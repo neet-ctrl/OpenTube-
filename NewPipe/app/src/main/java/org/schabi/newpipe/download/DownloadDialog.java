@@ -1079,6 +1079,30 @@ public class DownloadDialog extends DialogFragment
         askDialog.show();
     }
 
+    private String formatTime(long seconds) {
+        long h = seconds / 3600;
+        long m = (seconds % 3600) / 60;
+        long s = seconds % 60;
+        if (h > 0) {
+            return String.format(Locale.getDefault(), "%d:%02d:%02d", h, m, s);
+        } else {
+            return String.format(Locale.getDefault(), "%02d:%02d", m, s);
+        }
+    }
+
+    private long parseTime(String time) {
+        String[] parts = time.split(":");
+        long seconds = 0;
+        if (parts.length == 1) {
+            seconds = Long.parseLong(parts[0]);
+        } else if (parts.length == 2) {
+            seconds = Long.parseLong(parts[0]) * 60 + Long.parseLong(parts[1]);
+        } else if (parts.length == 3) {
+            seconds = Long.parseLong(parts[0]) * 3600 + Long.parseLong(parts[1]) * 60 + Long.parseLong(parts[2]);
+        }
+        return seconds;
+    }
+
     private void continueSelectedDownload(@NonNull final StoredFileHelper storage) {
         if (!storage.canWrite()) {
             showFailedDialog(R.string.permission_denied);
@@ -1184,14 +1208,11 @@ public class DownloadDialog extends DialogFragment
         }
 
         // Apply Time Range if selected
-        RadioGroup downloadModeGroup = dialogBinding.getRoot().findViewById(R.id.download_mode_group);
+        RadioGroup downloadModeGroup = view.findViewById(R.id.download_mode_group);
         if (downloadModeGroup != null && downloadModeGroup.getCheckedRadioButtonId() == R.id.download_mode_range) {
-            EditText timeRangeStart = dialogBinding.getRoot().findViewById(R.id.time_range_start);
-            EditText timeRangeEnd = dialogBinding.getRoot().findViewById(R.id.time_range_end);
-            
             try {
-                long startMs = Long.parseLong(timeRangeStart.getText().toString()) * 1000;
-                long endMs = Long.parseLong(timeRangeEnd.getText().toString()) * 1000;
+                long startMs = parseTime(timeRangeStart.getText().toString()) * 1000;
+                long endMs = parseTime(timeRangeEnd.getText().toString()) * 1000;
                 long durMs = endMs - startMs;
                 
                 if (durMs > 0) {
@@ -1203,7 +1224,7 @@ public class DownloadDialog extends DialogFragment
                          }
                      }
                 }
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
                 // Ignore invalid input, download full video
                 Log.e(TAG, "Invalid time range input", e);
             }
