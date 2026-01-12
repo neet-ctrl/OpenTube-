@@ -1,4 +1,4 @@
-package org.schabi.opentube;
+package org.schabi.newpipe;
 
 import android.app.Application;
 import android.content.Context;
@@ -14,20 +14,20 @@ import com.jakewharton.processphoenix.ProcessPhoenix;
 
 import org.acra.ACRA;
 import org.acra.config.CoreConfigurationBuilder;
-import org.schabi.opentube.error.ReCaptchaActivity;
-import org.schabi.opentube.extractor.OpenTube;
-import org.schabi.opentube.extractor.downloader.Downloader;
-import org.schabi.opentube.extractor.services.youtube.extractors.YoutubeStreamExtractor;
-import org.schabi.opentube.ktx.ExceptionUtils;
-import org.schabi.opentube.settings.OpenTubeSettings;
-import org.schabi.opentube.util.BridgeStateSaverInitializer;
-import org.schabi.opentube.util.Localization;
-import org.schabi.opentube.util.ServiceHelper;
-import org.schabi.opentube.util.StateSaver;
-import org.schabi.opentube.util.image.ImageStrategy;
-import org.schabi.opentube.util.image.PicassoHelper;
-import org.schabi.opentube.util.image.PreferredImageQuality;
-import org.schabi.opentube.util.potoken.PoTokenProviderImpl;
+import org.schabi.newpipe.error.ReCaptchaActivity;
+import org.schabi.newpipe.extractor.OpenTube;
+import org.schabi.newpipe.extractor.downloader.Downloader;
+import org.schabi.newpipe.extractor.services.youtube.extractors.YoutubeStreamExtractor;
+import org.schabi.newpipe.ktx.ExceptionUtils;
+import org.schabi.newpipe.settings.OpenTubeSettings;
+import org.schabi.newpipe.util.BridgeStateSaverInitializer;
+import org.schabi.newpipe.util.Localization;
+import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.newpipe.util.StateSaver;
+import org.schabi.newpipe.util.image.ImageStrategy;
+import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.newpipe.util.image.PreferredImageQuality;
+import org.schabi.newpipe.util.potoken.PoTokenProviderImpl;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;

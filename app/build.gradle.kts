@@ -34,10 +34,10 @@ kotlin {
 
 android {
     compileSdk = 36
-    namespace = "org.schabi.opentube"
+    namespace = "org.schabi.newpipe"
 
     defaultConfig {
-        applicationId = "org.schabi.opentube"
+        applicationId = "org.schabi.newpipe"
         resValue("string", "app_name", "OpenTube")
         minSdk = 21
         targetSdk = 35
