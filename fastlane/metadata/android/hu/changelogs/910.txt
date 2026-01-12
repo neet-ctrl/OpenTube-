@@ -1,1 +1,0 @@
-Adatbázis migráció fixálva, mely megakadályozta a OpenTube elindulását egyes esetekben.

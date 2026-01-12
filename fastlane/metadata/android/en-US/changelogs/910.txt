@@ -1,1 +1,0 @@
-Fixed database migration which prevented OpenTube from starting in some rare cases.

@@ -1,1 +1,0 @@
-OpenTube ora migunakake pustaka kerangka kerja Google, utawa API Youtube. OpenTube namung migunakake informasi situs kanggo njupuk informasi kang dibutuhake. Mula iku, OpenTube isa digunakke ing piranti tanpa Layanan Google. Sampeyan uga ora mbutuhake akun Youtube kanggo migunakake OpenTube, lan aplikasi iki FLOSS.

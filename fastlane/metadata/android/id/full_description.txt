@@ -1,1 +1,0 @@
-OpenTube sama sekali tidak menggunakan pustaka kerangka kerja Google, atau layanan API YouTube. OpenTube hanya mengunakan informasi situs YouTube untuk mendapatkan informasi yang dibutuhkan. Oleh karena itu, OpenTube bisa digunakan pada perangkat tanpa Layanan Google. Anda juga tidak membutuhkan akun YouTube untuk menggunakan OpenTube, dan aplikasi ini sepenuhnya FLOSS.
