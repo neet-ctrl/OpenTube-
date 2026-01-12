@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   pull_request:
     branches:
-      -main
+      - main
       - dev
       - master
       - refactor
@@ -19,7 +19,7 @@ on:
       - '.github/ISSUE_TEMPLATE/**'
   push:
     branches:
-      -main
+      - main
       - dev
       - master
     paths-ignore:
