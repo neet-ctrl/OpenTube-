@@ -334,13 +334,24 @@ public class DownloadDialog extends DialogFragment
         timeRangeSlider.addOnChangeListener((slider, value, fromUser) -> {
             List<Float> values = slider.getValues();
             if (values.size() >= 2) {
-                timeRangeStart.setText(String.valueOf(Math.round(values.get(0))));
-                timeRangeEnd.setText(String.valueOf(Math.round(values.get(1))));
+                timeRangeStart.setText(formatTime(Math.round(values.get(0))));
+                timeRangeEnd.setText(formatTime(Math.round(values.get(1))));
             }
         });
 
-        // Add listeners for EditTexts to update Slider (simplified)
-        // ...
+        View.OnFocusChangeListener timeFocusListener = (v, hasFocus) -> {
+            if (!hasFocus) {
+                try {
+                    long start = parseTime(timeRangeStart.getText().toString());
+                    long end = parseTime(timeRangeEnd.getText().toString());
+                    if (start >= 0 && end > start && end <= currentInfo.getDuration()) {
+                        timeRangeSlider.setValues((float) start, (float) end);
+                    }
+                } catch (Exception ignored) {}
+            }
+        };
+        timeRangeStart.setOnFocusChangeListener(timeFocusListener);
+        timeRangeEnd.setOnFocusChangeListener(timeFocusListener);
 
         selectedSubtitleIndex = getSubtitleIndexBy(subtitleStreamsAdapter.getAll());
 
