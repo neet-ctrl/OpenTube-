@@ -1096,37 +1096,8 @@ public class DownloadDialog extends DialogFragment
         long nearLength = 0;
 
         // more download logic: select muxer, subtitle converter, etc.
-        
-        // Handle Time Range
-        RadioGroup downloadModeGroup = getView().findViewById(R.id.download_mode_group);
-        if (downloadModeGroup.getCheckedRadioButtonId() == R.id.download_mode_range) {
-            EditText timeRangeStart = getView().findViewById(R.id.time_range_start);
-            EditText timeRangeEnd = getView().findViewById(R.id.time_range_end);
-            String start = timeRangeStart.getText().toString();
-            String end = timeRangeEnd.getText().toString();
-            
-            // Pass time range as custom arguments to Postprocessing or similar
-            // Since we cannot change startMission signature easily in this mode,
-            // we will append it to psArgs if possible, or just log it.
-            // In a real implementation, we would modify DownloadManager to accept start/end time.
-            if (psArgs == null) {
-                psArgs = new String[] {"-ss", start, "-to", end};
-            } else {
-                // Append to existing args
-                // For now, let's just assume we can pass it this way for ffmpeg
-                // NOTE: This assumes psName handles it or we're using a custom one.
-                // This is a placeholder for the backend logic.
-                String[] newArgs = new String[psArgs.length + 4];
-                System.arraycopy(psArgs, 0, newArgs, 0, psArgs.length);
-                newArgs[psArgs.length] = "-ss";
-                newArgs[psArgs.length + 1] = start;
-                newArgs[psArgs.length + 2] = "-to";
-                newArgs[psArgs.length + 3] = end;
-                psArgs = newArgs;
-            }
-        }
-
         switch (dialogBinding.videoAudioGroup.getCheckedRadioButtonId()) {
+            case R.id.audio_button:
             case R.id.audio_button:
                 kind = 'a';
                 selectedStream = audioStreamsAdapter.getItem(selectedAudioIndex);
@@ -1199,6 +1170,32 @@ public class DownloadDialog extends DialogFragment
                     new MissionRecoveryInfo(selectedStream),
                     new MissionRecoveryInfo(secondaryStream)
             );
+        }
+
+        // Apply Time Range if selected
+        RadioGroup downloadModeGroup = dialogBinding.getRoot().findViewById(R.id.download_mode_group);
+        if (downloadModeGroup != null && downloadModeGroup.getCheckedRadioButtonId() == R.id.download_mode_range) {
+            EditText timeRangeStart = dialogBinding.getRoot().findViewById(R.id.time_range_start);
+            EditText timeRangeEnd = dialogBinding.getRoot().findViewById(R.id.time_range_end);
+            
+            try {
+                long startMs = Long.parseLong(timeRangeStart.getText().toString()) * 1000;
+                long endMs = Long.parseLong(timeRangeEnd.getText().toString()) * 1000;
+                long durMs = endMs - startMs;
+                
+                if (durMs > 0) {
+                     for(int i=0; i<urls.length; i++) {
+                         if (urls[i] != null) {
+                             // Check if URL already has query params
+                             char separator = urls[i].contains("?") ? '&' : '?';
+                             urls[i] += separator + "begin=" + startMs + "&dur=" + durMs;
+                         }
+                     }
+                }
+            } catch (NumberFormatException e) {
+                // Ignore invalid input, download full video
+                Log.e(TAG, "Invalid time range input", e);
+            }
         }
 
         DownloadManagerService.startMission(context, urls, storage, kind, threads,
