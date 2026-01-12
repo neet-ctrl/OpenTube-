@@ -1,4 +1,4 @@
-package org.schabi.newpipe.error;
+package org.schabi.opentube.error;
 
 import android.content.Context;
 import android.content.Intent;
@@ -17,12 +17,12 @@ import androidx.core.content.IntentCompat;
 
 import com.grack.nanojson.JsonWriter;
 
-import org.schabi.newpipe.BuildConfig;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.ActivityErrorBinding;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.BuildConfig;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.ActivityErrorBinding;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
@@ -33,20 +33,20 @@ import java.util.stream.Collectors;
  * Created by Christian Schabesberger on 24.10.15.
  *
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * ErrorActivity.java is part of NewPipe.
+ * ErrorActivity.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * <
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * <
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
@@ -59,11 +59,11 @@ public class ErrorActivity extends AppCompatActivity {
     // BUNDLE TAGS
     public static final String ERROR_INFO = "error_info";
 
-    public static final String ERROR_EMAIL_ADDRESS = "crashreport@newpipe.schabi.org";
+    public static final String ERROR_EMAIL_ADDRESS = "crashreport@opentube.schabi.org";
     public static final String ERROR_EMAIL_SUBJECT = "Exception in ";
 
     public static final String ERROR_GITHUB_ISSUE_URL =
-            "https://github.com/TeamNewPipe/NewPipe/issues";
+            "https://github.com/TeamOpenTube/OpenTube/issues";
 
     private ErrorInfo errorInfo;
     private String currentTimeStamp;
@@ -165,7 +165,7 @@ public class ErrorActivity extends AppCompatActivity {
                                         + BuildConfig.VERSION_NAME)
                                 .putExtra(Intent.EXTRA_TEXT, buildJson());
                         ShareUtils.openIntentInApp(context, i);
-                    } else if (action.equals("GITHUB")) { // open the NewPipe issue page on GitHub
+                    } else if (action.equals("GITHUB")) { // open the OpenTube issue page on GitHub
                         ShareUtils.openUrlInApp(this, ERROR_GITHUB_ISSUE_URL);
                     }
                 })

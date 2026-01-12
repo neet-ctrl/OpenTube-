@@ -1,7 +1,7 @@
-package org.schabi.newpipe.player;
+package org.schabi.opentube.player;
 
-import static org.schabi.newpipe.QueueItemMenuUtil.openPopupMenu;
-import static org.schabi.newpipe.player.helper.PlayerHelper.formatSpeed;
+import static org.schabi.opentube.QueueItemMenuUtil.openPopupMenu;
+import static org.schabi.opentube.player.helper.PlayerHelper.formatSpeed;
 
 import android.content.ComponentName;
 import android.content.Intent;
@@ -26,26 +26,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.exoplayer2.PlaybackParameters;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.ActivityPlayerQueueControlBinding;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.fragments.OnScrollBelowItemsListener;
-import org.schabi.newpipe.local.dialog.PlaylistDialog;
-import org.schabi.newpipe.player.event.PlayerEventListener;
-import org.schabi.newpipe.player.helper.PlaybackParameterDialog;
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueAdapter;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.player.playqueue.PlayQueueItemBuilder;
-import org.schabi.newpipe.player.playqueue.PlayQueueItemHolder;
-import org.schabi.newpipe.player.playqueue.PlayQueueItemTouchCallback;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.PermissionHelper;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.ActivityPlayerQueueControlBinding;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.fragments.OnScrollBelowItemsListener;
+import org.schabi.opentube.local.dialog.PlaylistDialog;
+import org.schabi.opentube.player.event.PlayerEventListener;
+import org.schabi.opentube.player.helper.PlaybackParameterDialog;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueAdapter;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.playqueue.PlayQueueItemBuilder;
+import org.schabi.opentube.player.playqueue.PlayQueueItemHolder;
+import org.schabi.opentube.player.playqueue.PlayQueueItemTouchCallback;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.PermissionHelper;
+import org.schabi.opentube.util.ServiceHelper;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.util.List;
 import java.util.Optional;

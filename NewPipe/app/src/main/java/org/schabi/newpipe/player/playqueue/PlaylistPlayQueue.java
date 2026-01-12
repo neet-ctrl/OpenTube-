@@ -1,9 +1,9 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
-import org.schabi.newpipe.extractor.Page;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.util.ExtractorHelper;
+import org.schabi.opentube.extractor.Page;
+import org.schabi.opentube.extractor.playlist.PlaylistInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.util.ExtractorHelper;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments.list.comments;
+package org.schabi.opentube.fragments.list.comments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,15 +11,15 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.comments.CommentsInfo;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
-import org.schabi.newpipe.info_list.ItemViewMode;
-import org.schabi.newpipe.ktx.ViewUtils;
-import org.schabi.newpipe.util.ExtractorHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.comments.CommentsInfo;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.fragments.list.BaseListInfoFragment;
+import org.schabi.opentube.info_list.ItemViewMode;
+import org.schabi.opentube.ktx.ViewUtils;
+import org.schabi.opentube.util.ExtractorHelper;
 
 import io.reactivex.rxjava3.core.Single;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;

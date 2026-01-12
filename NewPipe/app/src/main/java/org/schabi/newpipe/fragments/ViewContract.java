@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments;
+package org.schabi.opentube.fragments;
 
 public interface ViewContract<I> {
     void showLoading();

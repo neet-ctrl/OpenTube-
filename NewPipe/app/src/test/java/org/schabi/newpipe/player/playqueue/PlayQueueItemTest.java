@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import org.junit.Test;
 

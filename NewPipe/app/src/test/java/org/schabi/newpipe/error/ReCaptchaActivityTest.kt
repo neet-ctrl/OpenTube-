@@ -1,4 +1,4 @@
-package org.schabi.newpipe.error
+package org.schabi.opentube.error
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

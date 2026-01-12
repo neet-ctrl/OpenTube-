@@ -1,18 +1,18 @@
-package org.schabi.newpipe.settings.export
+package org.schabi.opentube.settings.export
 
 import java.io.File
 
 /**
- * Locates specific files of NewPipe based on the home directory of the app.
+ * Locates specific files of OpenTube based on the home directory of the app.
  */
 class BackupFileLocator(private val homeDir: File) {
     companion object {
-        const val FILE_NAME_DB = "newpipe.db"
+        const val FILE_NAME_DB = "opentube.db"
         @Deprecated(
             "Serializing preferences with Java's ObjectOutputStream is vulnerable to injections",
             replaceWith = ReplaceWith("FILE_NAME_JSON_PREFS")
         )
-        const val FILE_NAME_SERIALIZED_PREFS = "newpipe.settings"
+        const val FILE_NAME_SERIALIZED_PREFS = "opentube.settings"
         const val FILE_NAME_JSON_PREFS = "preferences.json"
     }
 

@@ -1,8 +1,8 @@
-package org.schabi.newpipe.player.notification;
+package org.schabi.opentube.player.notification;
 
 import static android.app.PendingIntent.FLAG_UPDATE_CURRENT;
 import static androidx.media.app.NotificationCompat.MediaStyle;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_CLOSE;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_CLOSE;
 
 import android.annotation.SuppressLint;
 import android.app.Notification;
@@ -22,13 +22,13 @@ import androidx.core.app.PendingIntentCompat;
 import androidx.core.app.ServiceCompat;
 import androidx.core.content.ContextCompat;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.PlayerIntentType;
-import org.schabi.newpipe.player.PlayerService;
-import org.schabi.newpipe.player.mediasession.MediaSessionPlayerUi;
-import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.PlayerIntentType;
+import org.schabi.opentube.player.PlayerService;
+import org.schabi.opentube.player.mediasession.MediaSessionPlayerUi;
+import org.schabi.opentube.util.NavigationHelper;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -196,7 +196,7 @@ public final class NotificationUtil {
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setCategory(NotificationCompat.CATEGORY_TRANSPORT)
                 .setShowWhen(false)
-                .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                .setSmallIcon(R.drawable.ic_opentube_triangle_white)
                 .setColor(ContextCompat.getColor(context, R.color.dark_background_color))
                 .setDeleteIntent(PendingIntentCompat.getBroadcast(context,
                         NOTIFICATION_ID, new Intent(ACTION_CLOSE), FLAG_UPDATE_CURRENT, false));

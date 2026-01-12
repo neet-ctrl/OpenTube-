@@ -27,5 +27,5 @@
    - Corrigeer links in de videobeschrijving
    - Toon waarschuwing wanneer iemand probeert te downloaden naar een externe SD-kaart
    - niets repareren weergegeven uitzonderingstriggersrapport
-   - miniatuur wordt niet weergegeven in de achtergrondspeler voor Android 8.1 [zie hier](https://github.com/TeamNewPipe/NewPipe/issues/943)
+   - miniatuur wordt niet weergegeven in de achtergrondspeler voor Android 8.1 [zie hier](https://github.com/TeamOpenTube/OpenTube/issues/943)
  - Fix registratie van uitzendingsontvanger.  Sluit #1641.

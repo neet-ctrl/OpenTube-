@@ -12,8 +12,8 @@ Corrigido
 • Corrigir botões desaparecendo na visualização de downloads ao alternar aplicativos #2487
 • Corrigir a posição de reprodução é armazenada, embora o histórico de exibição esteja desativado
 • Corrigir desempenho reduzido causado pela posição de reprodução em visualizações de lista #2517
-• [Extractor] Corrigir ReCaptchaActivity # 2527, TeamNewPipe / NewPipeExtractor#186
-• [Extractor] [YouTube] Corrigir Erro de pesquisa casual quando as listas de reprodução estão nos resultados TeamNewPipe / NewPipeExtractor#185
+• [Extractor] Corrigir ReCaptchaActivity # 2527, TeamOpenTube / OpenTubeExtractor#186
+• [Extractor] [YouTube] Corrigir Erro de pesquisa casual quando as listas de reprodução estão nos resultados TeamOpenTube / OpenTubeExtractor#185
 
 
 
@@ -39,5 +39,5 @@ Corrigido
 • Não trave quando a verificação da atualização do aplicativo falhar (versão do GitHub) #2423 
 • Downloads fixos presos em 99,9% #2440
 • Atualizar metadados da fila de reprodução #2453 
-• [SoundCloud] corrigida a falha ao carregar listas de reprodução TeamNewPipe / NewPipeExtractor#170
-• [YouTube] duração fixa não pode ser Paresd TeamNewPipe / NewPipeExtractor#177
+• [SoundCloud] corrigida a falha ao carregar listas de reprodução TeamOpenTube / OpenTubeExtractor#170
+• [YouTube] duração fixa não pode ser Paresd TeamOpenTube / OpenTubeExtractor#177

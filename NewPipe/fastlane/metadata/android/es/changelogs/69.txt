@@ -3,7 +3,7 @@
 - Añadir soporte para la localización #1792
 
 ### Correcciones
-- Corregir parse en .format, para que NewPipe se pueda utilizar en Finlandia
+- Corregir parse en .format, para que OpenTube se pueda utilizar en Finlandia
 - Corregir el recuento de suscripciones
 - Añadir permiso de servicio en primer plano para dispositivos API 28+ #1830
 

@@ -1,14 +1,14 @@
-package org.schabi.newpipe.fragments.list.kiosk;
+package org.schabi.opentube.fragments.list.kiosk;
 
 import android.os.Bundle;
 
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.kiosk.KioskList;
-import org.schabi.newpipe.util.KioskTranslator;
-import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.kiosk.KioskList;
+import org.schabi.opentube.util.KioskTranslator;
+import org.schabi.opentube.util.ServiceHelper;
 
 public class DefaultKioskFragment extends KioskFragment {
 
@@ -38,7 +38,7 @@ public class DefaultKioskFragment extends KioskFragment {
         try {
             serviceId = ServiceHelper.getSelectedServiceId(requireContext());
 
-            final KioskList kioskList = NewPipe.getService(serviceId).getKioskList();
+            final KioskList kioskList = OpenTube.getService(serviceId).getKioskList();
             kioskId = kioskList.getDefaultKioskId();
             url = kioskList.getListLinkHandlerFactoryByType(kioskId).fromId(kioskId).getUrl();
 

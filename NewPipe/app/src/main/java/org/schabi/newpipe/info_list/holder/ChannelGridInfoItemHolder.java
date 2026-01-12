@@ -1,9 +1,9 @@
-package org.schabi.newpipe.info_list.holder;
+package org.schabi.opentube.info_list.holder;
 
 import android.view.ViewGroup;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.info_list.InfoItemBuilder;
+import org.schabi.opentube.R;
+import org.schabi.opentube.info_list.InfoItemBuilder;
 
 public class ChannelGridInfoItemHolder extends ChannelMiniInfoItemHolder {
     public ChannelGridInfoItemHolder(final InfoItemBuilder infoItemBuilder,

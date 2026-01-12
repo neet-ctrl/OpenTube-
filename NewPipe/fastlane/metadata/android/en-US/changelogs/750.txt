@@ -18,6 +18,6 @@ Fixed
 • Do not crash when check for app update fails (GitHub version) #2423 
 • Fixed downloads stuck at 99.9% #2440
 • Update play queue metadata #2453 
-• [SoundCloud] Fixed crash when loading playlists TeamNewPipe/NewPipeExtractor#170
-• [YouTube] Fixed duration can not be paresd TeamNewPipe/NewPipeExtractor#177
+• [SoundCloud] Fixed crash when loading playlists TeamOpenTube/OpenTubeExtractor#170
+• [YouTube] Fixed duration can not be paresd TeamOpenTube/OpenTubeExtractor#177
 

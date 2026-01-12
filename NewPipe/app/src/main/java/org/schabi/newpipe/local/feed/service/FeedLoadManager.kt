@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed.service
+package org.schabi.opentube.local.feed.service
 
 import android.content.Context
 import android.content.SharedPreferences
@@ -11,22 +11,22 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.functions.Consumer
 import io.reactivex.rxjava3.processors.PublishProcessor
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.extractor.Info
-import org.schabi.newpipe.extractor.NewPipe
-import org.schabi.newpipe.extractor.ServiceList
-import org.schabi.newpipe.extractor.feed.FeedInfo
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.ktx.getStringSafe
-import org.schabi.newpipe.local.feed.FeedDatabaseManager
-import org.schabi.newpipe.local.subscription.SubscriptionManager
-import org.schabi.newpipe.util.ChannelTabHelper
-import org.schabi.newpipe.util.ExtractorHelper.getChannelInfo
-import org.schabi.newpipe.util.ExtractorHelper.getChannelTab
-import org.schabi.newpipe.util.ExtractorHelper.getMoreChannelTabItems
+import org.schabi.opentube.R
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.extractor.Info
+import org.schabi.opentube.extractor.OpenTube
+import org.schabi.opentube.extractor.ServiceList
+import org.schabi.opentube.extractor.feed.FeedInfo
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.ktx.getStringSafe
+import org.schabi.opentube.local.feed.FeedDatabaseManager
+import org.schabi.opentube.local.subscription.SubscriptionManager
+import org.schabi.opentube.util.ChannelTabHelper
+import org.schabi.opentube.util.ExtractorHelper.getChannelInfo
+import org.schabi.opentube.util.ExtractorHelper.getChannelTab
+import org.schabi.opentube.util.ExtractorHelper.getMoreChannelTabItems
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
 import java.util.concurrent.atomic.AtomicBoolean
@@ -169,7 +169,7 @@ class FeedLoadManager(private val context: Context) {
             val errors = ArrayList<Throwable>()
 
             if (useFeedExtractor) {
-                NewPipe.getService(subscriptionEntity.serviceId)
+                OpenTube.getService(subscriptionEntity.serviceId)
                     .getFeedExtractor(subscriptionEntity.url)
                     ?.also { feedExtractor ->
                         // the user wants to use a feed extractor and there is one, use it

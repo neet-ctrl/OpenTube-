@@ -1,4 +1,4 @@
-package org.schabi.newpipe.database
+package org.schabi.opentube.database
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
@@ -13,10 +13,10 @@ import org.junit.Assert.assertNull
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.schabi.newpipe.database.playlist.model.PlaylistEntity
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity
-import org.schabi.newpipe.extractor.ServiceList
-import org.schabi.newpipe.extractor.stream.StreamType
+import org.schabi.opentube.database.playlist.model.PlaylistEntity
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity
+import org.schabi.opentube.extractor.ServiceList
+import org.schabi.opentube.extractor.stream.StreamType
 
 @RunWith(AndroidJUnit4::class)
 class DatabaseMigrationTest {

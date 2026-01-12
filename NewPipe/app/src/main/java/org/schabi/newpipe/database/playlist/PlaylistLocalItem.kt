@@ -1,12 +1,12 @@
 /*
- * SPDX-FileCopyrightText: 2018-2025 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2018-2025 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.playlist
+package org.schabi.opentube.database.playlist
 
-import org.schabi.newpipe.database.LocalItem
+import org.schabi.opentube.database.LocalItem
 
 interface PlaylistLocalItem : LocalItem {
     val orderingName: String?

@@ -12,8 +12,8 @@ Corrections
 • Correction des boutons qui disparaissent dans la vue des téléchargements lors du changement d'applications #2487
 • Correction de la position de lecture qui est enregistrée même si l'historique de visionnage est désactivé
 • Correction des performances réduites causées par la position de lecture dans les vues de liste #2517
-• [Extractor] Correction de ReCaptchaActivity #2527, TeamNewPipe/NewPipeExtractor#186
-• [Extractor] [YouTube] Correction de l'erreur de recherche occasionnelle lorsque les playlists sont dans les résultats TeamNewPipe/NewPipeExtractor#185
+• [Extractor] Correction de ReCaptchaActivity #2527, TeamOpenTube/OpenTubeExtractor#186
+• [Extractor] [YouTube] Correction de l'erreur de recherche occasionnelle lorsque les playlists sont dans les résultats TeamOpenTube/OpenTubeExtractor#185
 
 
 
@@ -39,5 +39,5 @@ Corrections
 • Ne plante pas lorsque la vérification de la mise à jour de l'application échoue (version GitHub) #2423
 • Correction des téléchargements bloqués à 99,9 % #2440
 • Mise à jour des métadonnées de la file de lecture #2453
-• [SoundCloud] Correction du plantage lors du chargement des playlists TeamNewPipe/NewPipeExtractor#170
-• [YouTube] Correction de la durée qui ne peut pas être analysée TeamNewPipe/NewPipeExtractor#177
+• [SoundCloud] Correction du plantage lors du chargement des playlists TeamOpenTube/OpenTubeExtractor#170
+• [YouTube] Correction de la durée qui ne peut pas être analysée TeamOpenTube/OpenTubeExtractor#177

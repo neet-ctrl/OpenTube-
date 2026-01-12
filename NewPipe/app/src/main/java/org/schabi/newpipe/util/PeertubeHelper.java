@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,9 +12,9 @@ import com.grack.nanojson.JsonParserException;
 import com.grack.nanojson.JsonStringWriter;
 import com.grack.nanojson.JsonWriter;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.ServiceList;
-import org.schabi.newpipe.extractor.services.peertube.PeertubeInstance;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.ServiceList;
+import org.schabi.opentube.extractor.services.peertube.PeertubeInstance;
 
 import java.util.ArrayList;
 import java.util.List;

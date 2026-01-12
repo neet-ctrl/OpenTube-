@@ -56,16 +56,16 @@ import androidx.recyclerview.widget.RecyclerView.ViewHolder;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import org.schabi.newpipe.BuildConfig;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.BuildConfig;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.streams.io.StoredFileHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 import java.io.File;
 import java.net.URI;
@@ -569,7 +569,7 @@ public class MissionAdapter extends Adapter<ViewHolder> implements Handler.Callb
 
         Integer service;
         try {
-            service = NewPipe.getServiceByUrl(mission.source).getServiceId();
+            service = OpenTube.getServiceByUrl(mission.source).getServiceId();
         } catch (Exception e) {
             service = null;
         }
@@ -697,7 +697,7 @@ public class MissionAdapter extends Adapter<ViewHolder> implements Handler.Callb
                         = new NotificationCompat.Builder(mContext,
                         mContext.getString(R.string.hash_channel_id))
                         .setPriority(NotificationCompat.PRIORITY_HIGH)
-                        .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                        .setSmallIcon(R.drawable.ic_opentube_triangle_white)
                         .setContentTitle(mContext.getString(R.string.msg_calculating_hash))
                         .setContentText(mContext.getString(R.string.msg_wait))
                         .setProgress(0, 0, true)

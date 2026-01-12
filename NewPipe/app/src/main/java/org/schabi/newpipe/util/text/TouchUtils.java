@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
 import android.text.Layout;
 import android.view.MotionEvent;

@@ -1,10 +1,10 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.extractor.stream.StreamType;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.StreamType;
 
 import java.util.ArrayList;
 import java.util.Collections;

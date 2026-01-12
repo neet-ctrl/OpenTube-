@@ -1,7 +1,7 @@
-package org.schabi.newpipe.info_list.holder;
+package org.schabi.opentube.info_list.holder;
 
-import static org.schabi.newpipe.util.ServiceHelper.getServiceById;
-import static org.schabi.newpipe.util.text.TouchUtils.getOffsetForHorizontalLine;
+import static org.schabi.opentube.util.ServiceHelper.getServiceById;
+import static org.schabi.opentube.util.text.TouchUtils.getOffsetForHorizontalLine;
 
 import android.text.Spanned;
 import android.text.method.LinkMovementMethod;
@@ -18,18 +18,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.info_list.InfoItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.util.image.ImageStrategy;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.text.TextEllipsizer;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.info_list.InfoItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.util.image.ImageStrategy;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.text.TextEllipsizer;
 
 public class CommentInfoItemHolder extends InfoItemHolder {
 

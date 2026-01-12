@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.gesture
+package org.schabi.opentube.player.gesture
 
 import android.util.Log
 import android.view.MotionEvent
@@ -8,15 +8,15 @@ import android.widget.ProgressBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isVisible
-import org.schabi.newpipe.MainActivity
-import org.schabi.newpipe.R
-import org.schabi.newpipe.ktx.AnimationType
-import org.schabi.newpipe.ktx.animate
-import org.schabi.newpipe.player.Player
-import org.schabi.newpipe.player.helper.AudioReactor
-import org.schabi.newpipe.player.helper.PlayerHelper
-import org.schabi.newpipe.player.ui.MainPlayerUi
-import org.schabi.newpipe.util.ThemeHelper.getAndroidDimenPx
+import org.schabi.opentube.MainActivity
+import org.schabi.opentube.R
+import org.schabi.opentube.ktx.AnimationType
+import org.schabi.opentube.ktx.animate
+import org.schabi.opentube.player.Player
+import org.schabi.opentube.player.helper.AudioReactor
+import org.schabi.opentube.player.helper.PlayerHelper
+import org.schabi.opentube.player.ui.MainPlayerUi
+import org.schabi.opentube.util.ThemeHelper.getAndroidDimenPx
 import kotlin.math.abs
 
 /**

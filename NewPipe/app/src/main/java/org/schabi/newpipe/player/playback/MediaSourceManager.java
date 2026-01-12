@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.playback;
+package org.schabi.opentube.player.playback;
 
 import android.os.Handler;
 import android.util.Log;
@@ -9,18 +9,18 @@ import androidx.collection.ArraySet;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.mediasource.FailedMediaSource;
-import org.schabi.newpipe.player.mediasource.LoadedMediaSource;
-import org.schabi.newpipe.player.mediasource.ManagedMediaSource;
-import org.schabi.newpipe.player.mediasource.ManagedMediaSourcePlaylist;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.MoveEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.RemoveEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.ReorderEvent;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.mediasource.FailedMediaSource;
+import org.schabi.opentube.player.mediasource.LoadedMediaSource;
+import org.schabi.opentube.player.mediasource.ManagedMediaSource;
+import org.schabi.opentube.player.mediasource.ManagedMediaSourcePlaylist;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.MoveEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.RemoveEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.ReorderEvent;
 
 import java.util.Collection;
 import java.util.Collections;
@@ -38,10 +38,10 @@ import io.reactivex.rxjava3.internal.subscriptions.EmptySubscription;
 import io.reactivex.rxjava3.schedulers.Schedulers;
 import io.reactivex.rxjava3.subjects.PublishSubject;
 
-import static org.schabi.newpipe.player.mediasource.FailedMediaSource.MediaSourceResolutionException;
-import static org.schabi.newpipe.player.mediasource.FailedMediaSource.StreamInfoLoadException;
-import static org.schabi.newpipe.player.playqueue.PlayQueue.DEBUG;
-import static org.schabi.newpipe.util.ServiceHelper.getCacheExpirationMillis;
+import static org.schabi.opentube.player.mediasource.FailedMediaSource.MediaSourceResolutionException;
+import static org.schabi.opentube.player.mediasource.FailedMediaSource.StreamInfoLoadException;
+import static org.schabi.opentube.player.playqueue.PlayQueue.DEBUG;
+import static org.schabi.opentube.util.ServiceHelper.getCacheExpirationMillis;
 
 public class MediaSourceManager {
     @NonNull

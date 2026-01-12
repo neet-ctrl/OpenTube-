@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.potoken
+package org.schabi.opentube.util.potoken
 
 import android.content.Context
 import io.reactivex.rxjava3.core.Single

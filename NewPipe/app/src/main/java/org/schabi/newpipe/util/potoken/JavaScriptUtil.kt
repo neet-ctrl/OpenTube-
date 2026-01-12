@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.potoken
+package org.schabi.opentube.util.potoken
 
 import com.grack.nanojson.JsonObject
 import com.grack.nanojson.JsonParser

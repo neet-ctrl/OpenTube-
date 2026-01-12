@@ -1,15 +1,15 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.ListInfo;
-import org.schabi.newpipe.extractor.Page;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.ListInfo;
+import org.schabi.opentube.extractor.Page;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
 
 import java.util.List;
 import java.util.stream.Collectors;

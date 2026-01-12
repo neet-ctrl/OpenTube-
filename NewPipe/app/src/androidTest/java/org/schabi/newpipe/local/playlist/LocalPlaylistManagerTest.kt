@@ -1,14 +1,14 @@
-package org.schabi.newpipe.local.playlist
+package org.schabi.opentube.local.playlist
 
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.schabi.newpipe.database.AppDatabase
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.extractor.stream.StreamType
-import org.schabi.newpipe.testUtil.TestDatabase
-import org.schabi.newpipe.testUtil.TrampolineSchedulerRule
+import org.schabi.opentube.database.AppDatabase
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.extractor.stream.StreamType
+import org.schabi.opentube.testUtil.TestDatabase
+import org.schabi.opentube.testUtil.TrampolineSchedulerRule
 
 class LocalPlaylistManagerTest {
 
@@ -20,7 +20,7 @@ class LocalPlaylistManagerTest {
 
     @Before
     fun setup() {
-        database = TestDatabase.createReplacingNewPipeDatabase()
+        database = TestDatabase.createReplacingOpenTubeDatabase()
         manager = LocalPlaylistManager(database)
     }
 
@@ -31,7 +31,7 @@ class LocalPlaylistManagerTest {
 
     @Test
     fun createPlaylist() {
-        val NEWPIPE_URL = "https://newpipe.net/"
+        val NEWPIPE_URL = "https://opentube.net/"
         val stream = StreamEntity(
             serviceId = 1, url = NEWPIPE_URL, title = "title",
             streamType = StreamType.VIDEO_STREAM, duration = 1, uploader = "uploader",
@@ -58,15 +58,15 @@ class LocalPlaylistManagerTest {
     @Test()
     fun createPlaylist_nonExistentStreamsAreUpserted() {
         val stream = StreamEntity(
-            serviceId = 1, url = "https://newpipe.net/", title = "title",
+            serviceId = 1, url = "https://opentube.net/", title = "title",
             streamType = StreamType.VIDEO_STREAM, duration = 1, uploader = "uploader",
-            uploaderUrl = "https://newpipe.net/"
+            uploaderUrl = "https://opentube.net/"
         )
         database.streamDAO().insert(stream)
         val upserted = StreamEntity(
-            serviceId = 1, url = "https://newpipe.net/2", title = "title2",
+            serviceId = 1, url = "https://opentube.net/2", title = "title2",
             streamType = StreamType.VIDEO_STREAM, duration = 1, uploader = "uploader",
-            uploaderUrl = "https://newpipe.net/"
+            uploaderUrl = "https://opentube.net/"
         )
 
         val result = manager.createPlaylist("name", listOf(stream, upserted))

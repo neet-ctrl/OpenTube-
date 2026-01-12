@@ -1,8 +1,8 @@
-package org.schabi.newpipe.settings.migration;
+package org.schabi.opentube.settings.migration;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
-import static org.schabi.newpipe.extractor.ServiceList.SoundCloud;
-import static org.schabi.newpipe.extractor.ServiceList.YouTube;
+import static org.schabi.opentube.MainActivity.DEBUG;
+import static org.schabi.opentube.extractor.ServiceList.SoundCloud;
+import static org.schabi.opentube.extractor.ServiceList.YouTube;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -12,14 +12,14 @@ import androidx.annotation.NonNull;
 import androidx.core.util.Consumer;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.settings.tabs.Tab;
-import org.schabi.newpipe.settings.tabs.TabsManager;
-import org.schabi.newpipe.util.DeviceUtils;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.settings.tabs.Tab;
+import org.schabi.opentube.settings.tabs.TabsManager;
+import org.schabi.opentube.util.DeviceUtils;
 
 import java.util.Collections;
 import java.util.HashSet;
@@ -52,7 +52,7 @@ public final class SettingMigrations {
     private static final Migration MIGRATION_0_1 = new Migration(0, 1) {
         @Override
         public void migrate(@NonNull final Context context) {
-            // We changed the content of the dialog which opens when sharing a link to NewPipe
+            // We changed the content of the dialog which opens when sharing a link to OpenTube
             // by removing the "open detail page" option.
             // Therefore, show the dialog once again to ensure users need to choose again and are
             // aware of the changed dialog.
@@ -189,7 +189,7 @@ public final class SettingMigrations {
         @Override
         protected void migrate(@NonNull final Context context) {
             // YouTube remove the combined Trending kiosk, see
-            // https://github.com/TeamNewPipe/NewPipe/discussions/12445 for more information.
+            // https://github.com/TeamOpenTube/OpenTube/discussions/12445 for more information.
             // If the user has a dedicated YouTube/Trending kiosk tab,
             // it is removed and replaced with the new live kiosk tab.
             // The default trending kiosk tab is not touched

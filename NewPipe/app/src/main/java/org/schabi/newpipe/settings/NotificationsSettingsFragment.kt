@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings
+package org.schabi.opentube.settings
 
 import android.content.SharedPreferences
 import android.content.SharedPreferences.OnSharedPreferenceChangeListener
@@ -10,16 +10,16 @@ import androidx.preference.SwitchPreference
 import com.google.android.material.snackbar.Snackbar
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.Disposable
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.error.ErrorInfo
-import org.schabi.newpipe.error.ErrorUtil
-import org.schabi.newpipe.error.UserAction
-import org.schabi.newpipe.local.feed.notifications.NotificationHelper
-import org.schabi.newpipe.local.feed.notifications.NotificationWorker
-import org.schabi.newpipe.local.feed.notifications.ScheduleOptions
-import org.schabi.newpipe.local.subscription.SubscriptionManager
+import org.schabi.opentube.R
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.error.ErrorInfo
+import org.schabi.opentube.error.ErrorUtil
+import org.schabi.opentube.error.UserAction
+import org.schabi.opentube.local.feed.notifications.NotificationHelper
+import org.schabi.opentube.local.feed.notifications.NotificationWorker
+import org.schabi.opentube.local.feed.notifications.ScheduleOptions
+import org.schabi.opentube.local.subscription.SubscriptionManager
 
 class NotificationsSettingsFragment : BasePreferenceFragment(), OnSharedPreferenceChangeListener {
 
@@ -80,7 +80,7 @@ class NotificationsSettingsFragment : BasePreferenceFragment(), OnSharedPreferen
                     Snackbar.LENGTH_INDEFINITE
                 ).apply {
                     setAction(R.string.settings) {
-                        NotificationHelper.openNewPipeSystemNotificationSettings(it.context)
+                        NotificationHelper.openOpenTubeSystemNotificationSettings(it.context)
                     }
                     setActionTextColor(Color.YELLOW)
                     addCallback(object : Snackbar.Callback() {

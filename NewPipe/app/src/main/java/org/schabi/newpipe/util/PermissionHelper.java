@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.Manifest;
 import android.app.Activity;
@@ -17,9 +17,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.settings.NewPipeSettings;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.settings.OpenTubeSettings;
 
 public final class PermissionHelper {
     public static final int POST_NOTIFICATIONS_REQUEST_CODE = 779;
@@ -29,7 +29,7 @@ public final class PermissionHelper {
     private PermissionHelper() { }
 
     public static boolean checkStoragePermissions(final Activity activity, final int requestCode) {
-        if (NewPipeSettings.useStorageAccessFramework(activity)) {
+        if (OpenTubeSettings.useStorageAccessFramework(activity)) {
             return true; // Storage permissions are not needed for SAF
         }
 

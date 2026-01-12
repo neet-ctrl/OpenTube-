@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments;
+package org.schabi.opentube.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,8 +7,8 @@ import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.BaseFragment;
-import org.schabi.newpipe.R;
+import org.schabi.opentube.BaseFragment;
+import org.schabi.opentube.R;
 
 public class EmptyFragment extends BaseFragment {
     private static final String SHOW_MESSAGE = "SHOW_MESSAGE";

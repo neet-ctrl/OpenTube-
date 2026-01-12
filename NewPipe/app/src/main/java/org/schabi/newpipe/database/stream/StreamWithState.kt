@@ -1,9 +1,9 @@
-package org.schabi.newpipe.database.stream
+package org.schabi.opentube.database.stream
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.stream.model.StreamStateEntity
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.stream.model.StreamStateEntity
 
 data class StreamWithState(
     @Embedded

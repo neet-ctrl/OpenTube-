@@ -1,8 +1,8 @@
-package org.schabi.newpipe.player.helper;
+package org.schabi.opentube.player.helper;
 
-import static org.schabi.newpipe.ktx.ViewUtils.animateRotation;
-import static org.schabi.newpipe.player.Player.DEBUG;
-import static org.schabi.newpipe.util.ThemeHelper.resolveDrawable;
+import static org.schabi.opentube.ktx.ViewUtils.animateRotation;
+import static org.schabi.opentube.player.Player.DEBUG;
+import static org.schabi.opentube.util.ThemeHelper.resolveDrawable;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -26,11 +26,11 @@ import androidx.preference.PreferenceManager;
 import com.evernote.android.state.State;
 import com.livefront.bridge.Bridge;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.DialogPlaybackParameterBinding;
-import org.schabi.newpipe.player.ui.VideoPlayerUi;
-import org.schabi.newpipe.util.SimpleOnSeekBarChangeListener;
-import org.schabi.newpipe.util.SliderStrategy;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.DialogPlaybackParameterBinding;
+import org.schabi.opentube.player.ui.VideoPlayerUi;
+import org.schabi.opentube.util.SimpleOnSeekBarChangeListener;
+import org.schabi.opentube.util.SliderStrategy;
 
 import java.util.Map;
 import java.util.Objects;

@@ -1,8 +1,8 @@
-package org.schabi.newpipe.info_list
+package org.schabi.opentube.info_list
 
 import android.util.Log
 import com.xwray.groupie.GroupieAdapter
-import org.schabi.newpipe.extractor.stream.StreamInfo
+import org.schabi.opentube.extractor.stream.StreamInfo
 import kotlin.math.max
 
 /**

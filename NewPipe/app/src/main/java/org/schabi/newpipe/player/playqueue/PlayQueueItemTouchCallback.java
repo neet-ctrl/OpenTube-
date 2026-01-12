@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import androidx.annotation.NonNull;
 import androidx.core.math.MathUtils;

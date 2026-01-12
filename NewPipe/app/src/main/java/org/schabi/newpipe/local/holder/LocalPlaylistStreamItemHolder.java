@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.holder;
+package org.schabi.opentube.local.holder;
 
 import android.view.MotionEvent;
 import android.view.View;
@@ -8,17 +8,17 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistStreamEntry;
-import org.schabi.newpipe.ktx.ViewUtils;
-import org.schabi.newpipe.local.LocalItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.DependentPreferenceHelper;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.views.AnimatedProgressBar;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.playlist.PlaylistStreamEntry;
+import org.schabi.opentube.ktx.ViewUtils;
+import org.schabi.opentube.local.LocalItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.DependentPreferenceHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.ServiceHelper;
+import org.schabi.opentube.views.AnimatedProgressBar;
 
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;

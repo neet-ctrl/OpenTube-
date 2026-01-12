@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.potoken
+package org.schabi.opentube.util.potoken
 
 import android.content.Context
 import android.os.Handler
@@ -16,8 +16,8 @@ import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.core.SingleEmitter
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.BuildConfig
-import org.schabi.newpipe.DownloaderImpl
+import org.schabi.opentube.BuildConfig
+import org.schabi.opentube.DownloaderImpl
 import java.time.Instant
 
 class PoTokenWebView private constructor(

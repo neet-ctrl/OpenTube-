@@ -1,9 +1,9 @@
-package org.schabi.newpipe.local.holder;
+package org.schabi.opentube.local.holder;
 
 import android.view.ViewGroup;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.local.LocalItemBuilder;
+import org.schabi.opentube.R;
+import org.schabi.opentube.local.LocalItemBuilder;
 
 /**
  * Local playlist stream UI. This also includes a handle to rearrange the videos.

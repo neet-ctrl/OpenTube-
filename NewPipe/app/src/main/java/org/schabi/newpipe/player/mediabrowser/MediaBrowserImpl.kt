@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.mediabrowser
+package org.schabi.opentube.player.mediabrowser
 
 import android.content.ContentResolver
 import android.content.Context
@@ -17,31 +17,31 @@ import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.MainActivity.DEBUG
-import org.schabi.newpipe.NewPipeDatabase
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.history.model.StreamHistoryEntry
-import org.schabi.newpipe.database.playlist.PlaylistLocalItem
-import org.schabi.newpipe.database.playlist.PlaylistStreamEntry
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity
-import org.schabi.newpipe.extractor.InfoItem
-import org.schabi.newpipe.extractor.InfoItem.InfoType
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem
-import org.schabi.newpipe.extractor.exceptions.ContentNotAvailableException
-import org.schabi.newpipe.extractor.playlist.PlaylistInfoItem
-import org.schabi.newpipe.extractor.search.SearchInfo
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.local.bookmark.MergedPlaylistManager
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager
-import org.schabi.newpipe.local.playlist.RemotePlaylistManager
-import org.schabi.newpipe.util.ExtractorHelper
-import org.schabi.newpipe.util.ServiceHelper
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.MainActivity.DEBUG
+import org.schabi.opentube.OpenTubeDatabase
+import org.schabi.opentube.R
+import org.schabi.opentube.database.history.model.StreamHistoryEntry
+import org.schabi.opentube.database.playlist.PlaylistLocalItem
+import org.schabi.opentube.database.playlist.PlaylistStreamEntry
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity
+import org.schabi.opentube.extractor.InfoItem
+import org.schabi.opentube.extractor.InfoItem.InfoType
+import org.schabi.opentube.extractor.channel.ChannelInfoItem
+import org.schabi.opentube.extractor.exceptions.ContentNotAvailableException
+import org.schabi.opentube.extractor.playlist.PlaylistInfoItem
+import org.schabi.opentube.extractor.search.SearchInfo
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.local.bookmark.MergedPlaylistManager
+import org.schabi.opentube.local.playlist.LocalPlaylistManager
+import org.schabi.opentube.local.playlist.RemotePlaylistManager
+import org.schabi.opentube.util.ExtractorHelper
+import org.schabi.opentube.util.ServiceHelper
+import org.schabi.opentube.util.image.ImageStrategy
 import java.util.function.Consumer
 
 /**
  * This class is used to cleanly separate the Service implementation (in
- * [org.schabi.newpipe.player.PlayerService]) and the media browser implementation (in this file).
+ * [org.schabi.opentube.player.PlayerService]) and the media browser implementation (in this file).
  *
  * @param notifyChildrenChanged takes the parent id of the children that changed
  */
@@ -50,7 +50,7 @@ class MediaBrowserImpl(
     notifyChildrenChanged: Consumer<String>, // parentId
 ) {
     private val packageValidator = PackageValidator(context)
-    private val database = NewPipeDatabase.getInstance(context)
+    private val database = OpenTubeDatabase.getInstance(context)
     private var disposables = CompositeDisposable()
 
     init {

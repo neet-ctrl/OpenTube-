@@ -1,9 +1,9 @@
-package org.schabi.newpipe.player.mediaitem;
+package org.schabi.opentube.player.mediaitem;
 
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.util.image.ImageStrategy;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.util.image.ImageStrategy;
 
 import java.util.List;
 import java.util.Optional;

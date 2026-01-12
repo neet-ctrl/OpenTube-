@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2017-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2017-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.error
+package org.schabi.opentube.error
 
 /**
  * The user actions that can cause an error.
@@ -35,7 +35,7 @@ enum class UserAction(val message: String) {
     DOWNLOAD_FAILED("download failed"),
     NEW_STREAMS_NOTIFICATIONS("new streams notifications"),
     PREFERENCES_MIGRATION("migration of preferences"),
-    SHARE_TO_NEWPIPE("share to newpipe"),
+    SHARE_TO_NEWPIPE("share to opentube"),
     CHECK_FOR_NEW_APP_VERSION("check for new app version"),
     OPEN_INFO_ITEM_DIALOG("open info item dialog"),
     GETTING_MAIN_SCREEN_TAB("getting main screen tab"),

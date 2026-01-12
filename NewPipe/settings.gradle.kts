@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -21,13 +21,13 @@ dependencyResolutionManagement {
 }
 include (":app")
 
-// Use a local copy of NewPipe Extractor by uncommenting the lines below.
-// We assume, that NewPipe and NewPipe Extractor have the same parent directory.
+// Use a local copy of OpenTube Extractor by uncommenting the lines below.
+// We assume, that OpenTube and OpenTube Extractor have the same parent directory.
 // If this is not the case, please change the path in includeBuild().
 
-//includeBuild("../NewPipeExtractor") {
+//includeBuild("../OpenTubeExtractor") {
 //    dependencySubstitution {
-//        substitute(module("com.github.TeamNewPipe:NewPipeExtractor"))
+//        substitute(module("com.github.TeamOpenTube:OpenTubeExtractor"))
 //            .using(project(":extractor"))
 //    }
 //}

@@ -1,10 +1,10 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import org.junit.Test;
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.AudioTrackType;
-import org.schabi.newpipe.extractor.stream.VideoStream;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.AudioTrackType;
+import org.schabi.opentube.extractor.stream.VideoStream;
 
 import java.util.ArrayList;
 import java.util.Comparator;

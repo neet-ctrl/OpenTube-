@@ -11,7 +11,7 @@ Améliorations :
 • [YouTube] Ajout de la prise en charge des liens de chaînes /c/shortened_url
 
 Corrections :
-• Correction de plusieurs problèmes lors du partage d'une vidéo sur NewPipe et du téléchargement direct de ses flux
+• Correction de plusieurs problèmes lors du partage d'une vidéo sur OpenTube et du téléchargement direct de ses flux
 • Correction de l'accès du lecteur hors de son fil de création
 • Correction de la pagination des résultats de recherche
 • [YouTube] Correction de null résultant en une erreur NPE

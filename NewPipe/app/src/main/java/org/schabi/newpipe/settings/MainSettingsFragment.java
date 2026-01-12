@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.os.Bundle;
 import android.view.Menu;
@@ -7,9 +7,9 @@ import android.view.MenuItem;
 
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.util.ReleaseVersionUtil;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.util.ReleaseVersionUtil;
 
 public class MainSettingsFragment extends BasePreferenceFragment {
     public static final boolean DEBUG = MainActivity.DEBUG;

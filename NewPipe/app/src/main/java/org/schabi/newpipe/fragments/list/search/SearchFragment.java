@@ -1,9 +1,9 @@
-package org.schabi.newpipe.fragments.list.search;
+package org.schabi.opentube.fragments.list.search;
 
 import static androidx.recyclerview.widget.ItemTouchHelper.Callback.makeMovementFlags;
-import static org.schabi.newpipe.extractor.utils.Utils.isBlank;
-import static org.schabi.newpipe.ktx.ViewUtils.animate;
-import static org.schabi.newpipe.util.ExtractorHelper.showMetaInfoInTextView;
+import static org.schabi.opentube.extractor.utils.Utils.isBlank;
+import static org.schabi.opentube.ktx.ViewUtils.animate;
+import static org.schabi.opentube.util.ExtractorHelper.showMetaInfoInTextView;
 import static java.util.Arrays.asList;
 
 import android.app.Activity;
@@ -42,35 +42,35 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.FragmentSearchBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.ReCaptchaActivity;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.MetaInfo;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.Page;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ParsingException;
-import org.schabi.newpipe.extractor.search.SearchExtractor;
-import org.schabi.newpipe.extractor.search.SearchInfo;
-import org.schabi.newpipe.extractor.services.peertube.linkHandler.PeertubeSearchQueryHandlerFactory;
-import org.schabi.newpipe.extractor.services.youtube.linkHandler.YoutubeSearchQueryHandlerFactory;
-import org.schabi.newpipe.fragments.BackPressable;
-import org.schabi.newpipe.fragments.list.BaseListFragment;
-import org.schabi.newpipe.ktx.AnimationType;
-import org.schabi.newpipe.ktx.ExceptionUtils;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.settings.NewPipeSettings;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.KeyboardUtil;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.FragmentSearchBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.ReCaptchaActivity;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.MetaInfo;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.Page;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ParsingException;
+import org.schabi.opentube.extractor.search.SearchExtractor;
+import org.schabi.opentube.extractor.search.SearchInfo;
+import org.schabi.opentube.extractor.services.peertube.linkHandler.PeertubeSearchQueryHandlerFactory;
+import org.schabi.opentube.extractor.services.youtube.linkHandler.YoutubeSearchQueryHandlerFactory;
+import org.schabi.opentube.fragments.BackPressable;
+import org.schabi.opentube.fragments.list.BaseListFragment;
+import org.schabi.opentube.ktx.AnimationType;
+import org.schabi.opentube.ktx.ExceptionUtils;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.settings.OpenTubeSettings;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.KeyboardUtil;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.ServiceHelper;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -204,8 +204,8 @@ public class SearchFragment extends BaseListFragment<SearchInfo, ListExtractor.I
         super.onAttach(context);
 
         final SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(activity);
-        showLocalSuggestions = NewPipeSettings.showLocalSearchSuggestions(activity, prefs);
-        showRemoteSuggestions = NewPipeSettings.showRemoteSearchSuggestions(activity, prefs);
+        showLocalSuggestions = OpenTubeSettings.showLocalSearchSuggestions(activity, prefs);
+        showRemoteSuggestions = OpenTubeSettings.showRemoteSearchSuggestions(activity, prefs);
 
         suggestionListAdapter = new SuggestionListAdapter();
         historyRecordManager = new HistoryRecordManager(context);
@@ -236,7 +236,7 @@ public class SearchFragment extends BaseListFragment<SearchInfo, ListExtractor.I
 
     private void updateService() {
         try {
-            service = NewPipe.getService(serviceId);
+            service = OpenTube.getService(serviceId);
         } catch (final Exception e) {
             ErrorUtil.showUiErrorSnackbar(this, "Getting service for id " + serviceId, e);
         }
@@ -836,10 +836,10 @@ public class SearchFragment extends BaseListFragment<SearchInfo, ListExtractor.I
             return;
         }
 
-        // Check if theSearchString is a URL which can be opened by NewPipe directly
+        // Check if theSearchString is a URL which can be opened by OpenTube directly
         // and open it if possible.
         try {
-            final StreamingService streamingService = NewPipe.getServiceByUrl(theSearchString);
+            final StreamingService streamingService = OpenTube.getServiceByUrl(theSearchString);
             showLoading();
             disposables.add(Observable
                     .fromCallable(() -> NavigationHelper.getIntentByLink(activity,

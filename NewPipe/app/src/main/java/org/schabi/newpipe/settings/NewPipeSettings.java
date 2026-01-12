@@ -1,6 +1,6 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,10 +11,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.settings.migration.MigrationManager;
-import org.schabi.newpipe.util.DeviceUtils;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.settings.migration.MigrationManager;
+import org.schabi.opentube.util.DeviceUtils;
 
 import java.io.File;
 import java.util.Set;
@@ -23,27 +23,27 @@ import java.util.Set;
  * Created by k3b on 07.01.2016.
  *
  * Copyright (C) Christian Schabesberger 2015 <chris.schabesberger@mailbox.org>
- * NewPipeSettings.java is part of NewPipe.
+ * OpenTubeSettings.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**
  * Helper class for global settings.
  */
-public final class NewPipeSettings {
-    private NewPipeSettings() { }
+public final class OpenTubeSettings {
+    private OpenTubeSettings() { }
 
     public static void initSettings(final Context context) {
         // first run migrations, then setDefaultValues, since the latter requires the correct types
@@ -88,7 +88,7 @@ public final class NewPipeSettings {
             }
 
             final SharedPreferences.Editor spEditor = prefs.edit();
-            spEditor.putString(key, getNewPipeChildFolderPathForDir(getDir(defaultDirectoryName)));
+            spEditor.putString(key, getOpenTubeChildFolderPathForDir(getDir(defaultDirectoryName)));
             spEditor.apply();
         }
     }
@@ -98,8 +98,8 @@ public final class NewPipeSettings {
         return new File(Environment.getExternalStorageDirectory(), defaultDirectoryName);
     }
 
-    private static String getNewPipeChildFolderPathForDir(final File dir) {
-        return new File(dir, "NewPipe").toURI().toString();
+    private static String getOpenTubeChildFolderPathForDir(final File dir) {
+        return new File(dir, "OpenTube").toURI().toString();
     }
 
     public static boolean useStorageAccessFramework(final Context context) {

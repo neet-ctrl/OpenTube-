@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import static org.schabi.newpipe.extractor.ServiceList.SoundCloud;
+import static org.schabi.opentube.extractor.ServiceList.SoundCloud;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -15,12 +15,12 @@ import com.grack.nanojson.JsonObject;
 import com.grack.nanojson.JsonParser;
 import com.grack.nanojson.JsonParserException;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.ServiceList;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.services.peertube.PeertubeInstance;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.ServiceList;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.services.peertube.PeertubeInstance;
 
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
@@ -128,7 +128,7 @@ public final class ServiceHelper {
                         context.getString(R.string.default_service_value));
 
         try {
-            return NewPipe.getService(serviceName);
+            return OpenTube.getService(serviceName);
         } catch (final ExtractionException e) {
             return null;
         }
@@ -160,7 +160,7 @@ public final class ServiceHelper {
     public static void setSelectedServiceId(final Context context, final int serviceId) {
         String serviceName;
         try {
-            serviceName = NewPipe.getService(serviceId).getServiceInfo().getName();
+            serviceName = OpenTube.getService(serviceId).getServiceInfo().getName();
         } catch (final ExtractionException e) {
             serviceName = DEFAULT_FALLBACK_SERVICE.getServiceInfo().getName();
         }

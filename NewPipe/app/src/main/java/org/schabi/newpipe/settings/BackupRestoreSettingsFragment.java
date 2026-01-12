@@ -1,6 +1,6 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isBlank;
+import static org.schabi.opentube.extractor.utils.Utils.isBlank;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -22,17 +22,17 @@ import androidx.preference.PreferenceManager;
 
 import com.grack.nanojson.JsonParserException;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.settings.export.BackupFileLocator;
-import org.schabi.newpipe.settings.export.ImportExportManager;
-import org.schabi.newpipe.streams.io.NoFileManagerSafeGuard;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.ZipHelper;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.settings.export.BackupFileLocator;
+import org.schabi.opentube.settings.export.ImportExportManager;
+import org.schabi.opentube.streams.io.NoFileManagerSafeGuard;
+import org.schabi.opentube.streams.io.StoredFileHelper;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.ZipHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -89,7 +89,7 @@ public class BackupRestoreSettingsFragment extends BasePreferenceFragment {
             NoFileManagerSafeGuard.launchSafe(
                     requestExportPathLauncher,
                     StoredFileHelper.getNewPicker(requireContext(),
-                            "NewPipeData-" + exportDateFormat.format(new Date()) + ".zip",
+                            "OpenTubeData-" + exportDateFormat.format(new Date()) + ".zip",
                             ZIP_MIME_TYPE, getImportExportDataUri()),
                     TAG,
                     getContext()
@@ -158,7 +158,7 @@ public class BackupRestoreSettingsFragment extends BasePreferenceFragment {
     private void exportDatabase(final StoredFileHelper file, final Uri exportDataUri) {
         try (ExecutorService executor = Executors.newSingleThreadExecutor()) {
             //checkpoint before export
-            executor.submit(NewPipeDatabase::checkpoint).get();
+            executor.submit(OpenTubeDatabase::checkpoint).get();
 
             final SharedPreferences preferences = PreferenceManager
                     .getDefaultSharedPreferences(requireContext());
@@ -259,7 +259,7 @@ public class BackupRestoreSettingsFragment extends BasePreferenceFragment {
                     .putInt(automaticTunnelingKey, -1)
                     .putBoolean(tunnelingKey, false)
                     .apply();
-            NewPipeSettings.setMediaTunneling(context);
+            OpenTubeSettings.setMediaTunneling(context);
         }
     }
 

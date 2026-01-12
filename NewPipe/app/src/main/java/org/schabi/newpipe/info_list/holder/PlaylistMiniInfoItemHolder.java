@@ -1,16 +1,16 @@
-package org.schabi.newpipe.info_list.holder;
+package org.schabi.opentube.info_list.holder;
 
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfoItem;
-import org.schabi.newpipe.info_list.InfoItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.playlist.PlaylistInfoItem;
+import org.schabi.opentube.info_list.InfoItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.Localization;
 
 public class PlaylistMiniInfoItemHolder extends InfoItemHolder {
     public final ImageView itemThumbnailView;

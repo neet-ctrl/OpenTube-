@@ -1,9 +1,9 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
 
 import java.util.ArrayList;
 import java.util.List;

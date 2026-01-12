@@ -1,7 +1,7 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import org.schabi.newpipe.streams.io.SharpInputStream;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
+import org.schabi.opentube.streams.io.SharpInputStream;
+import org.schabi.opentube.streams.io.StoredFileHelper;
 
 import java.io.BufferedInputStream;
 import java.io.ByteArrayInputStream;
@@ -19,7 +19,7 @@ import java.util.zip.ZipOutputStream;
 /**
  * Created by Christian Schabesberger on 28.01.18.
  * Copyright 2018 Christian Schabesberger <chris.schabesberger@mailbox.org>
- * ZipHelper.java is part of NewPipe
+ * ZipHelper.java is part of OpenTube
  * <p>
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify

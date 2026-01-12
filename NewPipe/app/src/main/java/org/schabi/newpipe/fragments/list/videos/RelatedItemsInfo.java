@@ -1,9 +1,9 @@
-package org.schabi.newpipe.fragments.list.videos;
+package org.schabi.opentube.fragments.list.videos;
 
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListInfo;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListInfo;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandler;
+import org.schabi.opentube.extractor.stream.StreamInfo;
 
 import java.util.ArrayList;
 import java.util.Collections;

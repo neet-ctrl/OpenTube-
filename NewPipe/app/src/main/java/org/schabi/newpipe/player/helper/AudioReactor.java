@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.helper;
+package org.schabi.opentube.player.helper;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;

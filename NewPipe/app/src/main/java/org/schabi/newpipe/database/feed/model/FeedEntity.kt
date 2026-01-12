@@ -1,14 +1,14 @@
-package org.schabi.newpipe.database.feed.model
+package org.schabi.opentube.database.feed.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
-import org.schabi.newpipe.database.feed.model.FeedEntity.Companion.FEED_TABLE
-import org.schabi.newpipe.database.feed.model.FeedEntity.Companion.STREAM_ID
-import org.schabi.newpipe.database.feed.model.FeedEntity.Companion.SUBSCRIPTION_ID
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
+import org.schabi.opentube.database.feed.model.FeedEntity.Companion.FEED_TABLE
+import org.schabi.opentube.database.feed.model.FeedEntity.Companion.STREAM_ID
+import org.schabi.opentube.database.feed.model.FeedEntity.Companion.SUBSCRIPTION_ID
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.subscription.SubscriptionEntity
 
 @Entity(
     tableName = FEED_TABLE,

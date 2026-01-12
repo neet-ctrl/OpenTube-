@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.gesture
+package org.schabi.opentube.player.gesture
 
 import android.os.Handler
 import android.os.Looper
@@ -7,9 +7,9 @@ import android.view.GestureDetector
 import android.view.MotionEvent
 import android.view.View
 import androidx.core.os.postDelayed
-import org.schabi.newpipe.databinding.PlayerBinding
-import org.schabi.newpipe.player.Player
-import org.schabi.newpipe.player.ui.VideoPlayerUi
+import org.schabi.opentube.databinding.PlayerBinding
+import org.schabi.opentube.player.Player
+import org.schabi.opentube.player.ui.VideoPlayerUi
 
 /**
  * Base gesture handling for [Player]

@@ -1,8 +1,8 @@
-package org.schabi.newpipe.local.feed.notifications
+package org.schabi.opentube.local.feed.notifications
 
 import android.content.Context
 import androidx.preference.PreferenceManager
-import org.schabi.newpipe.R
+import org.schabi.opentube.R
 import java.util.concurrent.TimeUnit
 
 /**

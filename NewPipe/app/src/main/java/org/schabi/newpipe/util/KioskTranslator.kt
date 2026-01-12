@@ -1,13 +1,13 @@
 /*
- * SPDX-FileCopyrightText: 2017-2025 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2017-2025 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.util
+package org.schabi.opentube.util
 
 import android.content.Context
-import org.schabi.newpipe.R
+import org.schabi.opentube.R
 
 object KioskTranslator {
     @JvmStatic

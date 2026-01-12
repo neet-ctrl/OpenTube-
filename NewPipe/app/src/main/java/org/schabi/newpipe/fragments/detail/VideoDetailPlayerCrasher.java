@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments.detail;
+package org.schabi.opentube.fragments.detail;
 
 import static com.google.android.exoplayer2.PlaybackException.ERROR_CODE_BEHIND_LIVE_WINDOW;
 import static com.google.android.exoplayer2.PlaybackException.ERROR_CODE_DECODING_FAILED;
@@ -22,11 +22,11 @@ import com.google.android.exoplayer2.C;
 import com.google.android.exoplayer2.ExoPlaybackException;
 import com.google.android.exoplayer2.PlaybackException;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.ListRadioIconItemBinding;
-import org.schabi.newpipe.databinding.SingleChoiceDialogViewBinding;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.ListRadioIconItemBinding;
+import org.schabi.opentube.databinding.SingleChoiceDialogViewBinding;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.io.IOException;
 import java.util.List;

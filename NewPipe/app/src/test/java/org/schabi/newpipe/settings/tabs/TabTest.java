@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.tabs;
+package org.schabi.opentube.settings.tabs;
 
 import org.junit.Test;
 

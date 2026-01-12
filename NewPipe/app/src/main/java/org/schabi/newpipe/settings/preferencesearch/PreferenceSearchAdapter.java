@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.preferencesearch;
+package org.schabi.opentube.settings.preferencesearch;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.databinding.SettingsPreferencesearchListItemResultBinding;
+import org.schabi.opentube.databinding.SettingsPreferencesearchListItemResultBinding;
 
 import java.util.function.Consumer;
 

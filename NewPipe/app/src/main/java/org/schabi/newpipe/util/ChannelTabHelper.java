@@ -1,13 +1,13 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 import android.content.SharedPreferences;
 
 import androidx.annotation.StringRes;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.channel.tabs.ChannelTabs;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.channel.tabs.ChannelTabs;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandler;
 
 import java.util.List;
 import java.util.Set;

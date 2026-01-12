@@ -1,6 +1,6 @@
 @file:JvmName("Constants")
 
-package org.schabi.newpipe.util
+package org.schabi.opentube.util
 
 /**
  * Default duration when using throttle functions across the app, in milliseconds.

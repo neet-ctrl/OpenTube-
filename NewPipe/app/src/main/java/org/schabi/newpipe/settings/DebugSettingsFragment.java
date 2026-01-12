@@ -1,16 +1,16 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.preference.Preference;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.local.feed.notifications.NotificationWorker;
-import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.local.feed.notifications.NotificationWorker;
+import org.schabi.opentube.util.image.PicassoHelper;
 
 import java.util.Optional;
 
@@ -103,7 +103,7 @@ public class DebugSettingsFragment extends BasePreferenceFragment {
      */
     public interface DebugSettingsBVDLeakCanaryAPI {
         String IMPL_CLASS =
-                "org.schabi.newpipe.settings.DebugSettingsBVDLeakCanary";
+                "org.schabi.opentube.settings.DebugSettingsBVDLeakCanary";
 
         Intent getNewLeakDisplayActivityIntent();
     }

@@ -1,14 +1,14 @@
-package org.schabi.newpipe.settings.notifications
+package org.schabi.opentube.settings.notifications
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.databinding.ItemNotificationConfigBinding
-import org.schabi.newpipe.settings.notifications.NotificationModeConfigAdapter.SubscriptionHolder
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.databinding.ItemNotificationConfigBinding
+import org.schabi.opentube.settings.notifications.NotificationModeConfigAdapter.SubscriptionHolder
 
 /**
  * This [RecyclerView.Adapter] is used in the [NotificationModeConfigFragment].

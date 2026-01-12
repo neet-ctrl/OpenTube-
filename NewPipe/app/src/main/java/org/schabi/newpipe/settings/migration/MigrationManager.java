@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.migration;
+package org.schabi.opentube.settings.migration;
 
 import android.content.Context;
 
@@ -6,8 +6,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.util.Consumer;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorUtil;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class MigrationManager {
     }
 
     /**
-     * Run all migrations that are needed for the current version of NewPipe.
+     * Run all migrations that are needed for the current version of OpenTube.
      * This method should be called at the start of the application, before any other operations
      * that depend on the settings.
      *

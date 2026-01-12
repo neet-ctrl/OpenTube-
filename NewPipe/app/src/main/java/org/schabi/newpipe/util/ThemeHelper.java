@@ -1,6 +1,6 @@
 /*
  * Copyright 2018 Mauricio Colli <mauriciocolli@outlook.com>
- * ThemeHelper.java is part of NewPipe
+ * ThemeHelper.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -37,18 +37,18 @@ import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.info_list.ItemViewMode;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.info_list.ItemViewMode;
 
 public final class ThemeHelper {
     private ThemeHelper() {
     }
 
     /**
-     * Apply the selected theme (on NewPipe settings) in the context
+     * Apply the selected theme (on OpenTube settings) in the context
      * with the default style (see {@link #setTheme(Context, int)}).
      *
      * ThemeHelper.setDayNightMode should be called before
@@ -61,7 +61,7 @@ public final class ThemeHelper {
     }
 
     /**
-     * Apply the selected theme (on NewPipe settings) in the context,
+     * Apply the selected theme (on OpenTube settings) in the context,
      * themed according with the styles defined for the service .
      *
      * ThemeHelper.setDayNightMode should be called before
@@ -76,7 +76,7 @@ public final class ThemeHelper {
     }
 
     /**
-     * Return true if the selected theme (on NewPipe settings) is the Light theme.
+     * Return true if the selected theme (on OpenTube settings) is the Light theme.
      *
      * @param context context to get the preference
      * @return whether the light theme is selected
@@ -158,7 +158,7 @@ public final class ThemeHelper {
 
         final StreamingService service;
         try {
-            service = NewPipe.getService(serviceId);
+            service = OpenTube.getService(serviceId);
         } catch (final ExtractionException ignored) {
             return baseTheme;
         }

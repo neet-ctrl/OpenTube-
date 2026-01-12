@@ -1,15 +1,15 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.content.Context
 import android.widget.ImageView
 import android.widget.TextView
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
-import org.schabi.newpipe.R
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem
-import org.schabi.newpipe.util.Localization
-import org.schabi.newpipe.util.OnClickGesture
-import org.schabi.newpipe.util.image.PicassoHelper
+import org.schabi.opentube.R
+import org.schabi.opentube.extractor.channel.ChannelInfoItem
+import org.schabi.opentube.util.Localization
+import org.schabi.opentube.util.OnClickGesture
+import org.schabi.opentube.util.image.PicassoHelper
 
 class ChannelItem(
     private val infoItem: ChannelInfoItem,

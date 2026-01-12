@@ -1,21 +1,21 @@
 /*
  * Copyright (C) Eltex ltd 2019 <eltex@eltex-co.ru>
- * FocusAwareCoordinator.java is part of NewPipe.
+ * FocusAwareCoordinator.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.schabi.newpipe.views;
+package org.schabi.opentube.views;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -29,7 +29,7 @@ import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.core.view.WindowInsetsCompat;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 public final class FocusAwareCoordinator extends CoordinatorLayout {
     private final Rect childFocus = new Rect();

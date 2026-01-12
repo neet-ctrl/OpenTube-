@@ -1,27 +1,27 @@
-package org.schabi.newpipe.info_list.dialog;
+package org.schabi.opentube.info_list.dialog;
 
-import static org.schabi.newpipe.util.NavigationHelper.openChannelFragment;
-import static org.schabi.newpipe.util.SparseItemUtil.fetchItemInfoIfSparse;
-import static org.schabi.newpipe.util.SparseItemUtil.fetchStreamInfoAndSaveToDatabase;
-import static org.schabi.newpipe.util.SparseItemUtil.fetchUploaderUrlIfSparse;
+import static org.schabi.opentube.util.NavigationHelper.openChannelFragment;
+import static org.schabi.opentube.util.SparseItemUtil.fetchItemInfoIfSparse;
+import static org.schabi.opentube.util.SparseItemUtil.fetchStreamInfoAndSaveToDatabase;
+import static org.schabi.opentube.util.SparseItemUtil.fetchUploaderUrlIfSparse;
 
 import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.download.DownloadDialog;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.local.dialog.PlaylistAppendDialog;
-import org.schabi.newpipe.local.dialog.PlaylistDialog;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.KoreUtils;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.download.DownloadDialog;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.local.dialog.PlaylistAppendDialog;
+import org.schabi.opentube.local.dialog.PlaylistDialog;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.KoreUtils;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 import java.util.List;
 

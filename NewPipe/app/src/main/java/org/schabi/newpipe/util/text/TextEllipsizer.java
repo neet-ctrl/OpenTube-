@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
 import android.graphics.Paint;
 import android.text.Layout;
@@ -9,8 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.stream.Description;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.stream.Description;
 
 import java.util.function.Consumer;
 

@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2023-2026 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2023-2026 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.info_list
+package org.schabi.opentube.info_list
 
 /**
  * Item view mode for streams & playlist listing screens.

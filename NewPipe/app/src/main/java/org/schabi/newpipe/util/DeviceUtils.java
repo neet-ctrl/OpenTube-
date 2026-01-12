@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import static android.content.Context.INPUT_SERVICE;
 
@@ -25,8 +25,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
 
 import java.lang.reflect.Method;
 
@@ -88,7 +88,7 @@ public final class DeviceUtils {
     /**
      * <p>Sony Bravia VH2.</p>
      * <p>Blacklist reason: fullscreen crash; this includes model A90J as reported in
-     * <a href="https://github.com/TeamNewPipe/NewPipe/issues/9023#issuecomment-1387106242">
+     * <a href="https://github.com/TeamOpenTube/OpenTube/issues/9023#issuecomment-1387106242">
      * #9023</a></p>
      */
     private static final boolean BRAVIA_VH2 = Build.VERSION.SDK_INT == 29
@@ -116,7 +116,7 @@ public final class DeviceUtils {
     /**
      * <p>Bouygtel4K / Bouygues Telecom Bbox 4K.</p>
      * <p>Blacklist reason: black screen; reported at
-     * <a href="https://github.com/TeamNewPipe/NewPipe/pull/10122#issuecomment-1638475769">
+     * <a href="https://github.com/TeamOpenTube/OpenTube/pull/10122#issuecomment-1638475769">
      *     #10122</a></p>
      */
     private static final boolean HMB9213NW = Build.DEVICE.equals("HMB9213NW");
@@ -316,8 +316,8 @@ public final class DeviceUtils {
      * <p>This can cause a black video player surface while attempting to play a video or
      * crashes while entering or exiting the full screen player.
      * The issue effects Android TVs most commonly.
-     * See <a href="https://github.com/TeamNewPipe/NewPipe/issues/5911">#5911</a> and
-     * <a href="https://github.com/TeamNewPipe/NewPipe/issues/9023">#9023</a> for more info.</p>
+     * See <a href="https://github.com/TeamOpenTube/OpenTube/issues/5911">#5911</a> and
+     * <a href="https://github.com/TeamOpenTube/OpenTube/issues/9023">#9023</a> for more info.</p>
      * @Note Update {@link #MEDIA_TUNNELING_DEVICE_BLACKLIST_VERSION}
      * when adding a new device to the method.
      * @return {@code false} if affected device; {@code true} otherwise

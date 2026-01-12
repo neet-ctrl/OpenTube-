@@ -1,19 +1,19 @@
-package org.schabi.newpipe.database.stream.model
+package org.schabi.opentube.database.stream.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import org.schabi.newpipe.database.stream.model.StreamEntity.Companion.STREAM_SERVICE_ID
-import org.schabi.newpipe.database.stream.model.StreamEntity.Companion.STREAM_TABLE
-import org.schabi.newpipe.database.stream.model.StreamEntity.Companion.STREAM_URL
-import org.schabi.newpipe.extractor.localization.DateWrapper
-import org.schabi.newpipe.extractor.stream.StreamInfo
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.extractor.stream.StreamType
-import org.schabi.newpipe.player.playqueue.PlayQueueItem
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.database.stream.model.StreamEntity.Companion.STREAM_SERVICE_ID
+import org.schabi.opentube.database.stream.model.StreamEntity.Companion.STREAM_TABLE
+import org.schabi.opentube.database.stream.model.StreamEntity.Companion.STREAM_URL
+import org.schabi.opentube.extractor.localization.DateWrapper
+import org.schabi.opentube.extractor.stream.StreamInfo
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.extractor.stream.StreamType
+import org.schabi.opentube.player.playqueue.PlayQueueItem
+import org.schabi.opentube.util.image.ImageStrategy
 import java.io.Serializable
 import java.time.OffsetDateTime
 

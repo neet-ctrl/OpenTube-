@@ -18,5 +18,5 @@ Javítás
 • Ha nem sikerül a frissítés keresése, nem omlik össze (GitHub version) #2423 
 • Letöltés nem akad meg 99,9%-nál #2440
 • Lejátszási lista metaadatainak frissítése #2453 
-• [SoundCloud] Lejátszási lista betöltésnél levő összeomlás javítása TeamNewPipe/NewPipeExtractor#170
-• [YouTube] Nem kielemezhető a videó hossza javítva TeamNewPipe/NewPipeExtractor#177
+• [SoundCloud] Lejátszási lista betöltésnél levő összeomlás javítása TeamOpenTube/OpenTubeExtractor#170
+• [YouTube] Nem kielemezhető a videó hossza javítva TeamOpenTube/OpenTubeExtractor#177

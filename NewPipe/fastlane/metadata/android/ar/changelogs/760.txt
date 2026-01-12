@@ -13,5 +13,5 @@
 • جعل قوائم الضغط الطويل متسقة # 2368
 
 ثابت
-• [SoundCloud] تعطل ثابت عند تحميل قوائم التشغيل TeamNewPipe / NewPipeExtractor # 170
-• [يوتيوب] لا يمكن تحديد المدة الثابتة TeamNewPipe / NewPipeExtractor # 177
+• [SoundCloud] تعطل ثابت عند تحميل قوائم التشغيل TeamOpenTube / OpenTubeExtractor # 170
+• [يوتيوب] لا يمكن تحديد المدة الثابتة TeamOpenTube / OpenTubeExtractor # 177

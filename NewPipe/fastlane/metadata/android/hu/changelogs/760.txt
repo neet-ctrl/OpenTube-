@@ -12,8 +12,8 @@ Javítások
 • App váltásnál a letöltés nézetnél eltűnő gombok javítása #2487
 • Lejátszási pozíció elmentődik, de nem menti az előzményeket
 • Listanézet visszajátszás pozíciója által okozott csökkentett teljesítmény gondok javítása #2517
-• [Kivonatoló] ReCaptchaActivity javítása #2527, TeamNewPipe/NewPipeExtractor#186
-• [Kivonatoló] [YouTube] Lista eredményes keresésnél felmerülő hiba javítása TeamNewPipe/NewPipeExtractor#185
+• [Kivonatoló] ReCaptchaActivity javítása #2527, TeamOpenTube/OpenTubeExtractor#186
+• [Kivonatoló] [YouTube] Lista eredményes keresésnél felmerülő hiba javítása TeamOpenTube/OpenTubeExtractor#185
 
 
 
@@ -39,5 +39,5 @@ Javítások
 • Sikertelen frissítés esetén most már nem omlik össze (GitHub verzió) #2423 
 • Letöltés nem áll meg 99,9%-nál #2440
 • Lejátszási lista metaadat frissítése #2453 
-• [SoundCloud] Lejátszásilista betöltésnél való összeomlás javítása TeamNewPipe/NewPipeExtractor#170
-• [YouTube] Videó hossza nem kiszámítható hiba javítása TeamNewPipe/NewPipeExtractor#177
+• [SoundCloud] Lejátszásilista betöltésnél való összeomlás javítása TeamOpenTube/OpenTubeExtractor#170
+• [YouTube] Videó hossza nem kiszámítható hiba javítása TeamOpenTube/OpenTubeExtractor#177

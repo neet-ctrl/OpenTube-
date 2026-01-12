@@ -1,21 +1,21 @@
 /*
  * Copyright (C) Eltex ltd 2019 <eltex@eltex-co.ru>
- * NewPipeRecyclerView.java is part of NewPipe.
+ * OpenTubeRecyclerView.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
-package org.schabi.newpipe.views;
+package org.schabi.opentube.views;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -30,28 +30,28 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class NewPipeRecyclerView extends RecyclerView {
-    private static final String TAG = "NewPipeRecyclerView";
+public class OpenTubeRecyclerView extends RecyclerView {
+    private static final String TAG = "OpenTubeRecyclerView";
 
     private final Rect focusRect = new Rect();
     private final Rect tempFocus = new Rect();
 
     private boolean allowDpadScroll = true;
 
-    public NewPipeRecyclerView(@NonNull final Context context) {
+    public OpenTubeRecyclerView(@NonNull final Context context) {
         super(context);
 
         init();
     }
 
-    public NewPipeRecyclerView(@NonNull final Context context,
+    public OpenTubeRecyclerView(@NonNull final Context context,
                                @Nullable final AttributeSet attrs) {
         super(context, attrs);
 
         init();
     }
 
-    public NewPipeRecyclerView(@NonNull final Context context,
+    public OpenTubeRecyclerView(@NonNull final Context context,
                                @Nullable final AttributeSet attrs, final int defStyle) {
         super(context, attrs, defStyle);
 

@@ -12,4 +12,4 @@ Behoben
 • Absturz, wenn die Überprüfung auf App-Updates fehlschlägt (GitHub-Version) #2423 
 • Downloads, die bei 99,9 % hängen bleiben #2440
 • Metadaten der Wiedergabeliste aktualisieren #2453 
-• [SoundCloud] Absturz beim Laden von Wiedergabelisten TeamNewPipe/NewPipeExtractor#170
+• [SoundCloud] Absturz beim Laden von Wiedergabelisten TeamOpenTube/OpenTubeExtractor#170

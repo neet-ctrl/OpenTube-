@@ -1,19 +1,19 @@
 /*
- * SPDX-FileCopyrightText: 2020-2023 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2020-2023 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.playlist
+package org.schabi.opentube.database.playlist
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
-import org.schabi.newpipe.database.LocalItem
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.stream.model.StreamStateEntity
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.database.LocalItem
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.stream.model.StreamStateEntity
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.util.image.ImageStrategy
 
 data class PlaylistStreamEntry(
     @Embedded

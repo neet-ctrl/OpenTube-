@@ -1,4 +1,4 @@
-package org.schabi.newpipe.error
+package org.schabi.opentube.error
 
 import android.content.Context
 import android.content.Intent
@@ -11,10 +11,10 @@ import androidx.fragment.app.Fragment
 import com.jakewharton.rxbinding4.view.clicks
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.Disposable
-import org.schabi.newpipe.MainActivity
-import org.schabi.newpipe.R
-import org.schabi.newpipe.ktx.animate
-import org.schabi.newpipe.util.external_communication.ShareUtils
+import org.schabi.opentube.MainActivity
+import org.schabi.opentube.R
+import org.schabi.opentube.ktx.animate
+import org.schabi.opentube.util.external_communication.ShareUtils
 import java.util.concurrent.TimeUnit
 
 class ErrorPanelHelper(

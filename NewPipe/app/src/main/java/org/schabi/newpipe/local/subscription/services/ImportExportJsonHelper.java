@@ -1,6 +1,6 @@
 /*
  * Copyright 2018 Mauricio Colli <mauriciocolli@outlook.com>
- * ImportExportJsonHelper.java is part of NewPipe
+ * ImportExportJsonHelper.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.local.subscription.services;
+package org.schabi.opentube.local.subscription.services;
 
 import androidx.annotation.Nullable;
 
@@ -27,9 +27,9 @@ import com.grack.nanojson.JsonObject;
 import com.grack.nanojson.JsonParser;
 import com.grack.nanojson.JsonWriter;
 
-import org.schabi.newpipe.BuildConfig;
-import org.schabi.newpipe.extractor.subscription.SubscriptionExtractor.InvalidSourceException;
-import org.schabi.newpipe.extractor.subscription.SubscriptionItem;
+import org.schabi.opentube.BuildConfig;
+import org.schabi.opentube.extractor.subscription.SubscriptionExtractor.InvalidSourceException;
+import org.schabi.opentube.extractor.subscription.SubscriptionItem;
 
 import java.io.InputStream;
 import java.io.OutputStream;

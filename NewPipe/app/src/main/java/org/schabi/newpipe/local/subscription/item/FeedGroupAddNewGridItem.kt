@@ -1,9 +1,9 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.view.View
 import com.xwray.groupie.viewbinding.BindableItem
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.FeedGroupAddNewGridItemBinding
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.FeedGroupAddNewGridItemBinding
 
 class FeedGroupAddNewGridItem : BindableItem<FeedGroupAddNewGridItemBinding>() {
     override fun getLayout(): Int = R.layout.feed_group_add_new_grid_item

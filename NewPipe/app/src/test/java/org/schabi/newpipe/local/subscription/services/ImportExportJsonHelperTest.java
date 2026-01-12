@@ -1,11 +1,11 @@
-package org.schabi.newpipe.local.subscription.services;
+package org.schabi.opentube.local.subscription.services;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
 import org.junit.Test;
-import org.schabi.newpipe.extractor.subscription.SubscriptionExtractor;
-import org.schabi.newpipe.extractor.subscription.SubscriptionItem;
+import org.schabi.opentube.extractor.subscription.SubscriptionExtractor;
+import org.schabi.opentube.extractor.subscription.SubscriptionItem;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

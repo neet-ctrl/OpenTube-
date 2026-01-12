@@ -1,4 +1,4 @@
-package org.schabi.newpipe.error;
+package org.schabi.opentube.error;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -20,31 +20,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NavUtils;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.DownloaderImpl;
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.ActivityRecaptchaBinding;
-import org.schabi.newpipe.extractor.utils.Utils;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.DownloaderImpl;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.ActivityRecaptchaBinding;
+import org.schabi.opentube.extractor.utils.Utils;
+import org.schabi.opentube.util.ThemeHelper;
 
 /*
  * Created by beneth <bmauduit@beneth.fr> on 06.12.16.
  *
  * Copyright (C) Christian Schabesberger 2015 <chris.schabesberger@mailbox.org>
- * ReCaptchaActivity.java is part of NewPipe.
+ * ReCaptchaActivity.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 public class ReCaptchaActivity extends AppCompatActivity {
     public static final int RECAPTCHA_REQUEST = 10;
@@ -161,7 +161,7 @@ public class ReCaptchaActivity extends AppCompatActivity {
         // Navigate to blank page (unloads youtube to prevent background playback)
         recaptchaBinding.reCaptchaWebView.loadUrl("about:blank");
 
-        final Intent intent = new Intent(this, org.schabi.newpipe.MainActivity.class);
+        final Intent intent = new Intent(this, org.schabi.opentube.MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         NavUtils.navigateUpTo(this, intent);
     }

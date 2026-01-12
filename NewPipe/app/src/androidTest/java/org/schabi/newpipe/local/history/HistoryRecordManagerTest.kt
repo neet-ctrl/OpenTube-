@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.history
+package org.schabi.opentube.local.history
 
 import androidx.test.core.app.ApplicationProvider
 import org.assertj.core.api.Assertions.assertThat
@@ -7,10 +7,10 @@ import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import org.schabi.newpipe.database.AppDatabase
-import org.schabi.newpipe.database.history.model.SearchHistoryEntry
-import org.schabi.newpipe.testUtil.TestDatabase
-import org.schabi.newpipe.testUtil.TrampolineSchedulerRule
+import org.schabi.opentube.database.AppDatabase
+import org.schabi.opentube.database.history.model.SearchHistoryEntry
+import org.schabi.opentube.testUtil.TestDatabase
+import org.schabi.opentube.testUtil.TrampolineSchedulerRule
 import java.time.LocalDateTime
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
@@ -25,7 +25,7 @@ class HistoryRecordManagerTest {
 
     @Before
     fun setup() {
-        database = TestDatabase.createReplacingNewPipeDatabase()
+        database = TestDatabase.createReplacingOpenTubeDatabase()
         manager = HistoryRecordManager(ApplicationProvider.getApplicationContext())
     }
 

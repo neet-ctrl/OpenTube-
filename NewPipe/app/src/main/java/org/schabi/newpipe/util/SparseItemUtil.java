@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -8,15 +8,15 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.player.playqueue.SinglePlayQueue;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.player.playqueue.SinglePlayQueue;
 
 import java.util.function.Consumer;
 
@@ -34,15 +34,15 @@ public final class SparseItemUtil {
     /**
      * Use this to certainly obtain an single play queue with all of the data filled in when the
      * stream info item you are handling might be sparse, e.g. because it was fetched via a {@link
-     * org.schabi.newpipe.extractor.feed.FeedExtractor}. FeedExtractors provide a fast and
+     * org.schabi.opentube.extractor.feed.FeedExtractor}. FeedExtractors provide a fast and
      * lightweight method to fetch info, but the info might be incomplete (see
-     * {@link org.schabi.newpipe.local.feed.service.FeedLoadService} for more details).
+     * {@link org.schabi.opentube.local.feed.service.FeedLoadService} for more details).
      *
      * @param context  Android context
      * @param item     item which is checked and eventually loaded completely
      * @param callback callback to call with the single play queue built from the original item if
      *                 all info was available, otherwise from the fetched {@link
-     *                 org.schabi.newpipe.extractor.stream.StreamInfo}
+     *                 org.schabi.opentube.extractor.stream.StreamInfo}
      */
     public static void fetchItemInfoIfSparse(@NonNull final Context context,
                                              @NonNull final StreamInfoItem item,
@@ -63,7 +63,7 @@ public final class SparseItemUtil {
     /**
      * Use this to certainly obtain an uploader url when the stream info item or play queue item you
      * are handling might not have the uploader url (e.g. because it was fetched with {@link
-     * org.schabi.newpipe.extractor.feed.FeedExtractor}). A toast is shown if loading details is
+     * org.schabi.opentube.extractor.feed.FeedExtractor}). A toast is shown if loading details is
      * required.
      *
      * @param context     Android context
@@ -72,7 +72,7 @@ public final class SparseItemUtil {
      * @param uploaderUrl uploaderUrl of the item; if null or empty will be fetched
      * @param callback    callback to be called with either the original uploaderUrl, if it was a
      *                    valid url, otherwise with the uploader url obtained by fetching the {@link
-     *                    org.schabi.newpipe.extractor.stream.StreamInfo} corresponding to the item
+     *                    org.schabi.opentube.extractor.stream.StreamInfo} corresponding to the item
      */
     public static void fetchUploaderUrlIfSparse(@NonNull final Context context,
                                                 final int serviceId,
@@ -107,7 +107,7 @@ public final class SparseItemUtil {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(result -> {
                     // save to database in the background (not on main thread)
-                    Completable.fromAction(() -> NewPipeDatabase.getInstance(context)
+                    Completable.fromAction(() -> OpenTubeDatabase.getInstance(context)
                             .streamDAO().upsert(new StreamEntity(result)))
                             .subscribeOn(Schedulers.io())
                             .observeOn(Schedulers.io())

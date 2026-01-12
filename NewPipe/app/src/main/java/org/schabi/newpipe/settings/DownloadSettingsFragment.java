@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.app.Activity;
 import android.content.ContentResolver;
@@ -20,10 +20,10 @@ import androidx.preference.SwitchPreferenceCompat;
 
 import com.nononsenseapps.filepicker.Utils;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.streams.io.NoFileManagerSafeGuard;
-import org.schabi.newpipe.streams.io.StoredDirectoryHelper;
-import org.schabi.newpipe.util.FilePickerActivityHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.streams.io.NoFileManagerSafeGuard;
+import org.schabi.opentube.streams.io.StoredDirectoryHelper;
+import org.schabi.opentube.util.FilePickerActivityHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -60,7 +60,7 @@ public class DownloadSettingsFragment extends BasePreferenceFragment {
         prefStorageAsk = findPreference(downloadStorageAsk);
 
         final SwitchPreferenceCompat prefUseSaf = findPreference(storageUseSafPreference);
-        prefUseSaf.setChecked(NewPipeSettings.useStorageAccessFramework(ctx));
+        prefUseSaf.setChecked(OpenTubeSettings.useStorageAccessFramework(ctx));
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             prefUseSaf.setEnabled(false);
             prefUseSaf.setSummary(R.string.downloads_storage_use_saf_summary_api_29);
@@ -169,9 +169,9 @@ public class DownloadSettingsFragment extends BasePreferenceFragment {
         final String key = preference.getKey();
 
         if (key.equals(storageUseSafPreference)) {
-            if (!NewPipeSettings.useStorageAccessFramework(ctx)) {
-                NewPipeSettings.saveDefaultVideoDownloadDirectory(ctx);
-                NewPipeSettings.saveDefaultAudioDownloadDirectory(ctx);
+            if (!OpenTubeSettings.useStorageAccessFramework(ctx)) {
+                OpenTubeSettings.saveDefaultVideoDownloadDirectory(ctx);
+                OpenTubeSettings.saveDefaultAudioDownloadDirectory(ctx);
             } else {
                 defaultPreferences.edit().putString(downloadPathVideoPreference, null)
                         .putString(downloadPathAudioPreference, null).apply();

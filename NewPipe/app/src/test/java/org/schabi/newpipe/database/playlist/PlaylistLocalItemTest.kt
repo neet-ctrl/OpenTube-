@@ -1,16 +1,16 @@
 /*
- * SPDX-FileCopyrightText: 2022-2024 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2022-2024 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.playlist
+package org.schabi.opentube.database.playlist
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity
-import org.schabi.newpipe.local.bookmark.MergedPlaylistManager
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity
+import org.schabi.opentube.local.bookmark.MergedPlaylistManager
 
 class PlaylistLocalItemTest {
 

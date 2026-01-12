@@ -4,8 +4,8 @@ import android.util.Log;
 
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.streams.io.SharpStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.streams.io.SharpStream;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.helper;
+package org.schabi.opentube.player.helper;
 
 import com.google.android.exoplayer2.DefaultLoadControl;
 

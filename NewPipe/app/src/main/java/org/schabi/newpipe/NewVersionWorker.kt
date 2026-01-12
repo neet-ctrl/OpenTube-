@@ -1,4 +1,4 @@
-package org.schabi.newpipe
+package org.schabi.opentube
 
 import android.content.Context
 import android.content.Intent
@@ -18,9 +18,9 @@ import androidx.work.WorkerParameters
 import androidx.work.workDataOf
 import com.grack.nanojson.JsonParser
 import com.grack.nanojson.JsonParserException
-import org.schabi.newpipe.extractor.downloader.Response
-import org.schabi.newpipe.extractor.exceptions.ReCaptchaException
-import org.schabi.newpipe.util.ReleaseVersionUtil
+import org.schabi.opentube.extractor.downloader.Response
+import org.schabi.opentube.extractor.exceptions.ReCaptchaException
+import org.schabi.opentube.util.ReleaseVersionUtil
 import java.io.IOException
 
 class NewVersionWorker(
@@ -62,7 +62,7 @@ class NewVersionWorker(
         )
         val channelId = applicationContext.getString(R.string.app_update_notification_channel_id)
         val notificationBuilder = NotificationCompat.Builder(applicationContext, channelId)
-            .setSmallIcon(R.drawable.ic_newpipe_update)
+            .setSmallIcon(R.drawable.ic_opentube_update)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setAutoCancel(true)
             .setContentIntent(pendingIntent)
@@ -96,7 +96,7 @@ class NewVersionWorker(
             }
         }
 
-        // Make a network request to get latest NewPipe data.
+        // Make a network request to get latest OpenTube data.
         val response = DownloaderImpl.getInstance().get(NEWPIPE_API_URL)
         handleResponse(response)
     }
@@ -118,19 +118,19 @@ class NewVersionWorker(
 
         // Parse the json from the response.
         try {
-            val newpipeVersionInfo = JsonParser.`object`()
+            val opentubeVersionInfo = JsonParser.`object`()
                 .from(response.responseBody()).getObject("flavors")
-                .getObject("newpipe")
+                .getObject("opentube")
 
-            val versionName = newpipeVersionInfo.getString("version")
-            val versionCode = newpipeVersionInfo.getInt("version_code")
-            val apkLocationUrl = newpipeVersionInfo.getString("apk")
+            val versionName = opentubeVersionInfo.getString("version")
+            val versionCode = opentubeVersionInfo.getInt("version_code")
+            val apkLocationUrl = opentubeVersionInfo.getString("apk")
             compareAppVersionAndShowNotification(versionName, apkLocationUrl, versionCode)
         } catch (e: JsonParserException) {
             // Most likely something is wrong in data received from NEWPIPE_API_URL.
             // Do not alarm user and fail silently.
             if (DEBUG) {
-                Log.w(TAG, "Could not get NewPipe API: invalid json", e)
+                Log.w(TAG, "Could not get OpenTube API: invalid json", e)
             }
         }
     }
@@ -140,7 +140,7 @@ class NewVersionWorker(
             checkNewVersion()
             Result.success()
         } catch (e: IOException) {
-            Log.w(TAG, "Could not fetch NewPipe API: probably network problem", e)
+            Log.w(TAG, "Could not fetch OpenTube API: probably network problem", e)
             Result.failure()
         } catch (e: ReCaptchaException) {
             Log.e(TAG, "ReCaptchaException should never happen here.", e)
@@ -151,17 +151,17 @@ class NewVersionWorker(
     companion object {
         private val DEBUG = MainActivity.DEBUG
         private val TAG = NewVersionWorker::class.java.simpleName
-        private const val NEWPIPE_API_URL = "https://newpipe.net/api/data.json"
+        private const val NEWPIPE_API_URL = "https://opentube.net/api/data.json"
         private const val IS_MANUAL = "isManual"
 
         /**
          * Start a new worker which checks if all conditions for performing a version check are met,
-         * fetches the API endpoint [.NEWPIPE_API_URL] containing info about the latest NewPipe
+         * fetches the API endpoint [.NEWPIPE_API_URL] containing info about the latest OpenTube
          * version and displays a notification about an available update if one is available.
          * <br></br>
          * Following conditions need to be met, before data is requested from the server:
          *
-         *  *  The app is signed with the correct signing key (by TeamNewPipe / schabi).
+         *  *  The app is signed with the correct signing key (by TeamOpenTube / schabi).
          * If the signing key differs from the one used upstream, the update cannot be installed.
          *  * The user enabled searching for and notifying about updates in the settings.
          *  * The app did not recently check for updates.

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.export;
+package org.schabi.opentube.settings.export;
 
 import java.io.IOException;
 import java.io.InputStream;

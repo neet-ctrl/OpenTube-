@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
@@ -9,9 +9,9 @@ import android.widget.Toast;
 import androidx.core.app.ActivityCompat;
 import androidx.preference.Preference;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.util.ThemeHelper;
 
 public class AppearanceSettingsFragment extends BasePreferenceFragment {
 

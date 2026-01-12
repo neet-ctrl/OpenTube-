@@ -1,2 +1,2 @@
-Esta es una versión de hotfix que actualiza NewPipe para permitir el uso de SoundCloud sin mayores problemas de nuevo.
+Esta es una versión de hotfix que actualiza OpenTube para permitir el uso de SoundCloud sin mayores problemas de nuevo.
 La API v2 de SoundCloud se utiliza ahora en el extractor y se ha mejorado la detección de IDs de clientes no válidos.

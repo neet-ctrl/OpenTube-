@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.custom;
+package org.schabi.opentube.settings.custom;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -17,13 +17,13 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.content.res.AppCompatResources;
 import androidx.core.widget.TextViewCompat;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.ListRadioIconItemBinding;
-import org.schabi.newpipe.databinding.SingleChoiceDialogViewBinding;
-import org.schabi.newpipe.player.notification.NotificationConstants;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.views.FocusOverlayView;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.ListRadioIconItemBinding;
+import org.schabi.opentube.databinding.SingleChoiceDialogViewBinding;
+import org.schabi.opentube.player.notification.NotificationConstants;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.views.FocusOverlayView;
 
 import java.util.Objects;
 import java.util.function.BiConsumer;

@@ -1,16 +1,16 @@
 /*
- * SPDX-FileCopyrightText: 2017-2021 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2017-2021 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.history.dao
+package org.schabi.opentube.database.history.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import io.reactivex.rxjava3.core.Flowable
-import org.schabi.newpipe.database.BasicDAO
-import org.schabi.newpipe.database.history.model.SearchHistoryEntry
+import org.schabi.opentube.database.BasicDAO
+import org.schabi.opentube.database.history.model.SearchHistoryEntry
 
 @Dao
 interface SearchHistoryDAO : BasicDAO<SearchHistoryEntry> {

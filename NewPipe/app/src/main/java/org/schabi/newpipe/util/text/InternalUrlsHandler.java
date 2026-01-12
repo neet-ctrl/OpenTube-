@@ -1,17 +1,17 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
 import android.content.Context;
 import android.content.Intent;
 import androidx.core.content.ContextCompat;
 
 import androidx.annotation.NonNull;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.exceptions.ParsingException;
-import org.schabi.newpipe.extractor.linkhandler.LinkHandlerFactory;
-import org.schabi.newpipe.player.TimestampChangeData;
-import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.exceptions.ParsingException;
+import org.schabi.opentube.extractor.linkhandler.LinkHandlerFactory;
+import org.schabi.opentube.player.TimestampChangeData;
+import org.schabi.opentube.util.NavigationHelper;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -23,7 +23,7 @@ public final class InternalUrlsHandler {
     }
 
     /**
-     * Handle a YouTube timestamp description URL in NewPipe.
+     * Handle a YouTube timestamp description URL in OpenTube.
      * <p>
      * This method will check if the provided url is a YouTube timestamp description URL ({@code
      * https://www.youtube.com/watch?v=}video_id{@code &t=}time_in_seconds). If yes, the popup
@@ -32,7 +32,7 @@ public final class InternalUrlsHandler {
      *
      * @param context     the context to use
      * @param url         the URL to check if it can be handled
-     * @return true if the URL can be handled by NewPipe, false if it cannot
+     * @return true if the URL can be handled by OpenTube, false if it cannot
      */
     public static boolean handleUrlDescriptionTimestamp(final Context context,
                                                         @NonNull final String url) {
@@ -51,7 +51,7 @@ public final class InternalUrlsHandler {
         final StreamingService service;
         final StreamingService.LinkType linkType;
         try {
-            service = NewPipe.getServiceByUrl(matchedUrl);
+            service = OpenTube.getServiceByUrl(matchedUrl);
             linkType = service.getLinkTypeByUrl(matchedUrl);
             if (linkType == StreamingService.LinkType.NONE) {
                 return false;

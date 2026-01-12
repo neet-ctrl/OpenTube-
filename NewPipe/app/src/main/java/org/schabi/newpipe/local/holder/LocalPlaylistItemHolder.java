@@ -1,15 +1,15 @@
-package org.schabi.newpipe.local.holder;
+package org.schabi.opentube.local.holder;
 
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistDuplicatesEntry;
-import org.schabi.newpipe.database.playlist.PlaylistMetadataEntry;
-import org.schabi.newpipe.local.LocalItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.playlist.PlaylistDuplicatesEntry;
+import org.schabi.opentube.database.playlist.PlaylistMetadataEntry;
+import org.schabi.opentube.local.LocalItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.Localization;
 
 import java.time.format.DateTimeFormatter;
 

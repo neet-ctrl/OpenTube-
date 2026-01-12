@@ -1,6 +1,6 @@
-package org.schabi.newpipe.streams;
+package org.schabi.opentube.streams;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
+import static org.schabi.opentube.MainActivity.DEBUG;
 
 import android.util.Log;
 import android.util.Pair;
@@ -8,12 +8,12 @@ import android.util.Pair;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.streams.WebMReader.Cluster;
-import org.schabi.newpipe.streams.WebMReader.Segment;
-import org.schabi.newpipe.streams.WebMReader.SimpleBlock;
-import org.schabi.newpipe.streams.WebMReader.WebMTrack;
-import org.schabi.newpipe.streams.io.SharpStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.streams.WebMReader.Cluster;
+import org.schabi.opentube.streams.WebMReader.Segment;
+import org.schabi.opentube.streams.WebMReader.SimpleBlock;
+import org.schabi.opentube.streams.WebMReader.WebMTrack;
+import org.schabi.opentube.streams.io.SharpStream;
 
 import java.io.Closeable;
 import java.io.IOException;

@@ -1,6 +1,6 @@
-package org.schabi.newpipe.local.dialog;
+package org.schabi.opentube.local.dialog;
 
-import static org.schabi.newpipe.database.playlist.model.PlaylistEntity.DEFAULT_THUMBNAIL_ID;
+import static org.schabi.opentube.database.playlist.model.PlaylistEntity.DEFAULT_THUMBNAIL_ID;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,12 +14,12 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.playlist.PlaylistDuplicatesEntry;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.local.LocalItemListAdapter;
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.playlist.PlaylistDuplicatesEntry;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.local.LocalItemListAdapter;
+import org.schabi.opentube.local.playlist.LocalPlaylistManager;
 
 import java.util.List;
 
@@ -62,7 +62,7 @@ public final class PlaylistAppendDialog extends PlaylistDialog {
         super.onViewCreated(view, savedInstanceState);
 
         final LocalPlaylistManager playlistManager =
-                new LocalPlaylistManager(NewPipeDatabase.getInstance(requireContext()));
+                new LocalPlaylistManager(OpenTubeDatabase.getInstance(requireContext()));
 
         playlistAdapter = new LocalItemListAdapter(getActivity());
         playlistAdapter.setSelectedListener(selectedItem -> {

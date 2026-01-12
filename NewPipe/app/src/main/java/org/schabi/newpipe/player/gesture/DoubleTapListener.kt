@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.gesture
+package org.schabi.opentube.player.gesture
 
 interface DoubleTapListener {
     fun onDoubleTapStarted(portion: DisplayPortion)

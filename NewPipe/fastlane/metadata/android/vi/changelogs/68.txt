@@ -27,5 +27,5 @@
 - Sửa các liên kết trong phần mô tả video
 - Hiển thị cảnh báo khi ai đó cố gắng tải xuống thẻ sdcard bên ngoài
 - sửa lỗi không hiển thị báo cáo kích hoạt ngoại lệ
-- hình thu nhỏ không hiển thị trong trình phát nền dành cho android 8.1 [xem tại đây](https://github.com/TeamNewPipe/NewPipe/issues/943)
+- hình thu nhỏ không hiển thị trong trình phát nền dành cho android 8.1 [xem tại đây](https://github.com/TeamOpenTube/OpenTube/issues/943)
 - Sửa lỗi đăng ký máy thu phát sóng. Đóng #1641.

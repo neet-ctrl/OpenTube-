@@ -12,8 +12,8 @@ Fixed
 • Fix disappearing buttons in downloads view when switching apps #2487
 • Fix playback position is stored although watch history is disabled
 • Fix reduced performance caused by playback position in list views #2517
-• [Extractor] Fix ReCaptchaActivity #2527, TeamNewPipe/NewPipeExtractor#186
-• [Extractor] [YouTube] Fix casual search error when playlists are in results TeamNewPipe/NewPipeExtractor#185
+• [Extractor] Fix ReCaptchaActivity #2527, TeamOpenTube/OpenTubeExtractor#186
+• [Extractor] [YouTube] Fix casual search error when playlists are in results TeamOpenTube/OpenTubeExtractor#185
 
 
 
@@ -39,6 +39,6 @@ Fixed
 • Do not crash when check for app update fails (GitHub version) #2423 
 • Fixed downloads stuck at 99.9% #2440
 • Update play queue metadata #2453 
-• [SoundCloud] Fixed crash when loading playlists TeamNewPipe/NewPipeExtractor#170
-• [YouTube] Fixed duration can not be paresd TeamNewPipe/NewPipeExtractor#177
+• [SoundCloud] Fixed crash when loading playlists TeamOpenTube/OpenTubeExtractor#170
+• [YouTube] Fixed duration can not be paresd TeamOpenTube/OpenTubeExtractor#177
 

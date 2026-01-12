@@ -1,17 +1,17 @@
-package org.schabi.newpipe.local.playlist;
+package org.schabi.opentube.local.playlist;
 
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.database.AppDatabase;
-import org.schabi.newpipe.database.playlist.PlaylistDuplicatesEntry;
-import org.schabi.newpipe.database.playlist.PlaylistMetadataEntry;
-import org.schabi.newpipe.database.playlist.PlaylistStreamEntry;
-import org.schabi.newpipe.database.playlist.dao.PlaylistDAO;
-import org.schabi.newpipe.database.playlist.dao.PlaylistStreamDAO;
-import org.schabi.newpipe.database.playlist.model.PlaylistEntity;
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity;
-import org.schabi.newpipe.database.stream.dao.StreamDAO;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
+import org.schabi.opentube.database.AppDatabase;
+import org.schabi.opentube.database.playlist.PlaylistDuplicatesEntry;
+import org.schabi.opentube.database.playlist.PlaylistMetadataEntry;
+import org.schabi.opentube.database.playlist.PlaylistStreamEntry;
+import org.schabi.opentube.database.playlist.dao.PlaylistDAO;
+import org.schabi.opentube.database.playlist.dao.PlaylistStreamDAO;
+import org.schabi.opentube.database.playlist.model.PlaylistEntity;
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity;
+import org.schabi.opentube.database.stream.dao.StreamDAO;
+import org.schabi.opentube.database.stream.model.StreamEntity;
 
 import java.util.ArrayList;
 import java.util.List;

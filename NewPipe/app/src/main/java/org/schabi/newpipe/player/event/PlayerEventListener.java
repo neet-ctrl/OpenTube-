@@ -1,9 +1,9 @@
-package org.schabi.newpipe.player.event;
+package org.schabi.opentube.player.event;
 
 import com.google.android.exoplayer2.PlaybackParameters;
 
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.player.playqueue.PlayQueue;
 
 public interface PlayerEventListener {
     void onQueueUpdate(PlayQueue queue);

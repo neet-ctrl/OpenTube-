@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.util.Log;
 
@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.collection.LruCache;
 
-import org.schabi.newpipe.MainActivity;
+import org.schabi.opentube.MainActivity;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

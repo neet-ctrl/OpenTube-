@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 import android.widget.Toast;
@@ -7,10 +7,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.PlaylistControlBinding;
-import org.schabi.newpipe.fragments.list.playlist.PlaylistControlViewHolder;
-import org.schabi.newpipe.player.PlayerType;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.PlaylistControlBinding;
+import org.schabi.opentube.fragments.list.playlist.PlaylistControlViewHolder;
+import org.schabi.opentube.player.PlayerType;
 
 /**
  * Utility class for play buttons and their respective click listeners.

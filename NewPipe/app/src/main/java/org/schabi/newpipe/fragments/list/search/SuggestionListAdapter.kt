@@ -1,18 +1,18 @@
 /*
- * SPDX-FileCopyrightText: 2017-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2017-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.fragments.list.search
+package org.schabi.opentube.fragments.list.search
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.ItemSearchSuggestionBinding
-import org.schabi.newpipe.fragments.list.search.SuggestionListAdapter.SuggestionItemHolder
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.ItemSearchSuggestionBinding
+import org.schabi.opentube.fragments.list.search.SuggestionListAdapter.SuggestionItemHolder
 
 class SuggestionListAdapter :
     ListAdapter<SuggestionItem, SuggestionItemHolder>(SuggestionItemCallback()) {

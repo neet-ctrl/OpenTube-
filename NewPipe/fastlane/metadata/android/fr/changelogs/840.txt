@@ -12,7 +12,7 @@ Amélioré
 • Amélioration de plusieurs chaînes sources en anglais
 
 Corrigé
-• Correction du redémarrage du lecteur bien qu'il soit en pause lorsque l'option « Réduire au changement d'application » est activée et que NewPipe est réduit
+• Correction du redémarrage du lecteur bien qu'il soit en pause lorsque l'option « Réduire au changement d'application » est activée et que OpenTube est réduit
 • Correction de la valeur de luminosité initiale pour le geste
 • Correction des téléchargements de sous-titres .srt ne contenant pas tous les sauts de ligne
 • Correction du téléchargement sur la carte SD qui échoue car certains appareils Android 5 ne sont pas conformes CTF

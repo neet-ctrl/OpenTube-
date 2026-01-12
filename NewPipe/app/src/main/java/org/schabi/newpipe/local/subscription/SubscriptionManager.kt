@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription
+package org.schabi.opentube.local.subscription
 
 import android.content.Context
 import android.util.Pair
@@ -6,22 +6,22 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.NewPipeDatabase
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.database.subscription.SubscriptionDAO
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.extractor.channel.ChannelInfo
-import org.schabi.newpipe.extractor.channel.tabs.ChannelTabInfo
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.local.feed.FeedDatabaseManager
-import org.schabi.newpipe.local.feed.service.FeedUpdateInfo
-import org.schabi.newpipe.util.ExtractorHelper
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.OpenTubeDatabase
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.database.subscription.SubscriptionDAO
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.extractor.channel.ChannelInfo
+import org.schabi.opentube.extractor.channel.tabs.ChannelTabInfo
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.local.feed.FeedDatabaseManager
+import org.schabi.opentube.local.feed.service.FeedUpdateInfo
+import org.schabi.opentube.util.ExtractorHelper
+import org.schabi.opentube.util.image.ImageStrategy
 
 class SubscriptionManager(context: Context) {
-    private val database = NewPipeDatabase.getInstance(context)
+    private val database = OpenTubeDatabase.getInstance(context)
     private val subscriptionTable = database.subscriptionDAO()
     private val feedDatabaseManager = FeedDatabaseManager(context)
 

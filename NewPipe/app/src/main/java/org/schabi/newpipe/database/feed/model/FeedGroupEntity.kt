@@ -1,12 +1,12 @@
-package org.schabi.newpipe.database.feed.model
+package org.schabi.opentube.database.feed.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity.Companion.FEED_GROUP_TABLE
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity.Companion.SORT_ORDER
-import org.schabi.newpipe.local.subscription.FeedGroupIcon
+import org.schabi.opentube.database.feed.model.FeedGroupEntity.Companion.FEED_GROUP_TABLE
+import org.schabi.opentube.database.feed.model.FeedGroupEntity.Companion.SORT_ORDER
+import org.schabi.opentube.local.subscription.FeedGroupIcon
 
 @Entity(
     tableName = FEED_GROUP_TABLE,

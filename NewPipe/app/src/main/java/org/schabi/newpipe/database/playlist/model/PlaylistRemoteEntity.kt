@@ -1,10 +1,10 @@
 /*
- * SPDX-FileCopyrightText: 2018-2025 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2018-2025 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.playlist.model
+package org.schabi.opentube.database.playlist.model
 
 import android.text.TextUtils
 import androidx.room.ColumnInfo
@@ -12,14 +12,14 @@ import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import org.schabi.newpipe.database.LocalItem.LocalItemType
-import org.schabi.newpipe.database.playlist.PlaylistLocalItem
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.Companion.REMOTE_PLAYLIST_SERVICE_ID
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.Companion.REMOTE_PLAYLIST_TABLE
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity.Companion.REMOTE_PLAYLIST_URL
-import org.schabi.newpipe.extractor.playlist.PlaylistInfo
-import org.schabi.newpipe.util.NO_SERVICE_ID
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.database.LocalItem.LocalItemType
+import org.schabi.opentube.database.playlist.PlaylistLocalItem
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity.Companion.REMOTE_PLAYLIST_SERVICE_ID
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity.Companion.REMOTE_PLAYLIST_TABLE
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity.Companion.REMOTE_PLAYLIST_URL
+import org.schabi.opentube.extractor.playlist.PlaylistInfo
+import org.schabi.opentube.util.NO_SERVICE_ID
+import org.schabi.opentube.util.image.ImageStrategy
 
 @Entity(
     tableName = REMOTE_PLAYLIST_TABLE,

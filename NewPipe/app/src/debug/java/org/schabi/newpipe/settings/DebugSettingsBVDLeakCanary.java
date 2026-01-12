@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.Intent;
 

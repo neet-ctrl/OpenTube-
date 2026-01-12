@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed
+package org.schabi.opentube.local.feed
 
 import android.app.Application
 import android.content.Context
@@ -14,17 +14,17 @@ import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.functions.Function6
 import io.reactivex.rxjava3.processors.BehaviorProcessor
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.App
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.stream.StreamWithState
-import org.schabi.newpipe.local.feed.item.StreamItem
-import org.schabi.newpipe.local.feed.service.FeedEventManager
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ErrorResultEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.IdleEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ProgressEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.SuccessResultEvent
-import org.schabi.newpipe.util.DEFAULT_THROTTLE_TIMEOUT
+import org.schabi.opentube.App
+import org.schabi.opentube.R
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.stream.StreamWithState
+import org.schabi.opentube.local.feed.item.StreamItem
+import org.schabi.opentube.local.feed.service.FeedEventManager
+import org.schabi.opentube.local.feed.service.FeedEventManager.Event.ErrorResultEvent
+import org.schabi.opentube.local.feed.service.FeedEventManager.Event.IdleEvent
+import org.schabi.opentube.local.feed.service.FeedEventManager.Event.ProgressEvent
+import org.schabi.opentube.local.feed.service.FeedEventManager.Event.SuccessResultEvent
+import org.schabi.opentube.util.DEFAULT_THROTTLE_TIMEOUT
 import java.time.OffsetDateTime
 import java.util.concurrent.TimeUnit
 

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed.item
+package org.schabi.opentube.local.feed.item
 
 import android.content.Context
 import android.text.TextUtils
@@ -6,20 +6,20 @@ import android.view.View
 import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
 import com.xwray.groupie.viewbinding.BindableItem
-import org.schabi.newpipe.MainActivity
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.stream.StreamWithState
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.databinding.ListStreamItemBinding
-import org.schabi.newpipe.extractor.stream.StreamType.AUDIO_LIVE_STREAM
-import org.schabi.newpipe.extractor.stream.StreamType.AUDIO_STREAM
-import org.schabi.newpipe.extractor.stream.StreamType.LIVE_STREAM
-import org.schabi.newpipe.extractor.stream.StreamType.POST_LIVE_AUDIO_STREAM
-import org.schabi.newpipe.extractor.stream.StreamType.POST_LIVE_STREAM
-import org.schabi.newpipe.extractor.stream.StreamType.VIDEO_STREAM
-import org.schabi.newpipe.util.Localization
-import org.schabi.newpipe.util.StreamTypeUtil
-import org.schabi.newpipe.util.image.PicassoHelper
+import org.schabi.opentube.MainActivity
+import org.schabi.opentube.R
+import org.schabi.opentube.database.stream.StreamWithState
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.databinding.ListStreamItemBinding
+import org.schabi.opentube.extractor.stream.StreamType.AUDIO_LIVE_STREAM
+import org.schabi.opentube.extractor.stream.StreamType.AUDIO_STREAM
+import org.schabi.opentube.extractor.stream.StreamType.LIVE_STREAM
+import org.schabi.opentube.extractor.stream.StreamType.POST_LIVE_AUDIO_STREAM
+import org.schabi.opentube.extractor.stream.StreamType.POST_LIVE_STREAM
+import org.schabi.opentube.extractor.stream.StreamType.VIDEO_STREAM
+import org.schabi.opentube.util.Localization
+import org.schabi.opentube.util.StreamTypeUtil
+import org.schabi.opentube.util.image.PicassoHelper
 import java.util.concurrent.TimeUnit
 import java.util.function.Consumer
 

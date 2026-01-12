@@ -1,38 +1,38 @@
-package org.schabi.newpipe.info_list.holder;
+package org.schabi.opentube.info_list.holder;
 
 import android.text.TextUtils;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.info_list.InfoItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.info_list.InfoItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.Localization;
 
 /*
  * Created by Christian Schabesberger on 01.08.16.
  * <p>
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * StreamInfoItemHolder.java is part of NewPipe.
+ * StreamInfoItemHolder.java is part of OpenTube.
  * </p>
  * <p>
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * </p>
  * <p>
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * </p?
  * <p>
  * You should have received a copy of the GNU General Public License
- * along with NewPipe. If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube. If not, see <http://www.gnu.org/licenses/>.
  * </p>
  */
 

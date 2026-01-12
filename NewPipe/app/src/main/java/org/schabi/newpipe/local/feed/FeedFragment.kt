@@ -1,6 +1,6 @@
 /*
  * Copyright 2019 Mauricio Colli <mauriciocolli@outlook.com>
- * FeedFragment.kt is part of NewPipe
+ * FeedFragment.kt is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.local.feed
+package org.schabi.opentube.local.feed
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -53,34 +53,34 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.NewPipeDatabase
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.databinding.FragmentFeedBinding
-import org.schabi.newpipe.error.ErrorInfo
-import org.schabi.newpipe.error.ErrorUtil
-import org.schabi.newpipe.error.UserAction
-import org.schabi.newpipe.extractor.exceptions.AccountTerminatedException
-import org.schabi.newpipe.extractor.exceptions.ContentNotAvailableException
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty
-import org.schabi.newpipe.fragments.BaseStateFragment
-import org.schabi.newpipe.info_list.ItemViewMode
-import org.schabi.newpipe.info_list.dialog.InfoItemDialog
-import org.schabi.newpipe.ktx.animate
-import org.schabi.newpipe.ktx.animateHideRecyclerViewAllowingScrolling
-import org.schabi.newpipe.ktx.slideUp
-import org.schabi.newpipe.local.feed.item.StreamItem
-import org.schabi.newpipe.local.feed.service.FeedLoadService
-import org.schabi.newpipe.local.subscription.SubscriptionManager
-import org.schabi.newpipe.util.DeviceUtils
-import org.schabi.newpipe.util.Localization
-import org.schabi.newpipe.util.NavigationHelper
-import org.schabi.newpipe.util.ThemeHelper.getGridSpanCountStreams
-import org.schabi.newpipe.util.ThemeHelper.getItemViewMode
-import org.schabi.newpipe.util.ThemeHelper.resolveDrawable
-import org.schabi.newpipe.util.ThemeHelper.shouldUseGridLayout
+import org.schabi.opentube.OpenTubeDatabase
+import org.schabi.opentube.R
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.databinding.FragmentFeedBinding
+import org.schabi.opentube.error.ErrorInfo
+import org.schabi.opentube.error.ErrorUtil
+import org.schabi.opentube.error.UserAction
+import org.schabi.opentube.extractor.exceptions.AccountTerminatedException
+import org.schabi.opentube.extractor.exceptions.ContentNotAvailableException
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty
+import org.schabi.opentube.fragments.BaseStateFragment
+import org.schabi.opentube.info_list.ItemViewMode
+import org.schabi.opentube.info_list.dialog.InfoItemDialog
+import org.schabi.opentube.ktx.animate
+import org.schabi.opentube.ktx.animateHideRecyclerViewAllowingScrolling
+import org.schabi.opentube.ktx.slideUp
+import org.schabi.opentube.local.feed.item.StreamItem
+import org.schabi.opentube.local.feed.service.FeedLoadService
+import org.schabi.opentube.local.subscription.SubscriptionManager
+import org.schabi.opentube.util.DeviceUtils
+import org.schabi.opentube.util.Localization
+import org.schabi.opentube.util.NavigationHelper
+import org.schabi.opentube.util.ThemeHelper.getGridSpanCountStreams
+import org.schabi.opentube.util.ThemeHelper.getItemViewMode
+import org.schabi.opentube.util.ThemeHelper.resolveDrawable
+import org.schabi.opentube.util.ThemeHelper.shouldUseGridLayout
 import java.time.OffsetDateTime
 import java.util.function.Consumer
 
@@ -466,7 +466,7 @@ class FeedFragment : BaseStateFragment<FeedState>() {
             ) {
                 disposables.add(
                     Single.fromCallable {
-                        NewPipeDatabase.getInstance(requireContext()).subscriptionDAO()
+                        OpenTubeDatabase.getInstance(requireContext()).subscriptionDAO()
                             .getSubscription(t.subscriptionId)
                     }
                         .subscribeOn(Schedulers.io())

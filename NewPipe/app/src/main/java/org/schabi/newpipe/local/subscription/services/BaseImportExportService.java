@@ -1,6 +1,6 @@
 /*
  * Copyright 2018 Mauricio Colli <mauriciocolli@outlook.com>
- * BaseImportExportService.java is part of NewPipe
+ * BaseImportExportService.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.local.subscription.services;
+package org.schabi.opentube.local.subscription.services;
 
 import android.app.Service;
 import android.content.Intent;
@@ -34,13 +34,13 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.app.ServiceCompat;
 
 import org.reactivestreams.Publisher;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.subscription.SubscriptionExtractor;
-import org.schabi.newpipe.ktx.ExceptionUtils;
-import org.schabi.newpipe.local.subscription.SubscriptionManager;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.subscription.SubscriptionExtractor;
+import org.schabi.opentube.ktx.ExceptionUtils;
+import org.schabi.opentube.local.subscription.SubscriptionManager;
 
 import java.io.FileNotFoundException;
 import java.util.concurrent.TimeUnit;
@@ -169,7 +169,7 @@ public abstract class BaseImportExportService extends Service {
         final String textOrEmpty = text == null ? "" : text;
         notificationBuilder = new NotificationCompat
                 .Builder(this, getString(R.string.notification_channel_id))
-                .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                .setSmallIcon(R.drawable.ic_opentube_triangle_white)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setContentTitle(title)
                 .setStyle(new NotificationCompat.BigTextStyle().bigText(textOrEmpty))
@@ -181,7 +181,7 @@ public abstract class BaseImportExportService extends Service {
         return new NotificationCompat.Builder(this, getString(R.string.notification_channel_id))
                 .setOngoing(true)
                 .setProgress(-1, -1, true)
-                .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                .setSmallIcon(R.drawable.ic_opentube_triangle_white)
                 .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                 .setContentTitle(getString(getTitle()));
     }

@@ -1,7 +1,7 @@
-package org.schabi.newpipe;
+package org.schabi.opentube;
 
-import static org.schabi.newpipe.extractor.StreamingService.ServiceInfo.MediaCapability.AUDIO;
-import static org.schabi.newpipe.extractor.StreamingService.ServiceInfo.MediaCapability.VIDEO;
+import static org.schabi.opentube.extractor.StreamingService.ServiceInfo.MediaCapability.AUDIO;
+import static org.schabi.opentube.extractor.StreamingService.ServiceInfo.MediaCapability.VIDEO;
 
 import android.annotation.SuppressLint;
 import android.app.IntentService;
@@ -44,42 +44,42 @@ import androidx.preference.PreferenceManager;
 import com.evernote.android.state.State;
 import com.livefront.bridge.Bridge;
 
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.databinding.ListRadioIconItemBinding;
-import org.schabi.newpipe.databinding.SingleChoiceDialogViewBinding;
-import org.schabi.newpipe.download.DownloadDialog;
-import org.schabi.newpipe.download.LoadingDialog;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.ReCaptchaActivity;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.Info;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.StreamingService.LinkType;
-import org.schabi.newpipe.extractor.channel.ChannelInfo;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.local.dialog.PlaylistDialog;
-import org.schabi.newpipe.player.PlayerType;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.player.helper.PlayerHolder;
-import org.schabi.newpipe.player.playqueue.ChannelTabPlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlaylistPlayQueue;
-import org.schabi.newpipe.player.playqueue.SinglePlayQueue;
-import org.schabi.newpipe.util.ChannelTabHelper;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.PermissionHelper;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.util.urlfinder.UrlFinder;
-import org.schabi.newpipe.views.FocusOverlayView;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.databinding.ListRadioIconItemBinding;
+import org.schabi.opentube.databinding.SingleChoiceDialogViewBinding;
+import org.schabi.opentube.download.DownloadDialog;
+import org.schabi.opentube.download.LoadingDialog;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.ReCaptchaActivity;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.Info;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.StreamingService.LinkType;
+import org.schabi.opentube.extractor.channel.ChannelInfo;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandler;
+import org.schabi.opentube.extractor.playlist.PlaylistInfo;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.local.dialog.PlaylistDialog;
+import org.schabi.opentube.player.PlayerType;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.player.helper.PlayerHolder;
+import org.schabi.opentube.player.playqueue.ChannelTabPlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlaylistPlayQueue;
+import org.schabi.opentube.player.playqueue.SinglePlayQueue;
+import org.schabi.opentube.util.ChannelTabHelper;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.PermissionHelper;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.util.urlfinder.UrlFinder;
+import org.schabi.opentube.views.FocusOverlayView;
 
 import java.io.Serializable;
 import java.lang.ref.Reference;
@@ -226,12 +226,12 @@ public class RouterActivity extends AppCompatActivity {
                 .fromCallable(() -> {
                     try {
                         if (currentServiceId == -1) {
-                            currentService = NewPipe.getServiceByUrl(url);
+                            currentService = OpenTube.getServiceByUrl(url);
                             currentServiceId = currentService.getServiceId();
                             currentLinkType = currentService.getLinkTypeByUrl(url);
                             currentUrl = url;
                         } else {
-                            currentService = NewPipe.getService(currentServiceId);
+                            currentService = OpenTube.getService(currentServiceId);
                         }
 
                         // return whether the url was found to be supported or not
@@ -1050,7 +1050,7 @@ public class RouterActivity extends AppCompatActivity {
         private NotificationCompat.Builder createNotification() {
             return new NotificationCompat.Builder(this, getString(R.string.notification_channel_id))
                     .setOngoing(true)
-                    .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+                    .setSmallIcon(R.drawable.ic_opentube_triangle_white)
                     .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
                     .setContentTitle(
                             getString(R.string.preferred_player_fetcher_notification_title))

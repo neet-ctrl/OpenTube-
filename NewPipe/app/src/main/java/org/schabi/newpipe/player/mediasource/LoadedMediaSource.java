@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.mediasource;
+package org.schabi.opentube.player.mediasource;
 
 import androidx.annotation.NonNull;
 
@@ -6,8 +6,8 @@ import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.WrappingMediaSource;
 
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
 
 public class LoadedMediaSource extends WrappingMediaSource implements ManagedMediaSource {
     private final PlayQueueItem stream;

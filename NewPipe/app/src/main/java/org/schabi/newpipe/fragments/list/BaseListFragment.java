@@ -1,7 +1,7 @@
-package org.schabi.newpipe.fragments.list;
+package org.schabi.opentube.fragments.list;
 
-import static org.schabi.newpipe.ktx.ViewUtils.animate;
-import static org.schabi.newpipe.ktx.ViewUtils.animateHideRecyclerViewAllowingScrolling;
+import static org.schabi.opentube.ktx.ViewUtils.animate;
+import static org.schabi.opentube.ktx.ViewUtils.animateHideRecyclerViewAllowingScrolling;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -19,20 +19,20 @@ import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.fragments.BaseStateFragment;
-import org.schabi.newpipe.fragments.OnScrollBelowItemsListener;
-import org.schabi.newpipe.info_list.InfoListAdapter;
-import org.schabi.newpipe.info_list.ItemViewMode;
-import org.schabi.newpipe.info_list.dialog.InfoItemDialog;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.OnClickGesture;
-import org.schabi.newpipe.util.StateSaver;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.views.SuperScrollLayoutManager;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.fragments.BaseStateFragment;
+import org.schabi.opentube.fragments.OnScrollBelowItemsListener;
+import org.schabi.opentube.info_list.InfoListAdapter;
+import org.schabi.opentube.info_list.ItemViewMode;
+import org.schabi.opentube.info_list.dialog.InfoItemDialog;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.OnClickGesture;
+import org.schabi.opentube.util.StateSaver;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.views.SuperScrollLayoutManager;
 
 import java.util.List;
 import java.util.Queue;
@@ -42,7 +42,7 @@ public abstract class BaseListFragment<I, N> extends BaseStateFragment<I>
         implements ListViewContract<I, N>, StateSaver.WriteRead,
         SharedPreferences.OnSharedPreferenceChangeListener {
     private static final int LIST_MODE_UPDATE_FLAG = 0x32;
-    protected org.schabi.newpipe.util.SavedState savedState;
+    protected org.schabi.opentube.util.SavedState savedState;
 
     private boolean useDefaultStateSaving = true;
     private int updateFlags = 0;

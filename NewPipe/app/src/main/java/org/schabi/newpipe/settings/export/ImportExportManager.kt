@@ -1,13 +1,13 @@
-package org.schabi.newpipe.settings.export
+package org.schabi.opentube.settings.export
 
 import android.content.SharedPreferences
 import com.grack.nanojson.JsonArray
 import com.grack.nanojson.JsonParser
 import com.grack.nanojson.JsonParserException
 import com.grack.nanojson.JsonWriter
-import org.schabi.newpipe.streams.io.SharpOutputStream
-import org.schabi.newpipe.streams.io.StoredFileHelper
-import org.schabi.newpipe.util.ZipHelper
+import org.schabi.opentube.streams.io.SharpOutputStream
+import org.schabi.opentube.streams.io.StoredFileHelper
+import org.schabi.opentube.util.ZipHelper
 import java.io.FileNotFoundException
 import java.io.IOException
 import java.io.ObjectOutputStream

@@ -1,28 +1,28 @@
-package org.schabi.newpipe;
+package org.schabi.opentube;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.opentube.util.NavigationHelper;
 
 /*
  * Copyright (C) Hans-Christoph Steiner 2016 <hans@eds.org>
- * ExitActivity.java is part of NewPipe.
+ * ExitActivity.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class ExitActivity extends Activity {

@@ -1,13 +1,13 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import android.content.Context;
 import android.text.TextUtils;
 import android.view.MotionEvent;
 import android.view.View;
 
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.ServiceHelper;
 
 public class PlayQueueItemBuilder {
     private static final String TAG = PlayQueueItemBuilder.class.toString();

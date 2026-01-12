@@ -1,8 +1,8 @@
-package org.schabi.newpipe.util.image;
+package org.schabi.opentube.util.image;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
-import static org.schabi.newpipe.util.image.ImageStrategy.choosePreferredImage;
+import static org.schabi.opentube.MainActivity.DEBUG;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.util.image.ImageStrategy.choosePreferredImage;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -21,8 +21,8 @@ import com.squareup.picasso.Picasso;
 import com.squareup.picasso.RequestCreator;
 import com.squareup.picasso.Transformation;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.Image;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.Image;
 
 import java.io.File;
 import java.io.IOException;
@@ -130,7 +130,7 @@ public final class PicassoHelper {
     }
 
     public static RequestCreator loadNotificationIcon(@Nullable final String url) {
-        return loadImageDefault(url, R.drawable.ic_newpipe_triangle_white);
+        return loadImageDefault(url, R.drawable.ic_opentube_triangle_white);
     }
 
 

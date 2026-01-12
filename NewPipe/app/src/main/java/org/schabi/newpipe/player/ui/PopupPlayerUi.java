@@ -1,8 +1,8 @@
-package org.schabi.newpipe.player.ui;
+package org.schabi.opentube.player.ui;
 
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
-import static org.schabi.newpipe.MainActivity.DEBUG;
-import static org.schabi.newpipe.player.helper.PlayerHelper.getMinimumVideoHeight;
+import static org.schabi.opentube.MainActivity.DEBUG;
+import static org.schabi.opentube.player.helper.PlayerHelper.getMinimumVideoHeight;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -33,21 +33,21 @@ import androidx.core.math.MathUtils;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.SubtitleView;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.PlayerBinding;
-import org.schabi.newpipe.databinding.PlayerPopupCloseOverlayBinding;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.gesture.BasePlayerGestureListener;
-import org.schabi.newpipe.player.gesture.PopupPlayerGestureListener;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.util.DeviceUtils;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.PlayerBinding;
+import org.schabi.opentube.databinding.PlayerPopupCloseOverlayBinding;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.gesture.BasePlayerGestureListener;
+import org.schabi.opentube.player.gesture.PopupPlayerGestureListener;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.util.DeviceUtils;
 
 public final class PopupPlayerUi extends VideoPlayerUi {
     private static final String TAG = PopupPlayerUi.class.getSimpleName();
 
     /**
      * Maximum opacity allowed for Android 12 and higher to allow touches on other apps when using
-     * NewPipe's popup player.
+     * OpenTube's popup player.
      *
      * <p>
      * This value is hardcoded instead of being get dynamically with the method linked of the

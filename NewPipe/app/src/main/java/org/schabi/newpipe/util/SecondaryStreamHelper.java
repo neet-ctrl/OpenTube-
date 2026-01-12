@@ -1,15 +1,15 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.util.StreamItemAdapter.StreamInfoWrapper;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.Stream;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.util.StreamItemAdapter.StreamInfoWrapper;
 
 import java.util.List;
 

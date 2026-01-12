@@ -1,12 +1,12 @@
 /*
- * SPDX-FileCopyrightText: 2023-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2023-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.util.image
+package org.schabi.opentube.util.image
 
-import org.schabi.newpipe.extractor.Image
-import org.schabi.newpipe.extractor.Image.ResolutionLevel
+import org.schabi.opentube.extractor.Image
+import org.schabi.opentube.extractor.Image.ResolutionLevel
 import kotlin.math.abs
 
 object ImageStrategy {

@@ -1,6 +1,6 @@
 /*
  * Copyright 2019 Alexander Rvachev <rvacheva@nxt.ru>
- * FocusOverlayView.java is part of NewPipe
+ * FocusOverlayView.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -16,7 +16,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
-package org.schabi.newpipe.views;
+package org.schabi.opentube.views;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -42,7 +42,7 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.view.WindowCallbackWrapper;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 import java.lang.ref.WeakReference;
 

@@ -30,11 +30,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.nononsenseapps.filepicker.Utils;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.settings.NewPipeSettings;
-import org.schabi.newpipe.streams.io.NoFileManagerSafeGuard;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.FilePickerActivityHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.settings.OpenTubeSettings;
+import org.schabi.opentube.streams.io.NoFileManagerSafeGuard;
+import org.schabi.opentube.streams.io.StoredFileHelper;
+import org.schabi.opentube.util.FilePickerActivityHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -264,14 +264,14 @@ public class MissionsFragment extends Fragment {
         unsafeMissionTarget = mission;
 
         final Uri initialPath;
-        if (NewPipeSettings.useStorageAccessFramework(mContext)) {
+        if (OpenTubeSettings.useStorageAccessFramework(mContext)) {
             initialPath = null;
         } else {
             final File initialSavePath;
             if (DownloadManager.TAG_AUDIO.equals(mission.storage.getType())) {
-                initialSavePath = NewPipeSettings.getDir(Environment.DIRECTORY_MUSIC);
+                initialSavePath = OpenTubeSettings.getDir(Environment.DIRECTORY_MUSIC);
             } else {
-                initialSavePath = NewPipeSettings.getDir(Environment.DIRECTORY_MOVIES);
+                initialSavePath = OpenTubeSettings.getDir(Environment.DIRECTORY_MOVIES);
             }
             initialPath = Uri.parse(initialSavePath.getAbsolutePath());
         }

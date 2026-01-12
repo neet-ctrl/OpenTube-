@@ -1,12 +1,12 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
 import android.content.Context;
 import android.view.View;
 
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 final class HashtagLongPressClickableSpan extends LongPressClickableSpan {
 

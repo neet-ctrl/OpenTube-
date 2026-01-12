@@ -1,10 +1,10 @@
-package org.schabi.newpipe.player.mediasource;
+package org.schabi.opentube.player.mediasource;
 
 import androidx.annotation.NonNull;
 
 import com.google.android.exoplayer2.source.MediaSource;
 
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
 
 public interface ManagedMediaSource extends MediaSource {
     /**

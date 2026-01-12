@@ -1,14 +1,14 @@
 /*
- * SPDX-FileCopyrightText: 2017-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2017-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.util
+package org.schabi.opentube.util
 
 import android.content.Context
 import androidx.preference.PreferenceManager
-import org.schabi.newpipe.R
-import org.schabi.newpipe.ktx.getStringSafe
+import org.schabi.opentube.R
+import org.schabi.opentube.ktx.getStringSafe
 import java.util.regex.Matcher
 
 object FilenameUtils {

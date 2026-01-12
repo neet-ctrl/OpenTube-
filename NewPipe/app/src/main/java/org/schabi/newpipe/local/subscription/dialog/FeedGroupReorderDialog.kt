@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription.dialog
+package org.schabi.opentube.local.subscription.dialog
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,13 +15,13 @@ import com.evernote.android.state.State
 import com.livefront.bridge.Bridge
 import com.xwray.groupie.GroupieAdapter
 import com.xwray.groupie.TouchCallback
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.databinding.DialogFeedGroupReorderBinding
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupReorderDialogViewModel.DialogEvent.ProcessingEvent
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupReorderDialogViewModel.DialogEvent.SuccessEvent
-import org.schabi.newpipe.local.subscription.item.FeedGroupReorderItem
-import org.schabi.newpipe.util.ThemeHelper
+import org.schabi.opentube.R
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.databinding.DialogFeedGroupReorderBinding
+import org.schabi.opentube.local.subscription.dialog.FeedGroupReorderDialogViewModel.DialogEvent.ProcessingEvent
+import org.schabi.opentube.local.subscription.dialog.FeedGroupReorderDialogViewModel.DialogEvent.SuccessEvent
+import org.schabi.opentube.local.subscription.item.FeedGroupReorderItem
+import org.schabi.opentube.util.ThemeHelper
 import java.util.Collections
 
 class FeedGroupReorderDialog : DialogFragment() {

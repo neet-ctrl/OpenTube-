@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -34,11 +34,11 @@ kotlin {
 
 android {
     compileSdk = 36
-    namespace = "org.schabi.newpipe"
+    namespace = "org.schabi.opentube"
 
     defaultConfig {
-        applicationId = "org.schabi.newpipe"
-        resValue("string", "app_name", "NewPipe")
+        applicationId = "org.schabi.opentube"
+        resValue("string", "app_name", "OpenTube")
         minSdk = 21
         targetSdk = 35
 
@@ -64,17 +64,17 @@ android {
             if (normalizedWorkingBranch.isEmpty() || workingBranch in defaultBranches) {
                 // default values when branch name could not be determined or is master or dev
                 applicationIdSuffix = ".debug"
-                resValue("string", "app_name", "NewPipe Debug")
+                resValue("string", "app_name", "OpenTube Debug")
             } else {
                 applicationIdSuffix = ".debug.$normalizedWorkingBranch"
-                resValue("string", "app_name", "NewPipe $workingBranch")
+                resValue("string", "app_name", "OpenTube $workingBranch")
             }
         }
 
         release {
             System.getProperty("packageSuffix")?.let { suffix ->
                 applicationIdSuffix = suffix
-                resValue("string", "app_name", "NewPipe $suffix")
+                resValue("string", "app_name", "OpenTube $suffix")
             }
             isMinifyEnabled = true
             isShrinkResources = false // disabled to fix F-Droid"s reproducible build
@@ -195,8 +195,8 @@ afterEvaluate {
 
 sonar {
     properties {
-        property("sonar.projectKey", "TeamNewPipe_NewPipe")
-        property("sonar.organization", "teamnewpipe")
+        property("sonar.projectKey", "TeamOpenTube_OpenTube")
+        property("sonar.organization", "teamopentube")
         property("sonar.host.url", "https://sonarcloud.io")
     }
 }
@@ -205,10 +205,10 @@ dependencies {
     /** Desugaring **/
     coreLibraryDesugaring(libs.android.desugar)
 
-    /** NewPipe libraries **/
-    implementation(libs.newpipe.nanojson)
-    implementation(libs.newpipe.extractor)
-    implementation(libs.newpipe.filepicker)
+    /** OpenTube libraries **/
+    implementation(libs.opentube.nanojson)
+    implementation(libs.opentube.extractor)
+    implementation(libs.opentube.filepicker)
 
     /** Checkstyle **/
     checkstyle(libs.puppycrawl.checkstyle)

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.views;
+package org.schabi.opentube.views;
 
 import android.content.Context;
 import android.util.AttributeSet;

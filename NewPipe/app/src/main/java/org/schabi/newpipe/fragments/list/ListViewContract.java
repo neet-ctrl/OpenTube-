@@ -1,6 +1,6 @@
-package org.schabi.newpipe.fragments.list;
+package org.schabi.opentube.fragments.list;
 
-import org.schabi.newpipe.fragments.ViewContract;
+import org.schabi.opentube.fragments.ViewContract;
 
 public interface ListViewContract<I, N> extends ViewContract<I> {
     void showListFooter(boolean show);

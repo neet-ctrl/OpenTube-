@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.local.playlist
+package org.schabi.opentube.local.playlist
 
 enum class PlayListShareMode {
     JUST_URLS,

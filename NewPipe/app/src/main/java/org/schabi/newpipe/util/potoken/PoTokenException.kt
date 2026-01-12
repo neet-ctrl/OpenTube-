@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.potoken
+package org.schabi.opentube.util.potoken
 
 class PoTokenException(message: String) : Exception(message)
 

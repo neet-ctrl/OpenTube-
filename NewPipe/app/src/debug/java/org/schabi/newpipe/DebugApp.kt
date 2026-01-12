@@ -1,11 +1,11 @@
-package org.schabi.newpipe
+package org.schabi.opentube
 
 import androidx.preference.PreferenceManager
 import com.facebook.stetho.Stetho
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import leakcanary.LeakCanary
 import okhttp3.OkHttpClient
-import org.schabi.newpipe.extractor.downloader.Downloader
+import org.schabi.opentube.extractor.downloader.Downloader
 
 class DebugApp : App() {
     override fun onCreate() {

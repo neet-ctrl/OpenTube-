@@ -1,4 +1,4 @@
-package org.schabi.newpipe.streams;
+package org.schabi.opentube.streams;
 
 import org.junit.Test;
 import org.jsoup.Jsoup;
@@ -38,7 +38,7 @@ import static org.junit.Assert.assertEquals;
  *   at compile time, so they do not represent real XML entities.
  *
  * - Purpose of these tests:
- *   We simulate *real TTML input* as NewPipe receives it — i.e., strings that
+ *   We simulate *real TTML input* as OpenTube receives it — i.e., strings that
  *   still contain encoded XML entities (&#x9;, &#xA;, &#xD;, etc.).
  *   The production code (`decodeXmlEntities()`) must convert these into their
  *   actual Unicode characters before normalization.
@@ -295,7 +295,7 @@ public class SrtFromTtmlWriterTest {
     * is empty).
     *
     * Note:
-    *   In the NewPipe, *.srt files will contain empty text lines by default.
+    *   In the OpenTube, *.srt files will contain empty text lines by default.
     */
     @Test
     public void testExtractTextWithEmpty() throws Exception {

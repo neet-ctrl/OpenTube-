@@ -1,14 +1,14 @@
-package org.schabi.newpipe.util.image;
+package org.schabi.opentube.util.image;
 
 import static org.junit.Assert.assertEquals;
-import static org.schabi.newpipe.extractor.Image.HEIGHT_UNKNOWN;
-import static org.schabi.newpipe.extractor.Image.WIDTH_UNKNOWN;
-import static org.schabi.newpipe.util.image.ImageStrategy.choosePreferredImage;
-import static org.schabi.newpipe.util.image.ImageStrategy.estimatePixelCount;
+import static org.schabi.opentube.extractor.Image.HEIGHT_UNKNOWN;
+import static org.schabi.opentube.extractor.Image.WIDTH_UNKNOWN;
+import static org.schabi.opentube.util.image.ImageStrategy.choosePreferredImage;
+import static org.schabi.opentube.util.image.ImageStrategy.estimatePixelCount;
 
 import org.junit.Test;
-import org.schabi.newpipe.extractor.Image;
-import org.schabi.newpipe.extractor.Image.ResolutionLevel;
+import org.schabi.opentube.extractor.Image;
+import org.schabi.opentube.extractor.Image.ResolutionLevel;
 
 import java.util.List;
 

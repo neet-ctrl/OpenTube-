@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments.list.videos;
+package org.schabi.opentube.fragments.list.videos;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -13,17 +13,17 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.RelatedItemsHeaderBinding;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
-import org.schabi.newpipe.info_list.ItemViewMode;
-import org.schabi.newpipe.info_list.dialog.InfoItemDialog;
-import org.schabi.newpipe.ktx.ViewUtils;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.RelatedItemsHeaderBinding;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.fragments.list.BaseListInfoFragment;
+import org.schabi.opentube.info_list.ItemViewMode;
+import org.schabi.opentube.info_list.dialog.InfoItemDialog;
+import org.schabi.opentube.ktx.ViewUtils;
 
 import java.io.Serializable;
 import java.util.function.Supplier;

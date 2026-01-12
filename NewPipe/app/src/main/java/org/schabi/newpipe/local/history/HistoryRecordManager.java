@@ -1,21 +1,21 @@
-package org.schabi.newpipe.local.history;
+package org.schabi.opentube.local.history;
 
 /*
  * Copyright (C) Mauricio Colli 2018
- * HistoryRecordManager.java is part of NewPipe.
+ * HistoryRecordManager.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 import android.content.Context;
@@ -24,28 +24,28 @@ import android.content.SharedPreferences;
 import androidx.annotation.NonNull;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.AppDatabase;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.history.dao.SearchHistoryDAO;
-import org.schabi.newpipe.database.history.dao.StreamHistoryDAO;
-import org.schabi.newpipe.database.history.model.SearchHistoryEntry;
-import org.schabi.newpipe.database.history.model.StreamHistoryEntity;
-import org.schabi.newpipe.database.history.model.StreamHistoryEntry;
-import org.schabi.newpipe.database.playlist.PlaylistStreamEntry;
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity;
-import org.schabi.newpipe.database.stream.StreamStatisticsEntry;
-import org.schabi.newpipe.database.stream.dao.StreamDAO;
-import org.schabi.newpipe.database.stream.dao.StreamStateDAO;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.database.stream.model.StreamStateEntity;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.local.feed.FeedViewModel;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.util.ExtractorHelper;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.AppDatabase;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.history.dao.SearchHistoryDAO;
+import org.schabi.opentube.database.history.dao.StreamHistoryDAO;
+import org.schabi.opentube.database.history.model.SearchHistoryEntry;
+import org.schabi.opentube.database.history.model.StreamHistoryEntity;
+import org.schabi.opentube.database.history.model.StreamHistoryEntry;
+import org.schabi.opentube.database.playlist.PlaylistStreamEntry;
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity;
+import org.schabi.opentube.database.stream.StreamStatisticsEntry;
+import org.schabi.opentube.database.stream.dao.StreamDAO;
+import org.schabi.opentube.database.stream.dao.StreamStateDAO;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.database.stream.model.StreamStateEntity;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.local.feed.FeedViewModel;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.util.ExtractorHelper;
 
 import java.time.OffsetDateTime;
 import java.time.ZoneOffset;
@@ -69,7 +69,7 @@ public class HistoryRecordManager {
     private final String streamHistoryKey;
 
     public HistoryRecordManager(final Context context) {
-        database = NewPipeDatabase.getInstance(context);
+        database = OpenTubeDatabase.getInstance(context);
         streamTable = database.streamDAO();
         streamHistoryTable = database.streamHistoryDAO();
         searchHistoryTable = database.searchHistoryDAO();

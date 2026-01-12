@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.tabs;
+package org.schabi.opentube.settings.tabs;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.AppCompatImageView;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 public final class AddTabDialog {
     private final AlertDialog dialog;

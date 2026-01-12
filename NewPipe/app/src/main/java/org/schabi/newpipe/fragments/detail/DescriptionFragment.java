@@ -1,7 +1,7 @@
-package org.schabi.newpipe.fragments.detail;
+package org.schabi.opentube.fragments.detail;
 
-import static org.schabi.newpipe.extractor.stream.StreamExtractor.NO_AGE_LIMIT;
-import static org.schabi.newpipe.util.Localization.getAppLocale;
+import static org.schabi.opentube.extractor.stream.StreamExtractor.NO_AGE_LIMIT;
+import static org.schabi.opentube.util.Localization.getAppLocale;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,11 +13,11 @@ import androidx.annotation.StringRes;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.stream.Description;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.stream.Description;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.util.Localization;
 
 import java.util.List;
 

@@ -18,5 +18,5 @@
 • 檢查應用程式更新失敗時不要崩潰 (GitHub 版本) #2423 
 • 修正下載停滯於 99.9% #2440
 • 更新播放佇列中繼資料 #2453 
-• [SoundCloud] 修正載入播放清單時崩潰 TeamNewPipe/NewPipeExtractor#170
-• [YouTube] 修正持續時間無法剖析 TeamNewPipe/NewPipeExtractor#177
+• [SoundCloud] 修正載入播放清單時崩潰 TeamOpenTube/OpenTubeExtractor#170
+• [YouTube] 修正持續時間無法剖析 TeamOpenTube/OpenTubeExtractor#177

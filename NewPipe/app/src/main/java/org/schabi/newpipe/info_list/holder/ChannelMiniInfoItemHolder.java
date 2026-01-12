@@ -1,4 +1,4 @@
-package org.schabi.newpipe.info_list.holder;
+package org.schabi.opentube.info_list.holder;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -7,14 +7,14 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem;
-import org.schabi.newpipe.extractor.utils.Utils;
-import org.schabi.newpipe.info_list.InfoItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.channel.ChannelInfoItem;
+import org.schabi.opentube.extractor.utils.Utils;
+import org.schabi.opentube.info_list.InfoItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.Localization;
 
 public class ChannelMiniInfoItemHolder extends InfoItemHolder {
     private final ImageView itemThumbnailView;

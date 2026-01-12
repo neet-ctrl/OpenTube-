@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -11,8 +11,8 @@ import androidx.preference.Preference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.util.Objects;
 

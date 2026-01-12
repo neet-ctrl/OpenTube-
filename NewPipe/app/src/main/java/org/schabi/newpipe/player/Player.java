@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player;
+package org.schabi.opentube.player;
 
 import static com.google.android.exoplayer2.PlaybackException.ERROR_CODE_BEHIND_LIVE_WINDOW;
 import static com.google.android.exoplayer2.PlaybackException.ERROR_CODE_IO_BAD_HTTP_STATUS;
@@ -28,22 +28,22 @@ import static com.google.android.exoplayer2.Player.REPEAT_MODE_ALL;
 import static com.google.android.exoplayer2.Player.REPEAT_MODE_OFF;
 import static com.google.android.exoplayer2.Player.REPEAT_MODE_ONE;
 import static com.google.android.exoplayer2.Player.RepeatMode;
-import static org.schabi.newpipe.extractor.ServiceList.YouTube;
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
-import static org.schabi.newpipe.player.helper.PlayerHelper.retrievePlaybackParametersFromPrefs;
-import static org.schabi.newpipe.player.helper.PlayerHelper.retrieveSeekDurationFromPreferences;
-import static org.schabi.newpipe.player.helper.PlayerHelper.savePlaybackParametersToPrefs;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_CLOSE;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_FAST_FORWARD;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_FAST_REWIND;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_PLAY_NEXT;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_PLAY_PAUSE;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_PLAY_PREVIOUS;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_RECREATE_NOTIFICATION;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_REPEAT;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_SHUFFLE;
-import static org.schabi.newpipe.util.ListHelper.getPopupResolutionIndex;
-import static org.schabi.newpipe.util.ListHelper.getResolutionIndex;
+import static org.schabi.opentube.extractor.ServiceList.YouTube;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.player.helper.PlayerHelper.retrievePlaybackParametersFromPrefs;
+import static org.schabi.opentube.player.helper.PlayerHelper.retrieveSeekDurationFromPreferences;
+import static org.schabi.opentube.player.helper.PlayerHelper.savePlaybackParametersToPrefs;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_CLOSE;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_FAST_FORWARD;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_FAST_REWIND;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_PLAY_NEXT;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_PLAY_PAUSE;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_PLAY_PREVIOUS;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_RECREATE_NOTIFICATION;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_REPEAT;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_SHUFFLE;
+import static org.schabi.opentube.util.ListHelper.getPopupResolutionIndex;
+import static org.schabi.opentube.util.ListHelper.getResolutionIndex;
 import static java.util.concurrent.TimeUnit.MILLISECONDS;
 
 import android.content.BroadcastReceiver;
@@ -83,49 +83,49 @@ import com.google.android.exoplayer2.video.VideoSize;
 import com.squareup.picasso.Picasso;
 import com.squareup.picasso.Target;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.PlayerBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.Image;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.fragments.detail.VideoDetailFragment;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.player.event.PlayerEventListener;
-import org.schabi.newpipe.player.event.PlayerServiceEventListener;
-import org.schabi.newpipe.player.helper.AudioReactor;
-import org.schabi.newpipe.player.helper.CustomRenderersFactory;
-import org.schabi.newpipe.player.helper.LoadController;
-import org.schabi.newpipe.player.helper.PlayerDataSource;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.mediasession.MediaSessionPlayerUi;
-import org.schabi.newpipe.player.notification.NotificationPlayerUi;
-import org.schabi.newpipe.player.playback.MediaSourceManager;
-import org.schabi.newpipe.player.playback.PlaybackListener;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.player.playqueue.SinglePlayQueue;
-import org.schabi.newpipe.player.resolver.AudioPlaybackResolver;
-import org.schabi.newpipe.player.resolver.VideoPlaybackResolver;
-import org.schabi.newpipe.player.resolver.VideoPlaybackResolver.SourceType;
-import org.schabi.newpipe.player.ui.MainPlayerUi;
-import org.schabi.newpipe.player.ui.PlayerUi;
-import org.schabi.newpipe.player.ui.PlayerUiList;
-import org.schabi.newpipe.player.ui.PopupPlayerUi;
-import org.schabi.newpipe.player.ui.VideoPlayerUi;
-import org.schabi.newpipe.util.DependentPreferenceHelper;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.ListHelper;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.SerializedCache;
-import org.schabi.newpipe.util.StreamTypeUtil;
-import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.PlayerBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.Image;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.fragments.detail.VideoDetailFragment;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.player.event.PlayerEventListener;
+import org.schabi.opentube.player.event.PlayerServiceEventListener;
+import org.schabi.opentube.player.helper.AudioReactor;
+import org.schabi.opentube.player.helper.CustomRenderersFactory;
+import org.schabi.opentube.player.helper.LoadController;
+import org.schabi.opentube.player.helper.PlayerDataSource;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.mediasession.MediaSessionPlayerUi;
+import org.schabi.opentube.player.notification.NotificationPlayerUi;
+import org.schabi.opentube.player.playback.MediaSourceManager;
+import org.schabi.opentube.player.playback.PlaybackListener;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.playqueue.SinglePlayQueue;
+import org.schabi.opentube.player.resolver.AudioPlaybackResolver;
+import org.schabi.opentube.player.resolver.VideoPlaybackResolver;
+import org.schabi.opentube.player.resolver.VideoPlaybackResolver.SourceType;
+import org.schabi.opentube.player.ui.MainPlayerUi;
+import org.schabi.opentube.player.ui.PlayerUi;
+import org.schabi.opentube.player.ui.PlayerUiList;
+import org.schabi.opentube.player.ui.PopupPlayerUi;
+import org.schabi.opentube.player.ui.VideoPlayerUi;
+import org.schabi.opentube.util.DependentPreferenceHelper;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.ListHelper;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.SerializedCache;
+import org.schabi.opentube.util.StreamTypeUtil;
+import org.schabi.opentube.util.image.PicassoHelper;
 
 import java.util.List;
 import java.util.Objects;
@@ -716,7 +716,7 @@ public final class Player implements PlaybackListener, Listener {
         final long windowPos = simpleExoPlayer.getCurrentPosition();
         final long duration = simpleExoPlayer.getDuration();
 
-        // No checks due to https://github.com/TeamNewPipe/NewPipe/pull/7195#issuecomment-962624380
+        // No checks due to https://github.com/TeamOpenTube/OpenTube/pull/7195#issuecomment-962624380
         setRecovery(queuePos, MathUtils.clamp(windowPos, 0, duration));
     }
 
@@ -1537,7 +1537,7 @@ public final class Player implements PlaybackListener, Listener {
      *
      * @see com.google.android.exoplayer2.Player.Listener#onPlayerError(PlaybackException)
      */
-    // Any error code not explicitly covered here are either unrelated to NewPipe use case
+    // Any error code not explicitly covered here are either unrelated to OpenTube use case
     // (e.g. DRM) or not recoverable (e.g. Decoder error). In both cases, the player should
     // shutdown.
     @SuppressWarnings("SwitchIntDef")

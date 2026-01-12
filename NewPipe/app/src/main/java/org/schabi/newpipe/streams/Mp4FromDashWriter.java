@@ -1,13 +1,13 @@
-package org.schabi.newpipe.streams;
+package org.schabi.opentube.streams;
 
-import org.schabi.newpipe.streams.Mp4DashReader.Hdlr;
-import org.schabi.newpipe.streams.Mp4DashReader.Mdia;
-import org.schabi.newpipe.streams.Mp4DashReader.Mp4DashChunk;
-import org.schabi.newpipe.streams.Mp4DashReader.Mp4DashSample;
-import org.schabi.newpipe.streams.Mp4DashReader.Mp4Track;
-import org.schabi.newpipe.streams.Mp4DashReader.TrackKind;
-import org.schabi.newpipe.streams.Mp4DashReader.TrunEntry;
-import org.schabi.newpipe.streams.io.SharpStream;
+import org.schabi.opentube.streams.Mp4DashReader.Hdlr;
+import org.schabi.opentube.streams.Mp4DashReader.Mdia;
+import org.schabi.opentube.streams.Mp4DashReader.Mp4DashChunk;
+import org.schabi.opentube.streams.Mp4DashReader.Mp4DashSample;
+import org.schabi.opentube.streams.Mp4DashReader.Mp4Track;
+import org.schabi.opentube.streams.Mp4DashReader.TrackKind;
+import org.schabi.opentube.streams.Mp4DashReader.TrunEntry;
+import org.schabi.opentube.streams.io.SharpStream;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -20,7 +20,7 @@ public class Mp4FromDashWriter {
     private static final int EPOCH_OFFSET = 2082844800;
     private static final short DEFAULT_TIMESCALE = 1000;
     private static final byte SAMPLES_PER_CHUNK_INIT = 2;
-    // ffmpeg uses 2, basic uses 1 (with 60fps uses 21 or 22). NewPipe will use 6
+    // ffmpeg uses 2, basic uses 1 (with 60fps uses 21 or 22). OpenTube will use 6
     private static final byte SAMPLES_PER_CHUNK = 6;
     // near 3.999 GiB
     private static final long THRESHOLD_FOR_CO64 = 0xFFFEFFFFL;

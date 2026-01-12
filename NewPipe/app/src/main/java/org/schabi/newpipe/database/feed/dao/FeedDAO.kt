@@ -1,4 +1,4 @@
-package org.schabi.newpipe.database.feed.dao
+package org.schabi.opentube.database.feed.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -8,13 +8,13 @@ import androidx.room.Transaction
 import androidx.room.Update
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Maybe
-import org.schabi.newpipe.database.feed.model.FeedEntity
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.feed.model.FeedLastUpdatedEntity
-import org.schabi.newpipe.database.stream.StreamWithState
-import org.schabi.newpipe.database.stream.model.StreamStateEntity
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
+import org.schabi.opentube.database.feed.model.FeedEntity
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.feed.model.FeedLastUpdatedEntity
+import org.schabi.opentube.database.stream.StreamWithState
+import org.schabi.opentube.database.stream.model.StreamStateEntity
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.database.subscription.SubscriptionEntity
 import java.time.OffsetDateTime
 
 @Dao

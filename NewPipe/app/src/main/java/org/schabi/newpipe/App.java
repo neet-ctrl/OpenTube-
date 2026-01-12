@@ -1,4 +1,4 @@
-package org.schabi.newpipe;
+package org.schabi.opentube;
 
 import android.app.Application;
 import android.content.Context;
@@ -14,20 +14,20 @@ import com.jakewharton.processphoenix.ProcessPhoenix;
 
 import org.acra.ACRA;
 import org.acra.config.CoreConfigurationBuilder;
-import org.schabi.newpipe.error.ReCaptchaActivity;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.downloader.Downloader;
-import org.schabi.newpipe.extractor.services.youtube.extractors.YoutubeStreamExtractor;
-import org.schabi.newpipe.ktx.ExceptionUtils;
-import org.schabi.newpipe.settings.NewPipeSettings;
-import org.schabi.newpipe.util.BridgeStateSaverInitializer;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.util.StateSaver;
-import org.schabi.newpipe.util.image.ImageStrategy;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.image.PreferredImageQuality;
-import org.schabi.newpipe.util.potoken.PoTokenProviderImpl;
+import org.schabi.opentube.error.ReCaptchaActivity;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.downloader.Downloader;
+import org.schabi.opentube.extractor.services.youtube.extractors.YoutubeStreamExtractor;
+import org.schabi.opentube.ktx.ExceptionUtils;
+import org.schabi.opentube.settings.OpenTubeSettings;
+import org.schabi.opentube.util.BridgeStateSaverInitializer;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.ServiceHelper;
+import org.schabi.opentube.util.StateSaver;
+import org.schabi.opentube.util.image.ImageStrategy;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.image.PreferredImageQuality;
+import org.schabi.opentube.util.potoken.PoTokenProviderImpl;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
@@ -44,20 +44,20 @@ import io.reactivex.rxjava3.plugins.RxJavaPlugins;
 
 /*
  * Copyright (C) Hans-Christoph Steiner 2016 <hans@eds.org>
- * App.java is part of NewPipe.
+ * App.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class App extends Application {
@@ -107,9 +107,9 @@ public class App extends Application {
         isFirstRun = lastUsedPrefVersion == -1;
 
         // Initialize settings first because other initializations can use its values
-        NewPipeSettings.initSettings(this);
+        OpenTubeSettings.initSettings(this);
 
-        NewPipe.init(getDownloader(),
+        OpenTube.init(getDownloader(),
             Localization.getPreferredLocalization(this),
             Localization.getPreferredContentCountry(this));
         Localization.initPrettyTime(Localization.resolvePrettyTime());

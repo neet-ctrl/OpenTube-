@@ -1,8 +1,8 @@
-package org.schabi.newpipe.fragments.detail;
+package org.schabi.opentube.fragments.detail;
 
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueue;
 
 import java.io.Serializable;
 

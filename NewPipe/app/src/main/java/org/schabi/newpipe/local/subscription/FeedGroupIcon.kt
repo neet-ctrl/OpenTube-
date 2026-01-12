@@ -1,7 +1,7 @@
-package org.schabi.newpipe.local.subscription
+package org.schabi.opentube.local.subscription
 
 import androidx.annotation.DrawableRes
-import org.schabi.newpipe.R
+import org.schabi.opentube.R
 
 enum class FeedGroupIcon(
     /**

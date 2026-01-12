@@ -58,11 +58,11 @@
             android:orientation="horizontal"
             android:gravity="center_vertical">
 
-            <org.schabi.newpipe.views.NewPipeTextView
+            <org.schabi.opentube.views.OpenTubeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Start (s): " />
-            <org.schabi.newpipe.views.NewPipeEditText
+            <org.schabi.opentube.views.OpenTubeEditText
                 android:id="@+id/time_range_start"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -70,12 +70,12 @@
                 android:inputType="number"
                 android:text="0" />
 
-            <org.schabi.newpipe.views.NewPipeTextView
+            <org.schabi.opentube.views.OpenTubeTextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:text="End (s): " />
-            <org.schabi.newpipe.views.NewPipeEditText
+            <org.schabi.opentube.views.OpenTubeEditText
                 android:id="@+id/time_range_end"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -85,7 +85,7 @@
         </LinearLayout>
     </LinearLayout>
 
-    <org.schabi.newpipe.views.NewPipeTextView
+    <org.schabi.opentube.views.OpenTubeTextView
         android:id="@+id/file_name_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
         android:layout_marginBottom="6dp"
         android:text="@string/msg_name" />
 
-    <org.schabi.newpipe.views.NewPipeEditText
+    <org.schabi.opentube.views.OpenTubeEditText
         android:id="@+id/file_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -171,7 +171,7 @@
         android:minWidth="150dp"
         tools:visibility="gone" />
 
-    <org.schabi.newpipe.views.NewPipeTextView
+    <org.schabi.opentube.views.OpenTubeTextView
         android:id="@+id/audio_track_present_in_video_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
         android:text="@string/audio_track_present_in_video"
         android:textSize="12sp" />
 
-    <org.schabi.newpipe.views.NewPipeTextView
+    <org.schabi.opentube.views.OpenTubeTextView
         android:id="@+id/threads_text_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -203,7 +203,7 @@
         android:layout_marginBottom="12dp"
         android:orientation="horizontal">
 
-        <org.schabi.newpipe.views.NewPipeTextView
+        <org.schabi.opentube.views.OpenTubeTextView
             android:id="@+id/threads_count"
             android:layout_width="25dp"
             android:layout_height="match_parent"
@@ -220,7 +220,7 @@
             android:progress="3" />
     </LinearLayout>
 
-    <org.schabi.newpipe.views.NewPipeTextView
+    <org.schabi.opentube.views.OpenTubeTextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/threads_layout"

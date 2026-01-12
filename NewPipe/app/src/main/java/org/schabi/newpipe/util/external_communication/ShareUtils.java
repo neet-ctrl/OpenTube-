@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util.external_communication;
+package org.schabi.opentube.util.external_communication;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
+import static org.schabi.opentube.MainActivity.DEBUG;
 
 import android.content.ActivityNotFoundException;
 import android.content.ClipData;
@@ -20,12 +20,12 @@ import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
-import org.schabi.newpipe.BuildConfig;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.RouterActivity;
-import org.schabi.newpipe.extractor.Image;
-import org.schabi.newpipe.util.image.ImageStrategy;
-import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.opentube.BuildConfig;
+import org.schabi.opentube.R;
+import org.schabi.opentube.RouterActivity;
+import org.schabi.opentube.extractor.Image;
+import org.schabi.opentube.util.image.ImageStrategy;
+import org.schabi.opentube.util.image.PicassoHelper;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -173,8 +173,8 @@ public final class ShareUtils {
             chooserIntent.putExtra(Intent.EXTRA_TITLE, context.getString(R.string.open_with));
         }
 
-        // Avoid opening in NewPipe
-        // (Implementation note: if the URL is one for which NewPipe itself
+        // Avoid opening in OpenTube
+        // (Implementation note: if the URL is one for which OpenTube itself
         // is set as handler on Android >= 12, we actually remove the only eligible app
         // for this link, and browsers will not be offered to the user. For that, use
         // `openUrlInBrowser`.)

@@ -1,10 +1,10 @@
-package org.schabi.newpipe
+package org.schabi.opentube
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue
 import org.junit.Test
-import org.schabi.newpipe.util.ReleaseVersionUtil.coerceUpdateCheckExpiry
-import org.schabi.newpipe.util.ReleaseVersionUtil.isLastUpdateCheckExpired
+import org.schabi.opentube.util.ReleaseVersionUtil.coerceUpdateCheckExpiry
+import org.schabi.opentube.util.ReleaseVersionUtil.isLastUpdateCheckExpired
 import java.time.Instant
 import java.time.ZoneId
 import java.time.format.DateTimeFormatter

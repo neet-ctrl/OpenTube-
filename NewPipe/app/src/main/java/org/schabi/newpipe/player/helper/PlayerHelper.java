@@ -1,11 +1,11 @@
-package org.schabi.newpipe.player.helper;
+package org.schabi.opentube.player.helper;
 
-import static org.schabi.newpipe.player.helper.PlayerHelper.AutoplayType.AUTOPLAY_TYPE_ALWAYS;
-import static org.schabi.newpipe.player.helper.PlayerHelper.AutoplayType.AUTOPLAY_TYPE_NEVER;
-import static org.schabi.newpipe.player.helper.PlayerHelper.AutoplayType.AUTOPLAY_TYPE_WIFI;
-import static org.schabi.newpipe.player.helper.PlayerHelper.MinimizeMode.MINIMIZE_ON_EXIT_MODE_BACKGROUND;
-import static org.schabi.newpipe.player.helper.PlayerHelper.MinimizeMode.MINIMIZE_ON_EXIT_MODE_NONE;
-import static org.schabi.newpipe.player.helper.PlayerHelper.MinimizeMode.MINIMIZE_ON_EXIT_MODE_POPUP;
+import static org.schabi.opentube.player.helper.PlayerHelper.AutoplayType.AUTOPLAY_TYPE_ALWAYS;
+import static org.schabi.opentube.player.helper.PlayerHelper.AutoplayType.AUTOPLAY_TYPE_NEVER;
+import static org.schabi.opentube.player.helper.PlayerHelper.AutoplayType.AUTOPLAY_TYPE_WIFI;
+import static org.schabi.opentube.player.helper.PlayerHelper.MinimizeMode.MINIMIZE_ON_EXIT_MODE_BACKGROUND;
+import static org.schabi.opentube.player.helper.PlayerHelper.MinimizeMode.MINIMIZE_ON_EXIT_MODE_NONE;
+import static org.schabi.opentube.player.helper.PlayerHelper.MinimizeMode.MINIMIZE_ON_EXIT_MODE_POPUP;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 
 import android.annotation.SuppressLint;
@@ -30,18 +30,18 @@ import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.AspectRatioFrameLayout.ResizeMode;
 import com.google.android.exoplayer2.ui.CaptionStyleCompat;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.extractor.stream.SubtitlesStream;
-import org.schabi.newpipe.extractor.utils.Utils;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.player.playqueue.SinglePlayQueue;
-import org.schabi.newpipe.util.ListHelper;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.SubtitlesStream;
+import org.schabi.opentube.extractor.utils.Utils;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.playqueue.SinglePlayQueue;
+import org.schabi.opentube.util.ListHelper;
+import org.schabi.opentube.util.Localization;
 
 import java.lang.annotation.Retention;
 import java.text.DecimalFormat;
@@ -411,7 +411,7 @@ public final class PlayerHelper {
                 AspectRatioFrameLayout.RESIZE_MODE_FIT);
     }
 
-    @SuppressLint("SwitchIntDef") // only fit, fill and zoom are supported by NewPipe
+    @SuppressLint("SwitchIntDef") // only fit, fill and zoom are supported by OpenTube
     @ResizeMode
     public static int nextResizeModeAndSaveToPrefs(final Player player,
                                                    @ResizeMode final int resizeMode) {

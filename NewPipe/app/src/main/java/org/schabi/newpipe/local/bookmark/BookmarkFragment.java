@@ -1,7 +1,7 @@
-package org.schabi.newpipe.local.bookmark;
+package org.schabi.opentube.local.bookmark;
 
-import static org.schabi.newpipe.local.bookmark.MergedPlaylistManager.getMergedOrderedPlaylists;
-import static org.schabi.newpipe.util.ThemeHelper.shouldUseGridLayout;
+import static org.schabi.opentube.local.bookmark.MergedPlaylistManager.getMergedOrderedPlaylists;
+import static org.schabi.opentube.util.ThemeHelper.shouldUseGridLayout;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -24,25 +24,25 @@ import com.evernote.android.state.State;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.AppDatabase;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistLocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistMetadataEntry;
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
-import org.schabi.newpipe.databinding.DialogEditTextBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.local.BaseLocalListFragment;
-import org.schabi.newpipe.local.holder.LocalBookmarkPlaylistItemHolder;
-import org.schabi.newpipe.local.holder.RemoteBookmarkPlaylistItemHolder;
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
-import org.schabi.newpipe.local.playlist.RemotePlaylistManager;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.OnClickGesture;
-import org.schabi.newpipe.util.debounce.DebounceSavable;
-import org.schabi.newpipe.util.debounce.DebounceSaver;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.AppDatabase;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.playlist.PlaylistLocalItem;
+import org.schabi.opentube.database.playlist.PlaylistMetadataEntry;
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity;
+import org.schabi.opentube.databinding.DialogEditTextBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.local.BaseLocalListFragment;
+import org.schabi.opentube.local.holder.LocalBookmarkPlaylistItemHolder;
+import org.schabi.opentube.local.holder.RemoteBookmarkPlaylistItemHolder;
+import org.schabi.opentube.local.playlist.LocalPlaylistManager;
+import org.schabi.opentube.local.playlist.RemotePlaylistManager;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.OnClickGesture;
+import org.schabi.opentube.util.debounce.DebounceSavable;
+import org.schabi.opentube.util.debounce.DebounceSaver;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -84,7 +84,7 @@ public final class BookmarkFragment extends BaseLocalListFragment<List<PlaylistL
         if (activity == null) {
             return;
         }
-        final AppDatabase database = NewPipeDatabase.getInstance(activity);
+        final AppDatabase database = OpenTubeDatabase.getInstance(activity);
         localPlaylistManager = new LocalPlaylistManager(database);
         remotePlaylistManager = new RemotePlaylistManager(database);
         disposables = new CompositeDisposable();

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments;
+package org.schabi.opentube.fragments;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -9,10 +9,10 @@ import androidx.annotation.Nullable;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.BaseFragment;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorPanelHelper;
+import org.schabi.opentube.BaseFragment;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorPanelHelper;
 
 public class BlankFragment extends BaseFragment {
 
@@ -40,7 +40,7 @@ public class BlankFragment extends BaseFragment {
     @Override
     public View onCreateView(final LayoutInflater inflater, @Nullable final ViewGroup container,
                              final Bundle savedInstanceState) {
-        setTitle("NewPipe");
+        setTitle("OpenTube");
         final View view = inflater.inflate(R.layout.fragment_blank, container, false);
         if (errorInfo != null) {
             errorPanel = new ErrorPanelHelper(this, view, null);
@@ -63,7 +63,7 @@ public class BlankFragment extends BaseFragment {
     @Override
     public void onResume() {
         super.onResume();
-        setTitle("NewPipe");
+        setTitle("OpenTube");
         // leave this inline. Will make it harder for copy cats.
         // If you are a Copy cat FUCK YOU.
         // I WILL FIND YOU, AND I WILL ...

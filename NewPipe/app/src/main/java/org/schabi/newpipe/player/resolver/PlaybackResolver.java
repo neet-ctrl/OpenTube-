@@ -1,8 +1,8 @@
-package org.schabi.newpipe.player.resolver;
+package org.schabi.opentube.player.resolver;
 
-import static org.schabi.newpipe.extractor.stream.AudioStream.UNKNOWN_BITRATE;
-import static org.schabi.newpipe.extractor.stream.VideoStream.RESOLUTION_UNKNOWN;
-import static org.schabi.newpipe.player.helper.PlayerDataSource.LIVE_STREAM_EDGE_GAP_MILLIS;
+import static org.schabi.opentube.extractor.stream.AudioStream.UNKNOWN_BITRATE;
+import static org.schabi.opentube.extractor.stream.VideoStream.RESOLUTION_UNKNOWN;
+import static org.schabi.opentube.player.helper.PlayerDataSource.LIVE_STREAM_EDGE_GAP_MILLIS;
 
 import android.net.Uri;
 import android.util.Log;
@@ -21,24 +21,24 @@ import com.google.android.exoplayer2.source.smoothstreaming.SsMediaSource;
 import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsManifest;
 import com.google.android.exoplayer2.source.smoothstreaming.manifest.SsManifestParser;
 
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.ServiceList;
-import org.schabi.newpipe.extractor.services.youtube.ItagItem;
-import org.schabi.newpipe.extractor.services.youtube.dashmanifestcreators.CreationException;
-import org.schabi.newpipe.extractor.services.youtube.dashmanifestcreators.YoutubeOtfDashManifestCreator;
-import org.schabi.newpipe.extractor.services.youtube.dashmanifestcreators.YoutubePostLiveStreamDvrDashManifestCreator;
-import org.schabi.newpipe.extractor.services.youtube.dashmanifestcreators.YoutubeProgressiveDashManifestCreator;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.DeliveryMethod;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.player.datasource.NonUriHlsDataSourceFactory;
-import org.schabi.newpipe.player.helper.PlayerDataSource;
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.mediaitem.StreamInfoTag;
-import org.schabi.newpipe.util.StreamTypeUtil;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.ServiceList;
+import org.schabi.opentube.extractor.services.youtube.ItagItem;
+import org.schabi.opentube.extractor.services.youtube.dashmanifestcreators.CreationException;
+import org.schabi.opentube.extractor.services.youtube.dashmanifestcreators.YoutubeOtfDashManifestCreator;
+import org.schabi.opentube.extractor.services.youtube.dashmanifestcreators.YoutubePostLiveStreamDvrDashManifestCreator;
+import org.schabi.opentube.extractor.services.youtube.dashmanifestcreators.YoutubeProgressiveDashManifestCreator;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.DeliveryMethod;
+import org.schabi.opentube.extractor.stream.Stream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.player.datasource.NonUriHlsDataSourceFactory;
+import org.schabi.opentube.player.helper.PlayerDataSource;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.mediaitem.StreamInfoTag;
+import org.schabi.opentube.util.StreamTypeUtil;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

@@ -11,7 +11,7 @@
 - Ajout de la prise en charge de la localisation #1792
 
 ### Corrections
-- Analyse de l'heure pour le format . , afin que NewPipe puisse être utilisé en Finlande.
+- Analyse de l'heure pour le format . , afin que OpenTube puisse être utilisé en Finlande.
 - Compte d'abonnement
 - Ajout permission de service de premier plan pour les appareils API 28+ #1830
 

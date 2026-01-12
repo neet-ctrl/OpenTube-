@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.tabs;
+package org.schabi.opentube.settings.tabs;
 
 import android.content.Context;
 
@@ -10,26 +10,26 @@ import androidx.fragment.app.Fragment;
 import com.grack.nanojson.JsonObject;
 import com.grack.nanojson.JsonStringWriter;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.LocalItem.LocalItemType;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.fragments.BlankFragment;
-import org.schabi.newpipe.fragments.list.channel.ChannelFragment;
-import org.schabi.newpipe.fragments.list.kiosk.DefaultKioskFragment;
-import org.schabi.newpipe.fragments.list.kiosk.KioskFragment;
-import org.schabi.newpipe.fragments.list.playlist.PlaylistFragment;
-import org.schabi.newpipe.local.bookmark.BookmarkFragment;
-import org.schabi.newpipe.local.feed.FeedFragment;
-import org.schabi.newpipe.local.history.StatisticsPlaylistFragment;
-import org.schabi.newpipe.local.playlist.LocalPlaylistFragment;
-import org.schabi.newpipe.local.subscription.SubscriptionFragment;
-import org.schabi.newpipe.util.KioskTranslator;
-import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.LocalItem.LocalItemType;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.fragments.BlankFragment;
+import org.schabi.opentube.fragments.list.channel.ChannelFragment;
+import org.schabi.opentube.fragments.list.kiosk.DefaultKioskFragment;
+import org.schabi.opentube.fragments.list.kiosk.KioskFragment;
+import org.schabi.opentube.fragments.list.playlist.PlaylistFragment;
+import org.schabi.opentube.local.bookmark.BookmarkFragment;
+import org.schabi.opentube.local.feed.FeedFragment;
+import org.schabi.opentube.local.history.StatisticsPlaylistFragment;
+import org.schabi.opentube.local.playlist.LocalPlaylistFragment;
+import org.schabi.opentube.local.subscription.SubscriptionFragment;
+import org.schabi.opentube.util.KioskTranslator;
+import org.schabi.opentube.util.ServiceHelper;
 
 import java.util.Objects;
 
@@ -194,7 +194,7 @@ public abstract class Tab {
         public String getTabName(final Context context) {
             // TODO: find a better name for the blank tab (maybe "blank_tab") or replace it with
             //       context.getString(R.string.app_name);
-            return "NewPipe"; // context.getString(R.string.blank_page_summary);
+            return "OpenTube"; // context.getString(R.string.blank_page_summary);
         }
 
         @DrawableRes
@@ -512,7 +512,7 @@ public abstract class Tab {
 
             String kioskId = "";
             try {
-                final StreamingService service = NewPipe.getService(kioskServiceId);
+                final StreamingService service = OpenTube.getService(kioskServiceId);
                 kioskId = service.getKioskList().getDefaultKioskId();
             } catch (final ExtractionException e) {
                 ErrorUtil.showSnackbar(context, new ErrorInfo(e,

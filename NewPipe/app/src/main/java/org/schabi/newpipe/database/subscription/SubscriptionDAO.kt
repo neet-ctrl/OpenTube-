@@ -1,4 +1,4 @@
-package org.schabi.newpipe.database.subscription
+package org.schabi.opentube.database.subscription
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -8,7 +8,7 @@ import androidx.room.RewriteQueriesToDropUnusedColumns
 import androidx.room.Transaction
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Maybe
-import org.schabi.newpipe.database.BasicDAO
+import org.schabi.opentube.database.BasicDAO
 
 @Dao
 abstract class SubscriptionDAO : BasicDAO<SubscriptionEntity> {

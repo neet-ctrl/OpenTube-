@@ -1,8 +1,8 @@
-package org.schabi.newpipe.streams.io;
+package org.schabi.opentube.streams.io;
 
 import static android.provider.DocumentsContract.Document.COLUMN_DISPLAY_NAME;
 import static android.provider.DocumentsContract.Root.COLUMN_DOCUMENT_ID;
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
 
 import android.content.ContentResolver;
 import android.content.Context;
@@ -19,8 +19,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.documentfile.provider.DocumentFile;
 
-import org.schabi.newpipe.settings.NewPipeSettings;
-import org.schabi.newpipe.util.FilePickerActivityHelper;
+import org.schabi.opentube.settings.OpenTubeSettings;
+import org.schabi.opentube.util.FilePickerActivityHelper;
 
 import java.io.FileDescriptor;
 import java.io.IOException;
@@ -285,7 +285,7 @@ public class StoredDirectoryHelper {
     /**
      * @return {@code false} if the storage is direct, or the SAF storage is valid; {@code true} if
      * SAF access to this SAF storage is denied (e.g. the user clicked on {@code Android settings ->
-     * Apps & notifications -> NewPipe -> Storage & cache -> Clear access});
+     * Apps & notifications -> OpenTube -> Storage & cache -> Clear access});
      */
     public boolean isInvalidSafStorage() {
         return docTree != null && docTree.getName() == null;
@@ -386,7 +386,7 @@ public class StoredDirectoryHelper {
     }
 
     public static Intent getPicker(final Context ctx) {
-        if (NewPipeSettings.useStorageAccessFramework(ctx)) {
+        if (OpenTubeSettings.useStorageAccessFramework(ctx)) {
             return new Intent(Intent.ACTION_OPEN_DOCUMENT_TREE)
                     .putExtra("android.content.extra.SHOW_ADVANCED", true)
                     .addFlags(Intent.FLAG_GRANT_PERSISTABLE_URI_PERMISSION

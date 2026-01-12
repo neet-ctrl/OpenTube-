@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments.list.kiosk;
+package org.schabi.opentube.fragments.list.kiosk;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -13,23 +13,23 @@ import androidx.appcompat.app.ActionBar;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.ServiceList;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.kiosk.KioskInfo;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandlerFactory;
-import org.schabi.newpipe.extractor.localization.ContentCountry;
-import org.schabi.newpipe.extractor.services.media_ccc.extractors.MediaCCCLiveStreamKiosk;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.KioskTranslator;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.ServiceList;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.kiosk.KioskInfo;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandlerFactory;
+import org.schabi.opentube.extractor.localization.ContentCountry;
+import org.schabi.opentube.extractor.services.media_ccc.extractors.MediaCCCLiveStreamKiosk;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.fragments.list.BaseListInfoFragment;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.KioskTranslator;
+import org.schabi.opentube.util.Localization;
 
 import io.reactivex.rxjava3.core.Single;
 
@@ -37,23 +37,23 @@ import io.reactivex.rxjava3.core.Single;
  * Created by Christian Schabesberger on 23.09.17.
  * <p>
  * Copyright (C) Christian Schabesberger 2017 <chris.schabesberger@mailbox.org>
- * KioskFragment.java is part of NewPipe.
+ * KioskFragment.java is part of OpenTube.
  * </p>
  * <p>
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * </p>
  * <p>
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * </p>
  * <p>
  * You should have received a copy of the GNU General Public License
- * along with NewPipe. If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube. If not, see <http://www.gnu.org/licenses/>.
  * </p>
  */
 
@@ -69,14 +69,14 @@ public class KioskFragment extends BaseListInfoFragment<StreamInfoItem, KioskInf
     //////////////////////////////////////////////////////////////////////////*/
 
     public static KioskFragment getInstance(final int serviceId) throws ExtractionException {
-        return getInstance(serviceId, NewPipe.getService(serviceId)
+        return getInstance(serviceId, OpenTube.getService(serviceId)
                 .getKioskList().getDefaultKioskId());
     }
 
     public static KioskFragment getInstance(final int serviceId, final String kioskId)
             throws ExtractionException {
         final KioskFragment instance = new KioskFragment();
-        final StreamingService service = NewPipe.getService(serviceId);
+        final StreamingService service = OpenTube.getService(serviceId);
         final ListLinkHandlerFactory kioskLinkHandlerFactory = service.getKioskList()
                 .getListLinkHandlerFactoryByType(kioskId);
         instance.setInitialData(serviceId,

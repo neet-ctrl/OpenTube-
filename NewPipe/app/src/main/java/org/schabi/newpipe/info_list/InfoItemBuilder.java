@@ -1,4 +1,4 @@
-package org.schabi.newpipe.info_list;
+package org.schabi.opentube.info_list;
 
 import android.content.Context;
 import android.view.View;
@@ -6,43 +6,43 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.info_list.holder.ChannelInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.ChannelMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.CommentInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.InfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamMiniInfoItemHolder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.OnClickGesture;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.channel.ChannelInfoItem;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.extractor.playlist.PlaylistInfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.info_list.holder.ChannelInfoItemHolder;
+import org.schabi.opentube.info_list.holder.ChannelMiniInfoItemHolder;
+import org.schabi.opentube.info_list.holder.CommentInfoItemHolder;
+import org.schabi.opentube.info_list.holder.InfoItemHolder;
+import org.schabi.opentube.info_list.holder.PlaylistInfoItemHolder;
+import org.schabi.opentube.info_list.holder.PlaylistMiniInfoItemHolder;
+import org.schabi.opentube.info_list.holder.StreamInfoItemHolder;
+import org.schabi.opentube.info_list.holder.StreamMiniInfoItemHolder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.OnClickGesture;
 
 /*
  * Created by Christian Schabesberger on 26.09.16.
  * <p>
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * InfoItemBuilder.java is part of NewPipe.
+ * InfoItemBuilder.java is part of OpenTube.
  * </p>
  * <p>
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * </p>
  * <p>
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * </p>
  * <p>
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  * </p>
  */
 

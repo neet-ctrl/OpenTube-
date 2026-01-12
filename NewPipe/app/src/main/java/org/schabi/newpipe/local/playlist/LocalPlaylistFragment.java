@@ -1,12 +1,12 @@
-package org.schabi.newpipe.local.playlist;
+package org.schabi.opentube.local.playlist;
 
-import static org.schabi.newpipe.error.ErrorUtil.showUiErrorSnackbar;
-import static org.schabi.newpipe.ktx.ViewUtils.animate;
-import static org.schabi.newpipe.local.playlist.ExportPlaylistKt.export;
-import static org.schabi.newpipe.local.playlist.PlayListShareMode.JUST_URLS;
-import static org.schabi.newpipe.local.playlist.PlayListShareMode.WITH_TITLES;
-import static org.schabi.newpipe.local.playlist.PlayListShareMode.YOUTUBE_TEMP_PLAYLIST;
-import static org.schabi.newpipe.util.ThemeHelper.shouldUseGridLayout;
+import static org.schabi.opentube.error.ErrorUtil.showUiErrorSnackbar;
+import static org.schabi.opentube.ktx.ViewUtils.animate;
+import static org.schabi.opentube.local.playlist.ExportPlaylistKt.export;
+import static org.schabi.opentube.local.playlist.PlayListShareMode.JUST_URLS;
+import static org.schabi.opentube.local.playlist.PlayListShareMode.WITH_TITLES;
+import static org.schabi.opentube.local.playlist.PlayListShareMode.YOUTUBE_TEMP_PLAYLIST;
+import static org.schabi.opentube.util.ThemeHelper.shouldUseGridLayout;
 
 
 import android.content.Context;
@@ -34,34 +34,34 @@ import androidx.viewbinding.ViewBinding;
 import com.evernote.android.state.State;
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.history.model.StreamHistoryEntry;
-import org.schabi.newpipe.database.playlist.PlaylistStreamEntry;
-import org.schabi.newpipe.database.playlist.model.PlaylistEntity;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.databinding.DialogEditTextBinding;
-import org.schabi.newpipe.databinding.LocalPlaylistHeaderBinding;
-import org.schabi.newpipe.databinding.PlaylistControlBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.fragments.MainFragment;
-import org.schabi.newpipe.fragments.list.playlist.PlaylistControlViewHolder;
-import org.schabi.newpipe.info_list.dialog.InfoItemDialog;
-import org.schabi.newpipe.info_list.dialog.StreamDialogDefaultEntry;
-import org.schabi.newpipe.local.BaseLocalListFragment;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.SinglePlayQueue;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.OnClickGesture;
-import org.schabi.newpipe.util.PlayButtonHelper;
-import org.schabi.newpipe.util.debounce.DebounceSavable;
-import org.schabi.newpipe.util.debounce.DebounceSaver;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.history.model.StreamHistoryEntry;
+import org.schabi.opentube.database.playlist.PlaylistStreamEntry;
+import org.schabi.opentube.database.playlist.model.PlaylistEntity;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.databinding.DialogEditTextBinding;
+import org.schabi.opentube.databinding.LocalPlaylistHeaderBinding;
+import org.schabi.opentube.databinding.PlaylistControlBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.fragments.MainFragment;
+import org.schabi.opentube.fragments.list.playlist.PlaylistControlViewHolder;
+import org.schabi.opentube.info_list.dialog.InfoItemDialog;
+import org.schabi.opentube.info_list.dialog.StreamDialogDefaultEntry;
+import org.schabi.opentube.local.BaseLocalListFragment;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.SinglePlayQueue;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.OnClickGesture;
+import org.schabi.opentube.util.PlayButtonHelper;
+import org.schabi.opentube.util.debounce.DebounceSavable;
+import org.schabi.opentube.util.debounce.DebounceSaver;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -123,7 +123,7 @@ public class LocalPlaylistFragment extends BaseLocalListFragment<List<PlaylistSt
     @Override
     public void onCreate(final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        playlistManager = new LocalPlaylistManager(NewPipeDatabase.getInstance(requireContext()));
+        playlistManager = new LocalPlaylistManager(OpenTubeDatabase.getInstance(requireContext()));
 
         disposables = new CompositeDisposable();
 

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.streams.io;
+package org.schabi.opentube.streams.io;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -8,7 +8,7 @@ import android.util.Log;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.appcompat.app.AlertDialog;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 /**
  * Helper for when no file-manager/activity was found.

@@ -1,9 +1,9 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.view.View
 import com.xwray.groupie.viewbinding.BindableItem
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.SubscriptionHeaderBinding
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.SubscriptionHeaderBinding
 
 class Header(private val title: String) : BindableItem<SubscriptionHeaderBinding>() {
 

@@ -1,20 +1,20 @@
 /*
- * SPDX-FileCopyrightText: 2017-2024 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2017-2024 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.subscription
+package org.schabi.opentube.database.subscription
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.Ignore
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import org.schabi.newpipe.extractor.channel.ChannelInfo
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem
-import org.schabi.newpipe.util.NO_SERVICE_ID
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.extractor.channel.ChannelInfo
+import org.schabi.opentube.extractor.channel.ChannelInfoItem
+import org.schabi.opentube.util.NO_SERVICE_ID
+import org.schabi.opentube.util.image.ImageStrategy
 
 @Entity(
     tableName = SubscriptionEntity.Companion.SUBSCRIPTION_TABLE,

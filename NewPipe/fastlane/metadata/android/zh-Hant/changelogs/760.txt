@@ -11,8 +11,8 @@
 • 修復在切換應用程式時在下載檢視中消失的按鈕 #2487
 • 修復雖然觀看歷史已停用，但播放位置仍被儲存的問題
 • 修復在清單檢視中因播放位置而造成的效能降低問題 #2517
-• [擷取器] 修復 ReCaptchaActivity #2527, TeamNewPipe/NewPipeExtractor#186
-• [擷取器] [YouTube] 修復播放清單在結果中所造成的搜尋錯誤 TeamNewPipe/NewPipeExtractor#185
+• [擷取器] 修復 ReCaptchaActivity #2527, TeamOpenTube/OpenTubeExtractor#186
+• [擷取器] [YouTube] 修復播放清單在結果中所造成的搜尋錯誤 TeamOpenTube/OpenTubeExtractor#185
 
 0.17.0 中的變更
 

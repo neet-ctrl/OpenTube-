@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.dialog;
+package org.schabi.opentube.local.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,11 +11,11 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.util.StateSaver;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.local.playlist.LocalPlaylistManager;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.util.StateSaver;
 
 import java.util.List;
 import java.util.Objects;
@@ -34,7 +34,7 @@ public abstract class PlaylistDialog extends DialogFragment implements StateSave
 
     private List<StreamEntity> streamEntities;
 
-    private org.schabi.newpipe.util.SavedState savedState;
+    private org.schabi.opentube.util.SavedState savedState;
 
     /*//////////////////////////////////////////////////////////////////////////
     // LifeCycle
@@ -143,7 +143,7 @@ public abstract class PlaylistDialog extends DialogFragment implements StateSave
             final List<StreamEntity> streamEntities,
             final Consumer<PlaylistDialog> onExec) {
 
-        return new LocalPlaylistManager(NewPipeDatabase.getInstance(context))
+        return new LocalPlaylistManager(OpenTubeDatabase.getInstance(context))
                 .hasPlaylists()
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe(hasPlaylists ->

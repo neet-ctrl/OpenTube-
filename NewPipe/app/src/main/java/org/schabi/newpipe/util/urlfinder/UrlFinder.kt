@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.urlfinder
+package org.schabi.opentube.util.urlfinder
 
 import java.util.regex.Pattern
 

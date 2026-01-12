@@ -1,7 +1,7 @@
-package org.schabi.newpipe.util.debounce;
+package org.schabi.opentube.util.debounce;
 
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.UserAction;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.UserAction;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicBoolean;

@@ -3,8 +3,8 @@
  மேம்படுத்தப்பட்டது
  The பிளேபேக் நிலைகளை அழிக்க விருப்பம் சேர்க்கப்பட்டது #2550
  The கோப்பு பிக்கர் #2591 இல் மறைக்கப்பட்ட கோப்பகங்களைக் காட்டு
- புதிய NewPipe #2488 உடன் திறக்கப்பட வேண்டிய `invidio.us` நிகழ்வுகளிலிருந்து முகவரி களை ஆதரிக்கவும்
- `Music.youtube.com` urls teamnewpipe/newPipeextractor#194 க்கான ஆதரவைச் சேர்க்கவும்
+ புதிய OpenTube #2488 உடன் திறக்கப்பட வேண்டிய `invidio.us` நிகழ்வுகளிலிருந்து முகவரி களை ஆதரிக்கவும்
+ `Music.youtube.com` urls teamopentube/newPipeextractor#194 க்கான ஆதரவைச் சேர்க்கவும்
 
  சரி
  • [YouTube] நிலையான 'java.lang.ilegalargumentexception #192

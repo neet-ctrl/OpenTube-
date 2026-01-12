@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed.service
+package org.schabi.opentube.local.feed.service
 
 class FeedResultsHolder {
     /**

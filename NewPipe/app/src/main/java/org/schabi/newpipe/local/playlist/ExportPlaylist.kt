@@ -1,18 +1,18 @@
 /*
- * SPDX-FileCopyrightText: 2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.local.playlist
+package org.schabi.opentube.local.playlist
 
 import android.content.Context
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.playlist.PlaylistStreamEntry
-import org.schabi.newpipe.extractor.exceptions.ParsingException
-import org.schabi.newpipe.extractor.services.youtube.linkHandler.YoutubeStreamLinkHandlerFactory
-import org.schabi.newpipe.local.playlist.PlayListShareMode.JUST_URLS
-import org.schabi.newpipe.local.playlist.PlayListShareMode.WITH_TITLES
-import org.schabi.newpipe.local.playlist.PlayListShareMode.YOUTUBE_TEMP_PLAYLIST
+import org.schabi.opentube.R
+import org.schabi.opentube.database.playlist.PlaylistStreamEntry
+import org.schabi.opentube.extractor.exceptions.ParsingException
+import org.schabi.opentube.extractor.services.youtube.linkHandler.YoutubeStreamLinkHandlerFactory
+import org.schabi.opentube.local.playlist.PlayListShareMode.JUST_URLS
+import org.schabi.opentube.local.playlist.PlayListShareMode.WITH_TITLES
+import org.schabi.opentube.local.playlist.PlayListShareMode.YOUTUBE_TEMP_PLAYLIST
 
 fun export(
     shareMode: PlayListShareMode,

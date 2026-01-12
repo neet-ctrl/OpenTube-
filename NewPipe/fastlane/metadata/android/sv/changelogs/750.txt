@@ -10,5 +10,5 @@ Fixat
 - Kraschar inte när kontrollen av appuppdatering misslyckas (GitHub-version) #2423 
 - Fixade nedladdningar som fastnade på 99,9 % #2440
 - Uppdatera metadata för uppspelningsköer #2453 
-- [SoundCloud] Fastställd krasch vid laddning av spellistor TeamNewPipe/NewPipeExtractor#170
-- YouTube] Fast varaktighet kan inte pareras TeamNewPipe/NewPipeExtractor#177
+- [SoundCloud] Fastställd krasch vid laddning av spellistor TeamOpenTube/OpenTubeExtractor#170
+- YouTube] Fast varaktighet kan inte pareras TeamOpenTube/OpenTubeExtractor#177

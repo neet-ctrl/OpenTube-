@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.notification;
+package org.schabi.opentube.player.notification;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -7,9 +7,9 @@ import androidx.annotation.DrawableRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.util.Localization;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.util.Localization;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;

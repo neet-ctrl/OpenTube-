@@ -1,7 +1,7 @@
-package org.schabi.newpipe.download;
+package org.schabi.opentube.download;
 
-import static org.schabi.newpipe.extractor.stream.DeliveryMethod.PROGRESSIVE_HTTP;
-import static org.schabi.newpipe.util.ListHelper.getStreamsOfSpecifiedDelivery;
+import static org.schabi.opentube.extractor.stream.DeliveryMethod.PROGRESSIVE_HTTP;
+import static org.schabi.opentube.util.ListHelper.getStreamsOfSpecifiedDelivery;
 
 import android.app.Activity;
 import android.content.ComponentName;
@@ -45,35 +45,35 @@ import com.google.android.material.slider.RangeSlider;
 import com.livefront.bridge.Bridge;
 import com.nononsenseapps.filepicker.Utils;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.DownloadDialogBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.localization.Localization;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.SubtitlesStream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.settings.NewPipeSettings;
-import org.schabi.newpipe.streams.io.NoFileManagerSafeGuard;
-import org.schabi.newpipe.streams.io.StoredDirectoryHelper;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.AudioTrackAdapter;
-import org.schabi.newpipe.util.AudioTrackAdapter.AudioTracksWrapper;
-import org.schabi.newpipe.util.FilePickerActivityHelper;
-import org.schabi.newpipe.util.FilenameUtils;
-import org.schabi.newpipe.util.ListHelper;
-import org.schabi.newpipe.util.PermissionHelper;
-import org.schabi.newpipe.util.SecondaryStreamHelper;
-import org.schabi.newpipe.util.SimpleOnSeekBarChangeListener;
-import org.schabi.newpipe.util.StreamItemAdapter;
-import org.schabi.newpipe.util.StreamItemAdapter.StreamInfoWrapper;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.DownloadDialogBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.localization.Localization;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.Stream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.SubtitlesStream;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.settings.OpenTubeSettings;
+import org.schabi.opentube.streams.io.NoFileManagerSafeGuard;
+import org.schabi.opentube.streams.io.StoredDirectoryHelper;
+import org.schabi.opentube.streams.io.StoredFileHelper;
+import org.schabi.opentube.util.AudioTrackAdapter;
+import org.schabi.opentube.util.AudioTrackAdapter.AudioTracksWrapper;
+import org.schabi.opentube.util.FilePickerActivityHelper;
+import org.schabi.opentube.util.FilenameUtils;
+import org.schabi.opentube.util.ListHelper;
+import org.schabi.opentube.util.PermissionHelper;
+import org.schabi.opentube.util.SecondaryStreamHelper;
+import org.schabi.opentube.util.SimpleOnSeekBarChangeListener;
+import org.schabi.opentube.util.StreamItemAdapter;
+import org.schabi.opentube.util.StreamItemAdapter.StreamInfoWrapper;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -763,7 +763,7 @@ public class DownloadDialog extends DialogFragment
     }
 
     private int getSubtitleIndexBy(@NonNull final List<SubtitlesStream> streams) {
-        final Localization preferredLocalization = NewPipe.getPreferredLocalization();
+        final Localization preferredLocalization = OpenTube.getPreferredLocalization();
 
         int candidate = 0;
         for (int i = 0; i < streams.size(); i++) {
@@ -864,7 +864,7 @@ public class DownloadDialog extends DialogFragment
         }
 
         if (!askForSavePath && (mainStorage == null
-                || mainStorage.isDirect() == NewPipeSettings.useStorageAccessFramework(context)
+                || mainStorage.isDirect() == OpenTubeSettings.useStorageAccessFramework(context)
                 || mainStorage.isInvalidSafStorage())) {
             // Pick new download folder if one of:
             // - Download folder is not set
@@ -885,14 +885,14 @@ public class DownloadDialog extends DialogFragment
 
         if (askForSavePath) {
             final Uri initialPath;
-            if (NewPipeSettings.useStorageAccessFramework(context)) {
+            if (OpenTubeSettings.useStorageAccessFramework(context)) {
                 initialPath = null;
             } else {
                 final File initialSavePath;
                 if (dialogBinding.videoAudioGroup.getCheckedRadioButtonId() == R.id.audio_button) {
-                    initialSavePath = NewPipeSettings.getDir(Environment.DIRECTORY_MUSIC);
+                    initialSavePath = OpenTubeSettings.getDir(Environment.DIRECTORY_MUSIC);
                 } else {
-                    initialSavePath = NewPipeSettings.getDir(Environment.DIRECTORY_MOVIES);
+                    initialSavePath = OpenTubeSettings.getDir(Environment.DIRECTORY_MOVIES);
                 }
                 initialPath = Uri.parse(initialSavePath.getAbsolutePath());
             }

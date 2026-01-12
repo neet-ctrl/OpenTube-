@@ -1,11 +1,11 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.view.View
 import androidx.annotation.DrawableRes
 import com.xwray.groupie.viewbinding.BindableItem
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.PickerIconItemBinding
-import org.schabi.newpipe.local.subscription.FeedGroupIcon
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.PickerIconItemBinding
+import org.schabi.opentube.local.subscription.FeedGroupIcon
 
 class PickerIconItem(
     val icon: FeedGroupIcon

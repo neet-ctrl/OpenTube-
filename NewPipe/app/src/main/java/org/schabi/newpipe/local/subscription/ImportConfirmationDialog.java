@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription;
+package org.schabi.opentube.local.subscription;
 
 import android.app.Dialog;
 import android.content.Intent;
@@ -12,7 +12,7 @@ import androidx.fragment.app.Fragment;
 
 import com.livefront.bridge.Bridge;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 public class ImportConfirmationDialog extends DialogFragment {
     protected Intent resultServiceIntent;

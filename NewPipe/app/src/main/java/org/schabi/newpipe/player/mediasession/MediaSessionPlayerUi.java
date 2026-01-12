@@ -1,7 +1,7 @@
-package org.schabi.newpipe.player.mediasession;
+package org.schabi.opentube.player.mediasession;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_RECREATE_NOTIFICATION;
+import static org.schabi.opentube.MainActivity.DEBUG;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_RECREATE_NOTIFICATION;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -19,14 +19,14 @@ import com.google.android.exoplayer2.ForwardingPlayer;
 import com.google.android.exoplayer2.Player.RepeatMode;
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.notification.NotificationActionData;
-import org.schabi.newpipe.player.notification.NotificationConstants;
-import org.schabi.newpipe.player.ui.PlayerUi;
-import org.schabi.newpipe.player.ui.VideoPlayerUi;
-import org.schabi.newpipe.util.StreamTypeUtil;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.notification.NotificationActionData;
+import org.schabi.opentube.player.notification.NotificationConstants;
+import org.schabi.opentube.player.ui.PlayerUi;
+import org.schabi.opentube.player.ui.VideoPlayerUi;
+import org.schabi.opentube.util.StreamTypeUtil;
 
 import java.util.List;
 import java.util.Objects;

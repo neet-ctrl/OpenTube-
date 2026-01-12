@@ -2,23 +2,23 @@
  * Created by Christian Schabesberger on 02.08.16.
  * <p>
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * DownloadActivity.java is part of NewPipe.
+ * DownloadActivity.java is part of OpenTube.
  * <p>
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * <p>
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * <p>
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe;
+package org.schabi.opentube;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -58,43 +58,43 @@ import androidx.preference.PreferenceManager;
 
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 
-import org.schabi.newpipe.databinding.ActivityMainBinding;
-import org.schabi.newpipe.databinding.DrawerHeaderBinding;
-import org.schabi.newpipe.databinding.DrawerLayoutBinding;
-import org.schabi.newpipe.databinding.InstanceSpinnerLayoutBinding;
-import org.schabi.newpipe.databinding.ToolbarLayoutBinding;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.services.peertube.PeertubeInstance;
-import org.schabi.newpipe.fragments.BackPressable;
-import org.schabi.newpipe.fragments.MainFragment;
-import org.schabi.newpipe.fragments.detail.VideoDetailFragment;
-import org.schabi.newpipe.fragments.list.comments.CommentRepliesFragment;
-import org.schabi.newpipe.fragments.list.search.SearchFragment;
-import org.schabi.newpipe.local.feed.notifications.NotificationWorker;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.event.OnKeyDownListener;
-import org.schabi.newpipe.player.helper.PlayerHolder;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.settings.UpdateSettingsFragment;
-import org.schabi.newpipe.settings.migration.MigrationManager;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.KioskTranslator;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.PeertubeHelper;
-import org.schabi.newpipe.util.PermissionHelper;
-import org.schabi.newpipe.util.ReleaseVersionUtil;
-import org.schabi.newpipe.util.SerializedCache;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.util.StateSaver;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.views.FocusOverlayView;
+import org.schabi.opentube.databinding.ActivityMainBinding;
+import org.schabi.opentube.databinding.DrawerHeaderBinding;
+import org.schabi.opentube.databinding.DrawerLayoutBinding;
+import org.schabi.opentube.databinding.InstanceSpinnerLayoutBinding;
+import org.schabi.opentube.databinding.ToolbarLayoutBinding;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.services.peertube.PeertubeInstance;
+import org.schabi.opentube.fragments.BackPressable;
+import org.schabi.opentube.fragments.MainFragment;
+import org.schabi.opentube.fragments.detail.VideoDetailFragment;
+import org.schabi.opentube.fragments.list.comments.CommentRepliesFragment;
+import org.schabi.opentube.fragments.list.search.SearchFragment;
+import org.schabi.opentube.local.feed.notifications.NotificationWorker;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.event.OnKeyDownListener;
+import org.schabi.opentube.player.helper.PlayerHolder;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.settings.UpdateSettingsFragment;
+import org.schabi.opentube.settings.migration.MigrationManager;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.KioskTranslator;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.PeertubeHelper;
+import org.schabi.opentube.util.PermissionHelper;
+import org.schabi.opentube.util.ReleaseVersionUtil;
+import org.schabi.opentube.util.SerializedCache;
+import org.schabi.opentube.util.ServiceHelper;
+import org.schabi.opentube.util.StateSaver;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.views.FocusOverlayView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         ThemeHelper.setTheme(this, ServiceHelper.getSelectedServiceId(this));
 
         // Fixes text color turning black in dark/black mode:
-        // https://github.com/TeamNewPipe/NewPipe/issues/12016
+        // https://github.com/TeamOpenTube/OpenTube/issues/12016
         // For further reference see: https://issuetracker.google.com/issues/37124582
         if (DeviceUtils.supportsWebView()) {
             try {
@@ -283,7 +283,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Kiosks
         final int currentServiceId = ServiceHelper.getSelectedServiceId(this);
-        final StreamingService service = NewPipe.getService(currentServiceId);
+        final StreamingService service = OpenTube.getService(currentServiceId);
 
         int kioskMenuItemId = 0;
 
@@ -394,18 +394,18 @@ public class MainActivity extends AppCompatActivity {
     private void setupDrawerHeader() {
         drawerHeaderBinding.drawerHeaderActionButton.setOnClickListener(view -> toggleServices());
 
-        // If the current app name is bigger than the default "NewPipe" (7 chars),
+        // If the current app name is bigger than the default "OpenTube" (7 chars),
         // let the text view grow a little more as well.
-        if (getString(R.string.app_name).length() > "NewPipe".length()) {
+        if (getString(R.string.app_name).length() > "OpenTube".length()) {
             final ViewGroup.LayoutParams layoutParams =
                     drawerHeaderBinding.drawerHeaderNewpipeTitle.getLayoutParams();
             layoutParams.width = ViewGroup.LayoutParams.WRAP_CONTENT;
             drawerHeaderBinding.drawerHeaderNewpipeTitle.setLayoutParams(layoutParams);
             drawerHeaderBinding.drawerHeaderNewpipeTitle.setMaxLines(2);
             drawerHeaderBinding.drawerHeaderNewpipeTitle.setMinWidth(getResources()
-                    .getDimensionPixelSize(R.dimen.drawer_header_newpipe_title_default_width));
+                    .getDimensionPixelSize(R.dimen.drawer_header_opentube_title_default_width));
             drawerHeaderBinding.drawerHeaderNewpipeTitle.setMaxWidth(getResources()
-                    .getDimensionPixelSize(R.dimen.drawer_header_newpipe_title_max_width));
+                    .getDimensionPixelSize(R.dimen.drawer_header_opentube_title_max_width));
         }
     }
 
@@ -433,7 +433,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showServices() {
-        for (final StreamingService s : NewPipe.getServices()) {
+        for (final StreamingService s : OpenTube.getServices()) {
             final String title = s.getServiceInfo().getName();
 
             final MenuItem menuItem = drawerLayoutBinding.navigation.getMenu()
@@ -517,7 +517,7 @@ public class MainActivity extends AppCompatActivity {
         mainBinding.getRoot().closeDrawer(GravityCompat.START, false);
         try {
             final int selectedServiceId = ServiceHelper.getSelectedServiceId(this);
-            final String selectedServiceName = NewPipe.getService(selectedServiceId)
+            final String selectedServiceName = OpenTube.getService(selectedServiceId)
                     .getServiceInfo().getName();
             drawerHeaderBinding.drawerHeaderServiceView.setText(selectedServiceName);
             drawerHeaderBinding.drawerHeaderServiceIcon.setImageResource(ServiceHelper

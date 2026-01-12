@@ -1,8 +1,8 @@
-package org.schabi.newpipe.about
+package org.schabi.opentube.about
 
 import android.content.Context
-import org.schabi.newpipe.R
-import org.schabi.newpipe.util.ThemeHelper
+import org.schabi.opentube.R
+import org.schabi.opentube.util.ThemeHelper
 import java.io.IOException
 
 /**

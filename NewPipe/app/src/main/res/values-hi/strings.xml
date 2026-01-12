@@ -840,7 +840,7 @@
     <string name="migration_info_6_7_title">साउंडक्लाउड टॉप 50 पेज हटा दिया गया</string>
     <string name="migration_info_6_7_message">साउंडक्लाउड ने ओरिजिनल टॉप 50 चार्ट बंद कर दिए हैं। इससे जुड़ा टैब आपके मेन पेज से हटा दिया गया है।</string>
     <string name="migration_info_7_8_title">YouTube कंबाइंड ट्रेंडिंग हटा दी गई</string>
-    <string name="migration_info_7_8_message">YouTube ने 21 जुलाई 2025 से कंबाइंड ट्रेंडिंग पेज बंद कर दिया है। NewPipe ने डिफ़ॉल्ट ट्रेंडिंग पेज को ट्रेंडिंग लाइवस्ट्रीम से बदल दिया है।\n\nआप \"सेटिंग्स &gt; कंटेंट &gt; मेन पेज कंटेंट\" में अलग-अलग ट्रेंडिंग पेज भी चुन सकते हैं।</string>
+    <string name="migration_info_7_8_message">YouTube ने 21 जुलाई 2025 से कंबाइंड ट्रेंडिंग पेज बंद कर दिया है। OpenTube ने डिफ़ॉल्ट ट्रेंडिंग पेज को ट्रेंडिंग लाइवस्ट्रीम से बदल दिया है।\n\nआप \"सेटिंग्स &gt; कंटेंट &gt; मेन पेज कंटेंट\" में अलग-अलग ट्रेंडिंग पेज भी चुन सकते हैं।</string>
     <string name="trending_gaming">गेमिंग ट्रेंडस</string>
     <string name="trending_podcasts">ट्रेंडिंग पॉडकास्ट</string>
     <string name="trending_movies">ट्रेंडिंग फिल्में और शो</string>

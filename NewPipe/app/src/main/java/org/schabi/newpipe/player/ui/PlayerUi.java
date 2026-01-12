@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.ui;
+package org.schabi.opentube.player.ui;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,8 +13,8 @@ import com.google.android.exoplayer2.Tracks;
 import com.google.android.exoplayer2.text.Cue;
 import com.google.android.exoplayer2.video.VideoSize;
 
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.player.Player;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.player.Player;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.holder;
+package org.schabi.opentube.local.holder;
 
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,17 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.core.content.ContextCompat;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.stream.StreamStatisticsEntry;
-import org.schabi.newpipe.ktx.ViewUtils;
-import org.schabi.newpipe.local.LocalItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.DependentPreferenceHelper;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.views.AnimatedProgressBar;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.stream.StreamStatisticsEntry;
+import org.schabi.opentube.ktx.ViewUtils;
+import org.schabi.opentube.local.LocalItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.DependentPreferenceHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.ServiceHelper;
+import org.schabi.opentube.views.AnimatedProgressBar;
 
 import java.time.format.DateTimeFormatter;
 import java.util.concurrent.TimeUnit;
@@ -27,20 +27,20 @@ import java.util.concurrent.TimeUnit;
  * Created by Christian Schabesberger on 01.08.16.
  * <p>
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * StreamInfoItemHolder.java is part of NewPipe.
+ * StreamInfoItemHolder.java is part of OpenTube.
  * <p>
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * <p>
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * <p>
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class LocalStatisticStreamItemHolder extends LocalItemHolder {

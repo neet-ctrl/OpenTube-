@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player
+package org.schabi.opentube.player
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import androidx.recyclerview.widget.RecyclerView;
 

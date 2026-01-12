@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -16,15 +16,15 @@ import androidx.annotation.Nullable;
 import androidx.annotation.VisibleForTesting;
 import androidx.collection.SparseArrayCompat;
 
-import org.schabi.newpipe.DownloaderImpl;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.downloader.Response;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.SubtitlesStream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.extractor.utils.Utils;
+import org.schabi.opentube.DownloaderImpl;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.downloader.Response;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.Stream;
+import org.schabi.opentube.extractor.stream.SubtitlesStream;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.extractor.utils.Utils;
 
 import java.io.Serializable;
 import java.util.Arrays;

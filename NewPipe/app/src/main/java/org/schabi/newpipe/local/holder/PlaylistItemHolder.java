@@ -1,13 +1,13 @@
-package org.schabi.newpipe.local.holder;
+package org.schabi.opentube.local.holder;
 
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.local.LocalItemBuilder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.local.LocalItemBuilder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
 
 import java.time.format.DateTimeFormatter;
 

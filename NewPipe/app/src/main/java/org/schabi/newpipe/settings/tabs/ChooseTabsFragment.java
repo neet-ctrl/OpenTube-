@@ -1,7 +1,7 @@
-package org.schabi.newpipe.settings.tabs;
+package org.schabi.opentube.settings.tabs;
 
-import static org.schabi.newpipe.settings.tabs.Tab.typeFrom;
-import static org.schabi.newpipe.util.ServiceHelper.getNameOfServiceById;
+import static org.schabi.opentube.settings.tabs.Tab.typeFrom;
+import static org.schabi.opentube.util.ServiceHelper.getNameOfServiceById;
 
 import android.annotation.SuppressLint;
 import android.app.Dialog;
@@ -27,16 +27,16 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.settings.SelectChannelFragment;
-import org.schabi.newpipe.settings.SelectKioskFragment;
-import org.schabi.newpipe.settings.SelectPlaylistFragment;
-import org.schabi.newpipe.settings.SelectFeedGroupFragment;
-import org.schabi.newpipe.settings.tabs.AddTabDialog.ChooseTabListItem;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.settings.SelectChannelFragment;
+import org.schabi.opentube.settings.SelectKioskFragment;
+import org.schabi.opentube.settings.SelectPlaylistFragment;
+import org.schabi.opentube.settings.SelectFeedGroupFragment;
+import org.schabi.opentube.settings.tabs.AddTabDialog.ChooseTabListItem;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.util.ArrayList;
 import java.util.Collections;

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.resolver;
+package org.schabi.opentube.player.resolver;
 
 import android.content.Context;
 import android.net.Uri;
@@ -12,25 +12,25 @@ import com.google.android.exoplayer2.MediaItem;
 import com.google.android.exoplayer2.source.MediaSource;
 import com.google.android.exoplayer2.source.MergingMediaSource;
 
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.SubtitlesStream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.player.helper.PlayerDataSource;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.mediaitem.StreamInfoTag;
-import org.schabi.newpipe.util.ListHelper;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.SubtitlesStream;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.player.helper.PlayerDataSource;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.mediaitem.StreamInfoTag;
+import org.schabi.opentube.util.ListHelper;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
 import static com.google.android.exoplayer2.C.TIME_UNSET;
-import static org.schabi.newpipe.util.ListHelper.getFilteredAudioStreams;
-import static org.schabi.newpipe.util.ListHelper.getUrlAndNonTorrentStreams;
-import static org.schabi.newpipe.util.ListHelper.getPlayableStreams;
+import static org.schabi.opentube.util.ListHelper.getFilteredAudioStreams;
+import static org.schabi.opentube.util.ListHelper.getUrlAndNonTorrentStreams;
+import static org.schabi.opentube.util.ListHelper.getPlayableStreams;
 
 public class VideoPlaybackResolver implements PlaybackResolver {
     private static final String TAG = VideoPlaybackResolver.class.getSimpleName();

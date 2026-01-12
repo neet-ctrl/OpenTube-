@@ -1,6 +1,6 @@
 /*
  * Copyright 2019 Mauricio Colli <mauriciocolli@outlook.com>
- * FeedLoadService.kt is part of NewPipe
+ * FeedLoadService.kt is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.local.feed.service
+package org.schabi.opentube.local.feed.service
 
 import android.app.Service
 import android.content.BroadcastReceiver
@@ -36,12 +36,12 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.functions.Function
-import org.schabi.newpipe.App
-import org.schabi.newpipe.MainActivity.DEBUG
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.ErrorResultEvent
-import org.schabi.newpipe.local.feed.service.FeedEventManager.postEvent
+import org.schabi.opentube.App
+import org.schabi.opentube.MainActivity.DEBUG
+import org.schabi.opentube.R
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.local.feed.service.FeedEventManager.Event.ErrorResultEvent
+import org.schabi.opentube.local.feed.service.FeedEventManager.postEvent
 import java.util.concurrent.TimeUnit
 
 class FeedLoadService : Service() {
@@ -141,7 +141,7 @@ class FeedLoadService : Service() {
         return NotificationCompat.Builder(this, getString(R.string.notification_channel_id))
             .setOngoing(true)
             .setProgress(-1, -1, true)
-            .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+            .setSmallIcon(R.drawable.ic_opentube_triangle_white)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .addAction(0, getString(R.string.cancel), cancelActionIntent)
             .setContentTitle(getString(R.string.feed_notification_loading))

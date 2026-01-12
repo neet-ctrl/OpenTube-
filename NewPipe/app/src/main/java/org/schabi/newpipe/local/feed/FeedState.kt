@@ -1,7 +1,7 @@
-package org.schabi.newpipe.local.feed
+package org.schabi.opentube.local.feed
 
 import androidx.annotation.StringRes
-import org.schabi.newpipe.local.feed.item.StreamItem
+import org.schabi.opentube.local.feed.item.StreamItem
 import java.time.OffsetDateTime
 
 sealed class FeedState {

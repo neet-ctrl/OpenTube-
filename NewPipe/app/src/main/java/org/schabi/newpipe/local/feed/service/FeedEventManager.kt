@@ -1,9 +1,9 @@
-package org.schabi.newpipe.local.feed.service
+package org.schabi.opentube.local.feed.service
 
 import androidx.annotation.StringRes
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.processors.BehaviorProcessor
-import org.schabi.newpipe.local.feed.service.FeedEventManager.Event.IdleEvent
+import org.schabi.opentube.local.feed.service.FeedEventManager.Event.IdleEvent
 import java.util.concurrent.atomic.AtomicBoolean
 
 object FeedEventManager {

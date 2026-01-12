@@ -1,23 +1,23 @@
 /*
- * SPDX-FileCopyrightText: 2018-2020 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2018-2020 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.playlist.model
+package org.schabi.opentube.database.playlist.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.ForeignKey.Companion.CASCADE
 import androidx.room.Index
-import org.schabi.newpipe.database.LocalItem
-import org.schabi.newpipe.database.playlist.model.PlaylistEntity.Companion.PLAYLIST_ID
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.Companion.JOIN_INDEX
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.Companion.JOIN_PLAYLIST_ID
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.Companion.JOIN_STREAM_ID
-import org.schabi.newpipe.database.playlist.model.PlaylistStreamEntity.Companion.PLAYLIST_STREAM_JOIN_TABLE
-import org.schabi.newpipe.database.stream.model.StreamEntity
+import org.schabi.opentube.database.LocalItem
+import org.schabi.opentube.database.playlist.model.PlaylistEntity.Companion.PLAYLIST_ID
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity.Companion.JOIN_INDEX
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity.Companion.JOIN_PLAYLIST_ID
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity.Companion.JOIN_STREAM_ID
+import org.schabi.opentube.database.playlist.model.PlaylistStreamEntity.Companion.PLAYLIST_STREAM_JOIN_TABLE
+import org.schabi.opentube.database.stream.model.StreamEntity
 
 @Entity(
     tableName = PLAYLIST_STREAM_JOIN_TABLE,

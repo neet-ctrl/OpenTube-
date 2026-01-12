@@ -1,6 +1,6 @@
-package org.schabi.newpipe.fragments;
+package org.schabi.opentube.fragments;
 
-import static org.schabi.newpipe.ktx.ViewUtils.animate;
+import static org.schabi.opentube.ktx.ViewUtils.animate;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -15,12 +15,12 @@ import androidx.fragment.app.Fragment;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.BaseFragment;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorPanelHelper;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.util.InfoCache;
+import org.schabi.opentube.BaseFragment;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorPanelHelper;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.util.InfoCache;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 

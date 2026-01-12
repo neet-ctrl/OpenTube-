@@ -1,6 +1,6 @@
 /*
  * Copyright 2017 Mauricio Colli <mauriciocolli@outlook.com>
- * StateSaver.java is part of NewPipe
+ * StateSaver.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 
 import android.content.Context;
@@ -29,8 +29,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.os.BundleCompat;
 
-import org.schabi.newpipe.BuildConfig;
-import org.schabi.newpipe.MainActivity;
+import org.schabi.opentube.BuildConfig;
+import org.schabi.opentube.MainActivity;
 
 import java.io.File;
 import java.io.FileInputStream;

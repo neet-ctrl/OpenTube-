@@ -1,6 +1,6 @@
 /*
  * Copyright 2017 Mauricio Colli <mauriciocolli@outlook.com>
- * InfoCache.java is part of NewPipe
+ * InfoCache.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.util.Log;
 
@@ -25,8 +25,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.collection.LruCache;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.extractor.Info;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.extractor.Info;
 
 import java.util.Map;
 

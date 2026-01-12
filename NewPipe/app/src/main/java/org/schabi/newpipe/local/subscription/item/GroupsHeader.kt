@@ -1,10 +1,10 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.view.View
 import androidx.core.view.isVisible
 import com.xwray.groupie.viewbinding.BindableItem
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.SubscriptionGroupsHeaderBinding
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.SubscriptionGroupsHeaderBinding
 
 class GroupsHeader(
     private val title: String,

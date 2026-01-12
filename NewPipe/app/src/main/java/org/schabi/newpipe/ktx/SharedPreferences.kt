@@ -1,4 +1,4 @@
-package org.schabi.newpipe.ktx
+package org.schabi.opentube.ktx
 
 import android.content.SharedPreferences
 

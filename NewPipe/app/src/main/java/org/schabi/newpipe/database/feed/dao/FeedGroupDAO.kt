@@ -1,4 +1,4 @@
-package org.schabi.newpipe.database.feed.dao
+package org.schabi.opentube.database.feed.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
@@ -8,8 +8,8 @@ import androidx.room.Transaction
 import androidx.room.Update
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Maybe
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.feed.model.FeedGroupSubscriptionEntity
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.feed.model.FeedGroupSubscriptionEntity
 
 @Dao
 abstract class FeedGroupDAO {

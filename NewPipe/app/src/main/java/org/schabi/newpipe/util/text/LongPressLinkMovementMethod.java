@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
-import static org.schabi.newpipe.util.text.TouchUtils.getOffsetForHorizontalLine;
+import static org.schabi.opentube.util.text.TouchUtils.getOffsetForHorizontalLine;
 
 import android.os.Handler;
 import android.os.Looper;

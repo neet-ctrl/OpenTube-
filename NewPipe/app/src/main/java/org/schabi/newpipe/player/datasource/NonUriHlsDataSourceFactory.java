@@ -1,6 +1,6 @@
-package org.schabi.newpipe.player.datasource;
+package org.schabi.opentube.player.datasource;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
 
 import androidx.annotation.NonNull;
 

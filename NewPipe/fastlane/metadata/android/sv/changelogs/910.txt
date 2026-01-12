@@ -1,1 +1,1 @@
-Fixade databasmigrering som hindrade NewPipe från att starta i vissa sällsynta fall.
+Fixade databasmigrering som hindrade OpenTube från att starta i vissa sällsynta fall.

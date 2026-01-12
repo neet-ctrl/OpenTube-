@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.dialog;
+package org.schabi.opentube.local.dialog;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -9,12 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog.Builder;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.databinding.DialogEditTextBinding;
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.databinding.DialogEditTextBinding;
+import org.schabi.opentube.local.playlist.LocalPlaylistManager;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.util.List;
 
@@ -60,7 +60,7 @@ public final class PlaylistCreationDialog extends PlaylistDialog {
                 .setPositiveButton(R.string.create, (dialogInterface, i) -> {
                     final String name = dialogBinding.dialogEditText.getText().toString();
                     final LocalPlaylistManager playlistManager =
-                            new LocalPlaylistManager(NewPipeDatabase.getInstance(requireContext()));
+                            new LocalPlaylistManager(OpenTubeDatabase.getInstance(requireContext()));
                     final Toast successToast = Toast.makeText(getActivity(),
                             R.string.playlist_creation_success,
                             Toast.LENGTH_SHORT);

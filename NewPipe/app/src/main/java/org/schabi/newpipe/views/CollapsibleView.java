@@ -1,6 +1,6 @@
 /*
  * Copyright 2018 Mauricio Colli <mauriciocolli@outlook.com>
- * CollapsibleView.java is part of NewPipe
+ * CollapsibleView.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.views;
+package org.schabi.opentube.views;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
+import static org.schabi.opentube.MainActivity.DEBUG;
 import static java.lang.annotation.RetentionPolicy.SOURCE;
 
 import android.animation.ValueAnimator;
@@ -35,7 +35,7 @@ import androidx.annotation.Nullable;
 import com.evernote.android.state.State;
 import com.livefront.bridge.Bridge;
 
-import org.schabi.newpipe.ktx.ViewUtils;
+import org.schabi.opentube.ktx.ViewUtils;
 
 import java.lang.annotation.Retention;
 import java.util.ArrayList;

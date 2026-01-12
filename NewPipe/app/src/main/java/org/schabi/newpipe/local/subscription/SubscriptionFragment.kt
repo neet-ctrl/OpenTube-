@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription
+package org.schabi.opentube.local.subscription
 
 import android.app.Activity
 import android.content.Context
@@ -27,41 +27,41 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.Section
 import com.xwray.groupie.viewbinding.GroupieViewHolder
 import io.reactivex.rxjava3.disposables.CompositeDisposable
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity.Companion.GROUP_ALL_ID
-import org.schabi.newpipe.databinding.DialogTitleBinding
-import org.schabi.newpipe.databinding.FeedItemCarouselBinding
-import org.schabi.newpipe.databinding.FragmentSubscriptionBinding
-import org.schabi.newpipe.error.ErrorInfo
-import org.schabi.newpipe.error.UserAction
-import org.schabi.newpipe.extractor.ServiceList
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem
-import org.schabi.newpipe.fragments.BaseStateFragment
-import org.schabi.newpipe.ktx.animate
-import org.schabi.newpipe.local.subscription.SubscriptionViewModel.SubscriptionState
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupDialog
-import org.schabi.newpipe.local.subscription.dialog.FeedGroupReorderDialog
-import org.schabi.newpipe.local.subscription.item.ChannelItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupAddNewGridItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupAddNewItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCardGridItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCardItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCarouselItem
-import org.schabi.newpipe.local.subscription.item.GroupsHeader
-import org.schabi.newpipe.local.subscription.item.Header
-import org.schabi.newpipe.local.subscription.item.ImportSubscriptionsHintPlaceholderItem
-import org.schabi.newpipe.local.subscription.services.SubscriptionsExportService
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_MODE
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_VALUE
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.PREVIOUS_EXPORT_MODE
-import org.schabi.newpipe.streams.io.NoFileManagerSafeGuard
-import org.schabi.newpipe.streams.io.StoredFileHelper
-import org.schabi.newpipe.util.NavigationHelper
-import org.schabi.newpipe.util.OnClickGesture
-import org.schabi.newpipe.util.ServiceHelper
-import org.schabi.newpipe.util.ThemeHelper.getGridSpanCountChannels
-import org.schabi.newpipe.util.external_communication.ShareUtils
+import org.schabi.opentube.R
+import org.schabi.opentube.database.feed.model.FeedGroupEntity.Companion.GROUP_ALL_ID
+import org.schabi.opentube.databinding.DialogTitleBinding
+import org.schabi.opentube.databinding.FeedItemCarouselBinding
+import org.schabi.opentube.databinding.FragmentSubscriptionBinding
+import org.schabi.opentube.error.ErrorInfo
+import org.schabi.opentube.error.UserAction
+import org.schabi.opentube.extractor.ServiceList
+import org.schabi.opentube.extractor.channel.ChannelInfoItem
+import org.schabi.opentube.fragments.BaseStateFragment
+import org.schabi.opentube.ktx.animate
+import org.schabi.opentube.local.subscription.SubscriptionViewModel.SubscriptionState
+import org.schabi.opentube.local.subscription.dialog.FeedGroupDialog
+import org.schabi.opentube.local.subscription.dialog.FeedGroupReorderDialog
+import org.schabi.opentube.local.subscription.item.ChannelItem
+import org.schabi.opentube.local.subscription.item.FeedGroupAddNewGridItem
+import org.schabi.opentube.local.subscription.item.FeedGroupAddNewItem
+import org.schabi.opentube.local.subscription.item.FeedGroupCardGridItem
+import org.schabi.opentube.local.subscription.item.FeedGroupCardItem
+import org.schabi.opentube.local.subscription.item.FeedGroupCarouselItem
+import org.schabi.opentube.local.subscription.item.GroupsHeader
+import org.schabi.opentube.local.subscription.item.Header
+import org.schabi.opentube.local.subscription.item.ImportSubscriptionsHintPlaceholderItem
+import org.schabi.opentube.local.subscription.services.SubscriptionsExportService
+import org.schabi.opentube.local.subscription.services.SubscriptionsImportService
+import org.schabi.opentube.local.subscription.services.SubscriptionsImportService.KEY_MODE
+import org.schabi.opentube.local.subscription.services.SubscriptionsImportService.KEY_VALUE
+import org.schabi.opentube.local.subscription.services.SubscriptionsImportService.PREVIOUS_EXPORT_MODE
+import org.schabi.opentube.streams.io.NoFileManagerSafeGuard
+import org.schabi.opentube.streams.io.StoredFileHelper
+import org.schabi.opentube.util.NavigationHelper
+import org.schabi.opentube.util.OnClickGesture
+import org.schabi.opentube.util.ServiceHelper
+import org.schabi.opentube.util.ThemeHelper.getGridSpanCountChannels
+import org.schabi.opentube.util.external_communication.ShareUtils
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale
@@ -208,7 +208,7 @@ class SubscriptionFragment : BaseStateFragment<SubscriptionState>() {
 
     private fun onExportSelected() {
         val date = SimpleDateFormat("yyyyMMddHHmm", Locale.ENGLISH).format(Date())
-        val exportName = "newpipe_subscriptions_$date.json"
+        val exportName = "opentube_subscriptions_$date.json"
 
         NoFileManagerSafeGuard.launchSafe(
             requestExportLauncher,

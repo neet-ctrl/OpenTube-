@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.ui;
+package org.schabi.opentube.player.ui;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
-package org.schabi.newpipe.local.holder;
+package org.schabi.opentube.local.holder;
 
 import android.view.ViewGroup;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.local.LocalItemBuilder;
+import org.schabi.opentube.R;
+import org.schabi.opentube.local.LocalItemBuilder;
 
 public class LocalPlaylistGridItemHolder extends LocalPlaylistItemHolder {
     public LocalPlaylistGridItemHolder(final LocalItemBuilder infoItemBuilder,

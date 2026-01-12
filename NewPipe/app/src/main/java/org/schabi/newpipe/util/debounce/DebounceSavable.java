@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util.debounce;
+package org.schabi.opentube.util.debounce;
 
-import org.schabi.newpipe.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorInfo;
 
 public interface DebounceSavable {
 

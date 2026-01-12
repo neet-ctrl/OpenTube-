@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription;
+package org.schabi.opentube.local.subscription;
 
 import static org.junit.Assert.assertEquals;
 
@@ -8,13 +8,13 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.schabi.newpipe.database.AppDatabase;
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity;
-import org.schabi.newpipe.database.subscription.SubscriptionEntity;
-import org.schabi.newpipe.extractor.channel.ChannelInfo;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.testUtil.TestDatabase;
-import org.schabi.newpipe.testUtil.TrampolineSchedulerRule;
+import org.schabi.opentube.database.AppDatabase;
+import org.schabi.opentube.database.feed.model.FeedGroupEntity;
+import org.schabi.opentube.database.subscription.SubscriptionEntity;
+import org.schabi.opentube.extractor.channel.ChannelInfo;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.testUtil.TestDatabase;
+import org.schabi.opentube.testUtil.TrampolineSchedulerRule;
 
 import java.io.IOException;
 import java.util.List;
@@ -38,7 +38,7 @@ public class SubscriptionManagerTest {
 
     @Before
     public void setup() {
-        database = TestDatabase.Companion.createReplacingNewPipeDatabase();
+        database = TestDatabase.Companion.createReplacingOpenTubeDatabase();
         manager = new SubscriptionManager(ApplicationProvider.getApplicationContext());
     }
 

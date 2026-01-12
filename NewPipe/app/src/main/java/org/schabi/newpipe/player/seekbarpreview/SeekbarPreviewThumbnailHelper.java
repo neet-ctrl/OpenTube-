@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.seekbarpreview;
+package org.schabi.opentube.player.seekbarpreview;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,16 +13,16 @@ import androidx.core.graphics.BitmapCompat;
 import androidx.core.math.MathUtils;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.util.DeviceUtils;
+import org.schabi.opentube.R;
+import org.schabi.opentube.util.DeviceUtils;
 
 import java.lang.annotation.Retention;
 import java.util.function.IntSupplier;
 
 import static java.lang.annotation.RetentionPolicy.SOURCE;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.HIGH_QUALITY;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.LOW_QUALITY;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.NONE;
+import static org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.HIGH_QUALITY;
+import static org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.LOW_QUALITY;
+import static org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType.NONE;
 
 /**
  * Helper for the seekbar preview.

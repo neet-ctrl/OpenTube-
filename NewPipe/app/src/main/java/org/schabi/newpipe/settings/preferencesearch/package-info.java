@@ -7,4 +7,4 @@
  *
  * @author litetex
  */
-package org.schabi.newpipe.settings.preferencesearch;
+package org.schabi.opentube.settings.preferencesearch;

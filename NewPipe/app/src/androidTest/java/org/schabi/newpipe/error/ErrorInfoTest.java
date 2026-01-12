@@ -1,4 +1,4 @@
-package org.schabi.newpipe.error;
+package org.schabi.opentube.error;
 
 import android.os.Parcel;
 
@@ -7,9 +7,9 @@ import androidx.test.filters.LargeTest;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.ServiceList;
-import org.schabi.newpipe.extractor.exceptions.ParsingException;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.ServiceList;
+import org.schabi.opentube.extractor.exceptions.ParsingException;
 
 import java.util.Arrays;
 import java.util.Objects;

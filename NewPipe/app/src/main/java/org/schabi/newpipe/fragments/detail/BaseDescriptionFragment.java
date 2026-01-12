@@ -1,8 +1,8 @@
-package org.schabi.newpipe.fragments.detail;
+package org.schabi.opentube.fragments.detail;
 
 import static android.text.TextUtils.isEmpty;
-import static org.schabi.newpipe.extractor.utils.Utils.isBlank;
-import static org.schabi.newpipe.util.text.TextLinkifier.SET_LINK_MOVEMENT_METHOD;
+import static org.schabi.opentube.extractor.utils.Utils.isBlank;
+import static org.schabi.opentube.util.text.TextLinkifier.SET_LINK_MOVEMENT_METHOD;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -24,18 +24,18 @@ import androidx.core.text.HtmlCompat;
 
 import com.google.android.material.chip.Chip;
 
-import org.schabi.newpipe.BaseFragment;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.FragmentDescriptionBinding;
-import org.schabi.newpipe.databinding.ItemMetadataBinding;
-import org.schabi.newpipe.databinding.ItemMetadataTagsBinding;
-import org.schabi.newpipe.extractor.Image;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.stream.Description;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.util.image.ImageStrategy;
-import org.schabi.newpipe.util.text.TextLinkifier;
+import org.schabi.opentube.BaseFragment;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.FragmentDescriptionBinding;
+import org.schabi.opentube.databinding.ItemMetadataBinding;
+import org.schabi.opentube.databinding.ItemMetadataTagsBinding;
+import org.schabi.opentube.extractor.Image;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.stream.Description;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.util.image.ImageStrategy;
+import org.schabi.opentube.util.text.TextLinkifier;
 
 import java.util.List;
 

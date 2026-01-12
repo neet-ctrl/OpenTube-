@@ -1,6 +1,6 @@
 @file:JvmName("ViewUtils")
 
-package org.schabi.newpipe.ktx
+package org.schabi.opentube.ktx
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter

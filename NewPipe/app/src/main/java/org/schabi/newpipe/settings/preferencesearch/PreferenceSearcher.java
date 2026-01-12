@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.preferencesearch;
+package org.schabi.opentube.settings.preferencesearch;
 
 import android.text.TextUtils;
 

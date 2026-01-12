@@ -1,19 +1,19 @@
 /*
- * SPDX-FileCopyrightText: 2023-2024 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2023-2024 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.playlist
+package org.schabi.opentube.database.playlist
 
 import androidx.room.ColumnInfo
-import org.schabi.newpipe.database.playlist.model.PlaylistEntity
+import org.schabi.opentube.database.playlist.model.PlaylistEntity
 
 /**
  * This class adds a field to [PlaylistMetadataEntry] that contains an integer representing
  * how many times a specific stream is already contained inside a local playlist. Used to be able
  * to grey out playlists which already contain the current stream in the playlist append dialog.
- * @see org.schabi.newpipe.local.playlist.LocalPlaylistManager.getPlaylistDuplicates
+ * @see org.schabi.opentube.local.playlist.LocalPlaylistManager.getPlaylistDuplicates
  */
 data class PlaylistDuplicatesEntry(
     @ColumnInfo(name = PlaylistEntity.PLAYLIST_ID)

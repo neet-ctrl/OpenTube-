@@ -1,19 +1,19 @@
 /*
- * SPDX-FileCopyrightText: 2018-2022 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2018-2022 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.history.dao
+package org.schabi.opentube.database.history.dao
 
 import androidx.room.Dao
 import androidx.room.Query
 import androidx.room.RewriteQueriesToDropUnusedColumns
 import io.reactivex.rxjava3.core.Flowable
-import org.schabi.newpipe.database.BasicDAO
-import org.schabi.newpipe.database.history.model.StreamHistoryEntity
-import org.schabi.newpipe.database.history.model.StreamHistoryEntry
-import org.schabi.newpipe.database.stream.StreamStatisticsEntry
+import org.schabi.opentube.database.BasicDAO
+import org.schabi.opentube.database.history.model.StreamHistoryEntity
+import org.schabi.opentube.database.history.model.StreamHistoryEntry
+import org.schabi.opentube.database.stream.StreamStatisticsEntry
 
 @Dao
 abstract class StreamHistoryDAO : BasicDAO<StreamHistoryEntity> {

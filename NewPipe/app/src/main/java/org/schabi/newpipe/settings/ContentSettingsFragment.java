@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,14 +13,14 @@ import androidx.appcompat.app.AppCompatDelegate;
 import androidx.core.os.LocaleListCompat;
 import androidx.preference.Preference;
 
-import org.schabi.newpipe.DownloaderImpl;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.image.ImageStrategy;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.image.PreferredImageQuality;
+import org.schabi.opentube.DownloaderImpl;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.image.ImageStrategy;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.image.PreferredImageQuality;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -105,7 +105,7 @@ public class ContentSettingsFragment extends BasePreferenceFragment {
         super.onDestroy();
 
         final Context context = requireContext();
-        NewPipe.setupLocalization(
+        OpenTube.setupLocalization(
             Localization.getPreferredLocalization(context),
             Localization.getPreferredContentCountry(context));
         PlayerHelper.resetFormat();

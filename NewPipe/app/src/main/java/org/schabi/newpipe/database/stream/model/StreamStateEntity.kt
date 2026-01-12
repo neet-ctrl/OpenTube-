@@ -1,19 +1,19 @@
 /*
- * SPDX-FileCopyrightText: 2018-2023 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2018-2023 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.stream.model
+package org.schabi.opentube.database.stream.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.ForeignKey.Companion.CASCADE
-import org.schabi.newpipe.database.stream.model.StreamEntity.Companion.STREAM_ID
-import org.schabi.newpipe.database.stream.model.StreamStateEntity.Companion.JOIN_STREAM_ID
-import org.schabi.newpipe.database.stream.model.StreamStateEntity.Companion.PLAYBACK_FINISHED_END_MILLISECONDS
-import org.schabi.newpipe.database.stream.model.StreamStateEntity.Companion.STREAM_STATE_TABLE
+import org.schabi.opentube.database.stream.model.StreamEntity.Companion.STREAM_ID
+import org.schabi.opentube.database.stream.model.StreamStateEntity.Companion.JOIN_STREAM_ID
+import org.schabi.opentube.database.stream.model.StreamStateEntity.Companion.PLAYBACK_FINISHED_END_MILLISECONDS
+import org.schabi.opentube.database.stream.model.StreamStateEntity.Companion.STREAM_STATE_TABLE
 
 @Entity(
     tableName = STREAM_STATE_TABLE,
@@ -78,7 +78,7 @@ data class StreamStateEntity(
         /**
          * Stream will be considered finished if the playback time left exceeds this threshold
          * (60000ms = 60s).
-         * @see org.schabi.newpipe.database.stream.model.StreamStateEntity.isFinished
+         * @see org.schabi.opentube.database.stream.model.StreamStateEntity.isFinished
          */
         const val PLAYBACK_FINISHED_END_MILLISECONDS = 60000L
     }

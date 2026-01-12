@@ -11,8 +11,8 @@ Sabit
 - Uygulama değiştirirken indirilenler görünümünde kaybolan düğmeleri düzeltme #2487
 - İzleme geçmişi devre dışı olmasına rağmen sabit oynatma konumu kaydedilir
 - Liste görünümlerinde oynatma konumunun neden olduğu düşük performansı düzeltme #2517
-- [Extractor] ReCaptchaActivity #2527'yi düzeltin, TeamNewPipe/NewPipeExtractor#186
-- [Extractor] [YouTube] Çalma listeleri sonuçlarda olduğunda sıradan arama hatasını düzeltin TeamNewPipe/NewPipeExtractor#185
+- [Extractor] ReCaptchaActivity #2527'yi düzeltin, TeamOpenTube/OpenTubeExtractor#186
+- [Extractor] [YouTube] Çalma listeleri sonuçlarda olduğunda sıradan arama hatasını düzeltin TeamOpenTube/OpenTubeExtractor#185
 
 0.17.0'daki Değişiklikler
 
@@ -36,5 +36,5 @@ Sabit
 - Uygulama güncellemesi kontrolü başarısız olduğunda çökme (GitHub sürümü) #2423 
 - İndirmelerin %99,9'da takılması düzeltildi #2440
 - Oynatma kuyruğu meta verilerini güncelleme #2453 
-- [SoundCloud] Çalma listeleri yüklenirken oluşan çökme düzeltildi TeamNewPipe/NewPipeExtractor#170
-- [YouTube] Sabit süre ayrıştırılamıyor TeamNewPipe/NewPipeExtractor#177
+- [SoundCloud] Çalma listeleri yüklenirken oluşan çökme düzeltildi TeamOpenTube/OpenTubeExtractor#170
+- [YouTube] Sabit süre ayrıştırılamıyor TeamOpenTube/OpenTubeExtractor#177

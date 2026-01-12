@@ -39,6 +39,6 @@
 
 - Correction d'une exception déclenchant un rapport en cas d'absence d'affichage
 
-- Correction de l'affichage des miniatures dans le lecteur en arrière-plan sous Android 8.1 [voir ici](https://github.com/TeamNewPipe/NewPipe/issues/943)
+- Correction de l'affichage des miniatures dans le lecteur en arrière-plan sous Android 8.1 [voir ici](https://github.com/TeamOpenTube/OpenTube/issues/943)
 
 - Correction de l'enregistrement du récepteur de diffusion. Résout le problème n° 1641.

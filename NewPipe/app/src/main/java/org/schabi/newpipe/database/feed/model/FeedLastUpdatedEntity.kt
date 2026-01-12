@@ -1,12 +1,12 @@
-package org.schabi.newpipe.database.feed.model
+package org.schabi.opentube.database.feed.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
-import org.schabi.newpipe.database.feed.model.FeedLastUpdatedEntity.Companion.FEED_LAST_UPDATED_TABLE
-import org.schabi.newpipe.database.feed.model.FeedLastUpdatedEntity.Companion.SUBSCRIPTION_ID
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
+import org.schabi.opentube.database.feed.model.FeedLastUpdatedEntity.Companion.FEED_LAST_UPDATED_TABLE
+import org.schabi.opentube.database.feed.model.FeedLastUpdatedEntity.Companion.SUBSCRIPTION_ID
+import org.schabi.opentube.database.subscription.SubscriptionEntity
 import java.time.OffsetDateTime
 
 @Entity(

@@ -1,7 +1,7 @@
-package org.schabi.newpipe.player.mediaitem;
+package org.schabi.opentube.player.mediaitem;
 
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.util.Constants;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.util.Constants;
 
 import java.util.Collections;
 import java.util.List;

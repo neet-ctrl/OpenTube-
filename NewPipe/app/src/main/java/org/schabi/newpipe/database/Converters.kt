@@ -1,8 +1,8 @@
-package org.schabi.newpipe.database
+package org.schabi.opentube.database
 
 import androidx.room.TypeConverter
-import org.schabi.newpipe.extractor.stream.StreamType
-import org.schabi.newpipe.local.subscription.FeedGroupIcon
+import org.schabi.opentube.extractor.stream.StreamType
+import org.schabi.opentube.local.subscription.FeedGroupIcon
 import java.time.Instant
 import java.time.OffsetDateTime
 import java.time.ZoneOffset

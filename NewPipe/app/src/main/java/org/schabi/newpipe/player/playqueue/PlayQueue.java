@@ -1,17 +1,17 @@
-package org.schabi.newpipe.player.playqueue;
+package org.schabi.opentube.player.playqueue;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.AppendEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.ErrorEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.InitEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.MoveEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.RecoveryEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.RemoveEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.ReorderEvent;
-import org.schabi.newpipe.player.playqueue.PlayQueueEvent.SelectEvent;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.AppendEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.ErrorEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.InitEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.MoveEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.RecoveryEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.RemoveEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.ReorderEvent;
+import org.schabi.opentube.player.playqueue.PlayQueueEvent.SelectEvent;
 
 import java.io.Serializable;
 import java.util.ArrayList;

@@ -1,6 +1,6 @@
-package org.schabi.newpipe.fragments.list.playlist;
+package org.schabi.opentube.fragments.list.playlist;
 
-import org.schabi.newpipe.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueue;
 
 /**
  * Interface for {@code R.layout.playlist_control} view holders

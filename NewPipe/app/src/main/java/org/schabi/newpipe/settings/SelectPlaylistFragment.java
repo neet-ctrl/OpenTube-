@@ -1,6 +1,6 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
-import static org.schabi.newpipe.local.bookmark.MergedPlaylistManager.getMergedOrderedPlaylists;
+import static org.schabi.opentube.local.bookmark.MergedPlaylistManager.getMergedOrderedPlaylists;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -15,19 +15,19 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.AppDatabase;
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistLocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistMetadataEntry;
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
-import org.schabi.newpipe.local.playlist.RemotePlaylistManager;
-import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.AppDatabase;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.playlist.PlaylistLocalItem;
+import org.schabi.opentube.database.playlist.PlaylistMetadataEntry;
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.local.playlist.LocalPlaylistManager;
+import org.schabi.opentube.local.playlist.RemotePlaylistManager;
+import org.schabi.opentube.util.image.PicassoHelper;
 
 import java.util.List;
 import java.util.Vector;
@@ -87,7 +87,7 @@ public class SelectPlaylistFragment extends DialogFragment {
         recyclerView.setVisibility(View.GONE);
         emptyView.setVisibility(View.GONE);
 
-        final AppDatabase database = NewPipeDatabase.getInstance(requireContext());
+        final AppDatabase database = OpenTubeDatabase.getInstance(requireContext());
         final LocalPlaylistManager localPlaylistManager = new LocalPlaylistManager(database);
         final RemotePlaylistManager remotePlaylistManager = new RemotePlaylistManager(database);
 

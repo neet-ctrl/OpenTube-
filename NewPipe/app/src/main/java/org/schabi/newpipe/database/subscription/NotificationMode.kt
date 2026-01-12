@@ -1,10 +1,10 @@
 /*
- * SPDX-FileCopyrightText: 2021 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2021 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.subscription
+package org.schabi.opentube.database.subscription
 
 import androidx.annotation.IntDef
 

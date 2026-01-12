@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 import android.text.Selection;
@@ -8,17 +8,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.views.NewPipeEditText;
-import org.schabi.newpipe.views.NewPipeTextView;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.views.OpenTubeEditText;
+import org.schabi.opentube.views.OpenTubeTextView;
 
-public final class NewPipeTextViewHelper {
-    private NewPipeTextViewHelper() {
+public final class OpenTubeTextViewHelper {
+    private OpenTubeTextViewHelper() {
     }
 
     /**
-     * Share the selected text of {@link NewPipeTextView NewPipeTextViews} and
-     * {@link NewPipeEditText NewPipeEditTexts} with
+     * Share the selected text of {@link OpenTubeTextView OpenTubeTextViews} and
+     * {@link OpenTubeEditText OpenTubeEditTexts} with
      * {@link ShareUtils#shareText(Context, String, String)}.
      *
      * <p>
@@ -27,7 +27,7 @@ public final class NewPipeTextViewHelper {
      * </p>
      *
      * @param textView the {@link TextView} on which sharing the selected text. It should be a
-     *                 {@link NewPipeTextView} or a {@link NewPipeEditText} (even if
+     *                 {@link OpenTubeTextView} or a {@link OpenTubeEditText} (even if
      *                 {@link TextView standard TextViews} are supported).
      */
     public static void shareSelectedTextWithShareUtils(@NonNull final TextView textView) {

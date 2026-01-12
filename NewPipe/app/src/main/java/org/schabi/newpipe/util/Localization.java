@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
+import static org.schabi.opentube.MainActivity.DEBUG;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -24,12 +24,12 @@ import androidx.preference.PreferenceManager;
 
 import org.ocpsoft.prettytime.PrettyTime;
 import org.ocpsoft.prettytime.units.Decade;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.localization.ContentCountry;
-import org.schabi.newpipe.extractor.localization.DateWrapper;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.AudioTrackType;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.localization.ContentCountry;
+import org.schabi.opentube.extractor.localization.DateWrapper;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.AudioTrackType;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -48,20 +48,20 @@ import java.util.stream.Collectors;
  * Created by chschtsch on 12/29/15.
  *
  * Copyright (C) Gregory Arkhipov 2015
- * Localization.java is part of NewPipe.
+ * Localization.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public final class Localization {
@@ -97,9 +97,9 @@ public final class Localization {
         return BidiFormatter.getInstance().unicodeWrap(plainName);
     }
 
-    public static org.schabi.newpipe.extractor.localization.Localization getPreferredLocalization(
+    public static org.schabi.opentube.extractor.localization.Localization getPreferredLocalization(
             final Context context) {
-        return org.schabi.newpipe.extractor.localization.Localization
+        return org.schabi.opentube.extractor.localization.Localization
                 .fromLocale(getPreferredLocale(context));
     }
 
@@ -386,7 +386,7 @@ public final class Localization {
     /**
      * @param context the Android context; if {@code null} then even if in debug mode and the
      *                setting is enabled, {@code textual} will not be shown next to {@code parsed}
-     * @param parsed  the textual date or time ago parsed by NewPipeExtractor, or {@code null} if
+     * @param parsed  the textual date or time ago parsed by OpenTubeExtractor, or {@code null} if
      *                the extractor could not parse it
      * @param textual the original textual date or time ago string as provided by services
      * @return {@link #relativeTime(OffsetDateTime)} is used if {@code parsed != null}, otherwise
@@ -443,8 +443,8 @@ public final class Localization {
         return context.getResources().getQuantityString(pluralId, safeCount, formattedCount);
     }
 
-    // Starting with pull request #12093, NewPipe exclusively uses Android's
-    // public per-app language APIs to read and set the UI language for NewPipe.
+    // Starting with pull request #12093, OpenTube exclusively uses Android's
+    // public per-app language APIs to read and set the UI language for OpenTube.
     // The following code will migrate any existing custom app language in SharedPreferences to
     // use the public per-app language APIs instead.
     // For reference, see

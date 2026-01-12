@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.helper;
+package org.schabi.opentube.player.helper;
 
 import android.content.ComponentName;
 import android.content.Context;
@@ -13,16 +13,16 @@ import androidx.core.content.ContextCompat;
 import com.google.android.exoplayer2.PlaybackException;
 import com.google.android.exoplayer2.PlaybackParameters;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.player.PlayerService;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.PlayerType;
-import org.schabi.newpipe.player.event.PlayerServiceEventListener;
-import org.schabi.newpipe.player.event.PlayerServiceExtendedEventListener;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.util.NavigationHelper;
+import org.schabi.opentube.App;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.player.PlayerService;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.PlayerType;
+import org.schabi.opentube.player.event.PlayerServiceEventListener;
+import org.schabi.opentube.player.event.PlayerServiceExtendedEventListener;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.util.NavigationHelper;
 
 import java.util.Optional;
 import java.util.function.Consumer;

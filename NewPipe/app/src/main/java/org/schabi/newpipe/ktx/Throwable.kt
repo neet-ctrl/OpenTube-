@@ -1,6 +1,6 @@
 @file:JvmName("ExceptionUtils")
 
-package org.schabi.newpipe.ktx
+package org.schabi.opentube.ktx
 
 import java.io.IOException
 import java.io.InterruptedIOException

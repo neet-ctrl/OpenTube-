@@ -1,4 +1,4 @@
-package org.schabi.newpipe.streams.io;
+package org.schabi.opentube.streams.io;
 
 import androidx.annotation.NonNull;
 

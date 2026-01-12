@@ -1,1 +1,1 @@
-Salabota datu bāzes migrācija, kas retos gadījumos neļāva NewPipe palaisties.
+Salabota datu bāzes migrācija, kas retos gadījumos neļāva OpenTube palaisties.

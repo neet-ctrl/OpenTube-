@@ -1,4 +1,4 @@
-package org.schabi.newpipe.about
+package org.schabi.opentube.about
 
 import android.os.Bundle
 import android.util.Base64
@@ -15,12 +15,12 @@ import io.reactivex.rxjava3.core.Observable
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.BuildConfig
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.FragmentLicensesBinding
-import org.schabi.newpipe.databinding.ItemSoftwareComponentBinding
-import org.schabi.newpipe.ktx.parcelableArrayList
-import org.schabi.newpipe.util.external_communication.ShareUtils
+import org.schabi.opentube.BuildConfig
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.FragmentLicensesBinding
+import org.schabi.opentube.databinding.ItemSoftwareComponentBinding
+import org.schabi.opentube.ktx.parcelableArrayList
+import org.schabi.opentube.util.external_communication.ShareUtils
 
 /**
  * Fragment containing the software licenses.
@@ -124,10 +124,10 @@ class LicenseFragment : Fragment() {
         private const val ARG_COMPONENTS = "components"
         private const val SOFTWARE_COMPONENT_KEY = "ACTIVE_SOFTWARE_COMPONENT"
         private val NEWPIPE_SOFTWARE_COMPONENT = SoftwareComponent(
-            "NewPipe",
+            "OpenTube",
             "2014-2023",
-            "Team NewPipe",
-            "https://newpipe.net/",
+            "Team OpenTube",
+            "https://opentube.net/",
             StandardLicenses.GPL3,
             BuildConfig.VERSION_NAME
         )

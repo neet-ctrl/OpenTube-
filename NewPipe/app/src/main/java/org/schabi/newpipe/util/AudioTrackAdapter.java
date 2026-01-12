@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -11,9 +11,9 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.util.StreamItemAdapter.StreamInfoWrapper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.util.StreamItemAdapter.StreamInfoWrapper;
 
 import java.io.Serializable;
 import java.util.List;

@@ -1,14 +1,14 @@
-package org.schabi.newpipe.info_list
+package org.schabi.opentube.info_list
 
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
-import org.schabi.newpipe.R
-import org.schabi.newpipe.extractor.stream.StreamSegment
-import org.schabi.newpipe.util.Localization
-import org.schabi.newpipe.util.image.PicassoHelper
+import org.schabi.opentube.R
+import org.schabi.opentube.extractor.stream.StreamSegment
+import org.schabi.opentube.util.Localization
+import org.schabi.opentube.util.image.PicassoHelper
 
 class StreamSegmentItem(
     private val item: StreamSegment,

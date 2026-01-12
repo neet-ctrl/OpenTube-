@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed.notifications
+package org.schabi.opentube.local.feed.notifications
 
 import android.app.Notification
 import android.app.NotificationManager
@@ -18,11 +18,11 @@ import androidx.core.content.getSystemService
 import androidx.preference.PreferenceManager
 import com.squareup.picasso.Picasso
 import com.squareup.picasso.Target
-import org.schabi.newpipe.R
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.local.feed.service.FeedUpdateInfo
-import org.schabi.newpipe.util.NavigationHelper
-import org.schabi.newpipe.util.image.PicassoHelper
+import org.schabi.opentube.R
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.local.feed.service.FeedUpdateInfo
+import org.schabi.opentube.util.NavigationHelper
+import org.schabi.opentube.util.image.PicassoHelper
 
 /**
  * Helper for everything related to show notifications about new streams to the user.
@@ -52,7 +52,7 @@ class NotificationHelper(val context: Context) {
             .setNumber(newStreams.size)
             .setBadgeIconType(NotificationCompat.BADGE_ICON_LARGE)
             .setPriority(NotificationCompat.PRIORITY_DEFAULT)
-            .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+            .setSmallIcon(R.drawable.ic_opentube_triangle_white)
             .setColor(ContextCompat.getColor(context, R.color.ic_launcher_background))
             .setColorized(true)
             .setAutoCancel(true)
@@ -137,7 +137,7 @@ class NotificationHelper(val context: Context) {
             context,
             context.getString(R.string.streams_notification_channel_id)
         )
-            .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+            .setSmallIcon(R.drawable.ic_opentube_triangle_white)
             .setLargeIcon(channelIcon)
             .setContentTitle(item.name)
             .setContentText(item.uploaderName)
@@ -167,7 +167,7 @@ class NotificationHelper(val context: Context) {
          * If this is the case, the app cannot create any notifications
          * and display them to the user.
          * <br>
-         * On Android 26 and above, notification channels are used by NewPipe.
+         * On Android 26 and above, notification channels are used by OpenTube.
          * These can be configured by the user, too.
          * The notification channel for new streams is also checked by this method.
          *
@@ -201,10 +201,10 @@ class NotificationHelper(val context: Context) {
         }
 
         /**
-         * Open the system's notification settings for NewPipe on Android Oreo (API 26) and later.
-         * Open the system's app settings for NewPipe on previous Android versions.
+         * Open the system's notification settings for OpenTube on Android Oreo (API 26) and later.
+         * Open the system's app settings for OpenTube on previous Android versions.
          */
-        fun openNewPipeSystemNotificationSettings(context: Context) {
+        fun openOpenTubeSystemNotificationSettings(context: Context) {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 val intent = Intent(Settings.ACTION_APP_NOTIFICATION_SETTINGS)
                     .putExtra(Settings.EXTRA_APP_PACKAGE, context.packageName)

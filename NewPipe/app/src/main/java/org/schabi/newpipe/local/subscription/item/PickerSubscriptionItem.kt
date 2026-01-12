@@ -1,16 +1,16 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.view.View
 import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import com.xwray.groupie.viewbinding.BindableItem
 import com.xwray.groupie.viewbinding.GroupieViewHolder
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.databinding.PickerSubscriptionItemBinding
-import org.schabi.newpipe.ktx.AnimationType
-import org.schabi.newpipe.ktx.animate
-import org.schabi.newpipe.util.image.PicassoHelper
+import org.schabi.opentube.R
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.databinding.PickerSubscriptionItemBinding
+import org.schabi.opentube.ktx.AnimationType
+import org.schabi.opentube.ktx.animate
+import org.schabi.opentube.util.image.PicassoHelper
 
 data class PickerSubscriptionItem(
     val subscriptionEntity: SubscriptionEntity,

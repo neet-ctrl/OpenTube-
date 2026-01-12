@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local;
+package org.schabi.opentube.local;
 
 import android.content.Context;
 import android.util.Log;
@@ -10,28 +10,28 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.database.LocalItem;
-import org.schabi.newpipe.database.stream.model.StreamStateEntity;
-import org.schabi.newpipe.info_list.ItemViewMode;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.local.holder.LocalBookmarkPlaylistItemHolder;
-import org.schabi.newpipe.local.holder.LocalItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistCardItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistGridItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistStreamCardItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistStreamGridItemHolder;
-import org.schabi.newpipe.local.holder.LocalPlaylistStreamItemHolder;
-import org.schabi.newpipe.local.holder.LocalStatisticStreamCardItemHolder;
-import org.schabi.newpipe.local.holder.LocalStatisticStreamGridItemHolder;
-import org.schabi.newpipe.local.holder.LocalStatisticStreamItemHolder;
-import org.schabi.newpipe.local.holder.RemoteBookmarkPlaylistItemHolder;
-import org.schabi.newpipe.local.holder.RemotePlaylistCardItemHolder;
-import org.schabi.newpipe.local.holder.RemotePlaylistGridItemHolder;
-import org.schabi.newpipe.local.holder.RemotePlaylistItemHolder;
-import org.schabi.newpipe.util.FallbackViewHolder;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.OnClickGesture;
+import org.schabi.opentube.database.LocalItem;
+import org.schabi.opentube.database.stream.model.StreamStateEntity;
+import org.schabi.opentube.info_list.ItemViewMode;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.local.holder.LocalBookmarkPlaylistItemHolder;
+import org.schabi.opentube.local.holder.LocalItemHolder;
+import org.schabi.opentube.local.holder.LocalPlaylistCardItemHolder;
+import org.schabi.opentube.local.holder.LocalPlaylistGridItemHolder;
+import org.schabi.opentube.local.holder.LocalPlaylistItemHolder;
+import org.schabi.opentube.local.holder.LocalPlaylistStreamCardItemHolder;
+import org.schabi.opentube.local.holder.LocalPlaylistStreamGridItemHolder;
+import org.schabi.opentube.local.holder.LocalPlaylistStreamItemHolder;
+import org.schabi.opentube.local.holder.LocalStatisticStreamCardItemHolder;
+import org.schabi.opentube.local.holder.LocalStatisticStreamGridItemHolder;
+import org.schabi.opentube.local.holder.LocalStatisticStreamItemHolder;
+import org.schabi.opentube.local.holder.RemoteBookmarkPlaylistItemHolder;
+import org.schabi.opentube.local.holder.RemotePlaylistCardItemHolder;
+import org.schabi.opentube.local.holder.RemotePlaylistGridItemHolder;
+import org.schabi.opentube.local.holder.RemotePlaylistItemHolder;
+import org.schabi.opentube.util.FallbackViewHolder;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.OnClickGesture;
 
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -42,20 +42,20 @@ import java.util.List;
  * Created by Christian Schabesberger on 01.08.16.
  *
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * InfoListAdapter.java is part of NewPipe.
+ * InfoListAdapter.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class LocalItemListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

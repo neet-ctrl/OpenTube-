@@ -1,4 +1,4 @@
-package org.schabi.newpipe.database.stream.dao
+package org.schabi.opentube.database.stream.dao
 
 import androidx.room.ColumnInfo
 import androidx.room.Dao
@@ -8,11 +8,11 @@ import androidx.room.Query
 import androidx.room.Transaction
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
-import org.schabi.newpipe.database.BasicDAO
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.stream.model.StreamEntity.Companion.STREAM_ID
-import org.schabi.newpipe.extractor.stream.StreamType
-import org.schabi.newpipe.util.StreamTypeUtil
+import org.schabi.opentube.database.BasicDAO
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.stream.model.StreamEntity.Companion.STREAM_ID
+import org.schabi.opentube.extractor.stream.StreamType
+import org.schabi.opentube.util.StreamTypeUtil
 import java.time.OffsetDateTime
 
 @Dao

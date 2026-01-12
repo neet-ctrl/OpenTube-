@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.urlfinder
+package org.schabi.opentube.util.urlfinder
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

@@ -1,16 +1,16 @@
-package org.schabi.newpipe.util.potoken
+package org.schabi.opentube.util.potoken
 
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import org.schabi.newpipe.App
-import org.schabi.newpipe.BuildConfig
-import org.schabi.newpipe.extractor.NewPipe
-import org.schabi.newpipe.extractor.services.youtube.InnertubeClientRequestInfo
-import org.schabi.newpipe.extractor.services.youtube.PoTokenProvider
-import org.schabi.newpipe.extractor.services.youtube.PoTokenResult
-import org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper
-import org.schabi.newpipe.util.DeviceUtils
+import org.schabi.opentube.App
+import org.schabi.opentube.BuildConfig
+import org.schabi.opentube.extractor.OpenTube
+import org.schabi.opentube.extractor.services.youtube.InnertubeClientRequestInfo
+import org.schabi.opentube.extractor.services.youtube.PoTokenProvider
+import org.schabi.opentube.extractor.services.youtube.PoTokenResult
+import org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper
+import org.schabi.opentube.util.DeviceUtils
 
 object PoTokenProviderImpl : PoTokenProvider {
     val TAG = PoTokenProviderImpl::class.simpleName
@@ -65,8 +65,8 @@ object PoTokenProviderImpl : PoTokenProvider {
 
                     webPoTokenVisitorData = YoutubeParsingHelper.getVisitorDataFromInnertube(
                         innertubeClientRequestInfo,
-                        NewPipe.getPreferredLocalization(),
-                        NewPipe.getPreferredContentCountry(),
+                        OpenTube.getPreferredLocalization(),
+                        OpenTube.getPreferredContentCountry(),
                         YoutubeParsingHelper.getYouTubeHeaders(),
                         YoutubeParsingHelper.YOUTUBEI_V1_URL,
                         null,
@@ -105,7 +105,7 @@ object PoTokenProviderImpl : PoTokenProvider {
                 throw throwable
             } else {
                 // retry, this time recreating the [webPoTokenGenerator] from scratch;
-                // this might happen for example if NewPipe goes in the background and the WebView
+                // this might happen for example if OpenTube goes in the background and the WebView
                 // content is lost
                 Log.e(TAG, "Failed to obtain poToken, retrying", throwable)
                 return getWebClientPoToken(videoId = videoId, forceRecreate = true)

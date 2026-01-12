@@ -1,4 +1,4 @@
-package org.schabi.newpipe.about
+package org.schabi.opentube.about
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -12,12 +12,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.google.android.material.tabs.TabLayoutMediator
-import org.schabi.newpipe.BuildConfig
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.ActivityAboutBinding
-import org.schabi.newpipe.databinding.FragmentAboutBinding
-import org.schabi.newpipe.util.ThemeHelper
-import org.schabi.newpipe.util.external_communication.ShareUtils
+import org.schabi.opentube.BuildConfig
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.ActivityAboutBinding
+import org.schabi.opentube.databinding.FragmentAboutBinding
+import org.schabi.opentube.util.ThemeHelper
+import org.schabi.opentube.util.external_communication.ShareUtils
 
 class AboutActivity : AppCompatActivity() {
 
@@ -157,8 +157,8 @@ class AboutActivity : AppCompatActivity() {
                 StandardLicenses.APACHE2
             ),
             SoftwareComponent(
-                "NewPipe Extractor", "2017 - 2020", "Christian Schabesberger",
-                "https://github.com/TeamNewPipe/NewPipeExtractor", StandardLicenses.GPL3
+                "OpenTube Extractor", "2017 - 2020", "Christian Schabesberger",
+                "https://github.com/TeamOpenTube/OpenTubeExtractor", StandardLicenses.GPL3
             ),
             SoftwareComponent(
                 "NoNonsense-FilePicker", "2016", "Jonas Kalderstam",

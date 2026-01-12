@@ -1,12 +1,12 @@
-package org.schabi.newpipe.settings
+package org.schabi.opentube.settings
 
 import android.content.SharedPreferences
 import org.junit.Assert
 import org.junit.Test
 import org.mockito.Mockito
-import org.schabi.newpipe.settings.export.BackupFileLocator
-import org.schabi.newpipe.settings.export.ImportExportManager
-import org.schabi.newpipe.streams.io.StoredFileHelper
+import org.schabi.opentube.settings.export.BackupFileLocator
+import org.schabi.opentube.settings.export.ImportExportManager
+import org.schabi.opentube.streams.io.StoredFileHelper
 import us.shandian.giga.io.FileStream
 import java.io.File
 import java.io.IOException
@@ -47,10 +47,10 @@ class ImportAllCombinationsTest {
             BackupFileLocator::class.java,
             Mockito.withSettings().stubOnly()
         )
-        val db = File.createTempFile("newpipe_", "")
-        val dbJournal = File.createTempFile("newpipe_", "")
-        val dbWal = File.createTempFile("newpipe_", "")
-        val dbShm = File.createTempFile("newpipe_", "")
+        val db = File.createTempFile("opentube_", "")
+        val dbJournal = File.createTempFile("opentube_", "")
+        val dbWal = File.createTempFile("opentube_", "")
+        val dbShm = File.createTempFile("opentube_", "")
         Mockito.`when`(fileLocator.db).thenReturn(db)
         Mockito.`when`(fileLocator.dbJournal).thenReturn(dbJournal)
         Mockito.`when`(fileLocator.dbShm).thenReturn(dbShm)

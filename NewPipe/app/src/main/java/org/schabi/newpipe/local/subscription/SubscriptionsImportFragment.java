@@ -1,10 +1,10 @@
-package org.schabi.newpipe.local.subscription;
+package org.schabi.opentube.local.subscription;
 
-import static org.schabi.newpipe.extractor.subscription.SubscriptionExtractor.ContentSource.CHANNEL_URL;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.CHANNEL_URL_MODE;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.INPUT_STREAM_MODE;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_MODE;
-import static org.schabi.newpipe.local.subscription.services.SubscriptionsImportService.KEY_VALUE;
+import static org.schabi.opentube.extractor.subscription.SubscriptionExtractor.ContentSource.CHANNEL_URL;
+import static org.schabi.opentube.local.subscription.services.SubscriptionsImportService.CHANNEL_URL_MODE;
+import static org.schabi.opentube.local.subscription.services.SubscriptionsImportService.INPUT_STREAM_MODE;
+import static org.schabi.opentube.local.subscription.services.SubscriptionsImportService.KEY_MODE;
+import static org.schabi.opentube.local.subscription.services.SubscriptionsImportService.KEY_VALUE;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -29,19 +29,19 @@ import androidx.core.text.util.LinkifyCompat;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.BaseFragment;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.subscription.SubscriptionExtractor;
-import org.schabi.newpipe.local.subscription.services.SubscriptionsImportService;
-import org.schabi.newpipe.streams.io.NoFileManagerSafeGuard;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.ServiceHelper;
+import org.schabi.opentube.BaseFragment;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.subscription.SubscriptionExtractor;
+import org.schabi.opentube.local.subscription.services.SubscriptionsImportService;
+import org.schabi.opentube.streams.io.NoFileManagerSafeGuard;
+import org.schabi.opentube.streams.io.StoredFileHelper;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.util.ServiceHelper;
 
 import java.util.Collections;
 import java.util.List;
@@ -206,7 +206,7 @@ public class SubscriptionsImportFragment extends BaseFragment {
     private void setupServiceVariables() {
         if (currentServiceId != Constants.NO_SERVICE_ID) {
             try {
-                final SubscriptionExtractor extractor = NewPipe.getService(currentServiceId)
+                final SubscriptionExtractor extractor = OpenTube.getService(currentServiceId)
                         .getSubscriptionExtractor();
                 supportedSources = extractor.getSupportedSources();
                 relatedUrl = extractor.getRelatedUrl();

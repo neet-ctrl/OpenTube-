@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.helper;
+package org.schabi.opentube.player.helper;
 
 import androidx.core.math.MathUtils;
 

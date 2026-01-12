@@ -1,8 +1,8 @@
-package org.schabi.newpipe.player.mediabrowser
+package org.schabi.opentube.player.mediabrowser
 
-import org.schabi.newpipe.BuildConfig
-import org.schabi.newpipe.extractor.InfoItem.InfoType
-import org.schabi.newpipe.extractor.exceptions.ContentNotAvailableException
+import org.schabi.opentube.BuildConfig
+import org.schabi.opentube.extractor.InfoItem.InfoType
+import org.schabi.opentube.extractor.exceptions.ContentNotAvailableException
 
 internal const val ID_AUTHORITY = BuildConfig.APPLICATION_ID
 internal const val ID_ROOT = "//$ID_AUTHORITY"

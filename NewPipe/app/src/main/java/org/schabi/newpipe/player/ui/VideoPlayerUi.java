@@ -1,20 +1,20 @@
-package org.schabi.newpipe.player.ui;
+package org.schabi.opentube.player.ui;
 
 import static com.google.android.exoplayer2.Player.REPEAT_MODE_ALL;
 import static com.google.android.exoplayer2.Player.REPEAT_MODE_ONE;
-import static org.schabi.newpipe.MainActivity.DEBUG;
-import static org.schabi.newpipe.ktx.ViewUtils.animate;
-import static org.schabi.newpipe.ktx.ViewUtils.animateRotation;
-import static org.schabi.newpipe.player.Player.RENDERER_UNAVAILABLE;
-import static org.schabi.newpipe.player.Player.STATE_BUFFERING;
-import static org.schabi.newpipe.player.Player.STATE_COMPLETED;
-import static org.schabi.newpipe.player.Player.STATE_PAUSED;
-import static org.schabi.newpipe.player.Player.STATE_PAUSED_SEEK;
-import static org.schabi.newpipe.player.Player.STATE_PLAYING;
-import static org.schabi.newpipe.player.helper.PlayerHelper.formatSpeed;
-import static org.schabi.newpipe.player.helper.PlayerHelper.getTimeString;
-import static org.schabi.newpipe.player.helper.PlayerHelper.nextResizeModeAndSaveToPrefs;
-import static org.schabi.newpipe.player.helper.PlayerHelper.retrieveSeekDurationFromPreferences;
+import static org.schabi.opentube.MainActivity.DEBUG;
+import static org.schabi.opentube.ktx.ViewUtils.animate;
+import static org.schabi.opentube.ktx.ViewUtils.animateRotation;
+import static org.schabi.opentube.player.Player.RENDERER_UNAVAILABLE;
+import static org.schabi.opentube.player.Player.STATE_BUFFERING;
+import static org.schabi.opentube.player.Player.STATE_COMPLETED;
+import static org.schabi.opentube.player.Player.STATE_PAUSED;
+import static org.schabi.opentube.player.Player.STATE_PAUSED_SEEK;
+import static org.schabi.opentube.player.Player.STATE_PLAYING;
+import static org.schabi.opentube.player.helper.PlayerHelper.formatSpeed;
+import static org.schabi.opentube.player.helper.PlayerHelper.getTimeString;
+import static org.schabi.opentube.player.helper.PlayerHelper.nextResizeModeAndSaveToPrefs;
+import static org.schabi.opentube.player.helper.PlayerHelper.retrieveSeekDurationFromPreferences;
 
 import android.content.Intent;
 import android.content.res.Resources;
@@ -60,31 +60,31 @@ import com.google.android.exoplayer2.ui.AspectRatioFrameLayout;
 import com.google.android.exoplayer2.ui.CaptionStyleCompat;
 import com.google.android.exoplayer2.video.VideoSize;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.PlayerBinding;
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.fragments.detail.VideoDetailFragment;
-import org.schabi.newpipe.ktx.AnimationType;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.gesture.BasePlayerGestureListener;
-import org.schabi.newpipe.player.gesture.DisplayPortion;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.player.mediaitem.MediaItemTag;
-import org.schabi.newpipe.player.playback.SurfaceHolderCallback;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper;
-import org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHolder;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.KoreUtils;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.views.player.PlayerFastSeekOverlay;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.PlayerBinding;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.fragments.detail.VideoDetailFragment;
+import org.schabi.opentube.ktx.AnimationType;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.gesture.BasePlayerGestureListener;
+import org.schabi.opentube.player.gesture.DisplayPortion;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.player.mediaitem.MediaItemTag;
+import org.schabi.opentube.player.playback.SurfaceHolderCallback;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHelper;
+import org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHolder;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.KoreUtils;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.views.player.PlayerFastSeekOverlay;
 
 import java.util.List;
 import java.util.Objects;
@@ -1481,7 +1481,7 @@ public abstract class VideoPlayerUi extends PlayerUi implements SeekBar.OnSeekBa
                     break;
                 }
 
-                if (player.getCurrentState() == org.schabi.newpipe.player.Player.STATE_BLOCKED) {
+                if (player.getCurrentState() == org.schabi.opentube.player.Player.STATE_BLOCKED) {
                     return true;
                 }
 

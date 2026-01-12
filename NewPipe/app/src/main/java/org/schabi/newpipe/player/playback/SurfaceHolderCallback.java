@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.playback;
+package org.schabi.opentube.player.playback;
 
 import android.content.Context;
 import android.view.SurfaceHolder;

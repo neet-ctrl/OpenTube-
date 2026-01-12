@@ -1,4 +1,4 @@
-package org.schabi.newpipe.error
+package org.schabi.opentube.error
 
 import android.content.Context
 import android.os.Parcelable
@@ -8,26 +8,26 @@ import com.google.android.exoplayer2.ExoPlaybackException
 import com.google.android.exoplayer2.upstream.HttpDataSource
 import com.google.android.exoplayer2.upstream.Loader
 import kotlinx.parcelize.Parcelize
-import org.schabi.newpipe.R
-import org.schabi.newpipe.extractor.Info
-import org.schabi.newpipe.extractor.ServiceList
-import org.schabi.newpipe.extractor.ServiceList.YouTube
-import org.schabi.newpipe.extractor.exceptions.AccountTerminatedException
-import org.schabi.newpipe.extractor.exceptions.AgeRestrictedContentException
-import org.schabi.newpipe.extractor.exceptions.ContentNotAvailableException
-import org.schabi.newpipe.extractor.exceptions.ContentNotSupportedException
-import org.schabi.newpipe.extractor.exceptions.ExtractionException
-import org.schabi.newpipe.extractor.exceptions.GeographicRestrictionException
-import org.schabi.newpipe.extractor.exceptions.PaidContentException
-import org.schabi.newpipe.extractor.exceptions.PrivateContentException
-import org.schabi.newpipe.extractor.exceptions.ReCaptchaException
-import org.schabi.newpipe.extractor.exceptions.SignInConfirmNotBotException
-import org.schabi.newpipe.extractor.exceptions.SoundCloudGoPlusContentException
-import org.schabi.newpipe.extractor.exceptions.UnsupportedContentInCountryException
-import org.schabi.newpipe.extractor.exceptions.YoutubeMusicPremiumContentException
-import org.schabi.newpipe.ktx.isNetworkRelated
-import org.schabi.newpipe.player.mediasource.FailedMediaSource
-import org.schabi.newpipe.player.resolver.PlaybackResolver
+import org.schabi.opentube.R
+import org.schabi.opentube.extractor.Info
+import org.schabi.opentube.extractor.ServiceList
+import org.schabi.opentube.extractor.ServiceList.YouTube
+import org.schabi.opentube.extractor.exceptions.AccountTerminatedException
+import org.schabi.opentube.extractor.exceptions.AgeRestrictedContentException
+import org.schabi.opentube.extractor.exceptions.ContentNotAvailableException
+import org.schabi.opentube.extractor.exceptions.ContentNotSupportedException
+import org.schabi.opentube.extractor.exceptions.ExtractionException
+import org.schabi.opentube.extractor.exceptions.GeographicRestrictionException
+import org.schabi.opentube.extractor.exceptions.PaidContentException
+import org.schabi.opentube.extractor.exceptions.PrivateContentException
+import org.schabi.opentube.extractor.exceptions.ReCaptchaException
+import org.schabi.opentube.extractor.exceptions.SignInConfirmNotBotException
+import org.schabi.opentube.extractor.exceptions.SoundCloudGoPlusContentException
+import org.schabi.opentube.extractor.exceptions.UnsupportedContentInCountryException
+import org.schabi.opentube.extractor.exceptions.YoutubeMusicPremiumContentException
+import org.schabi.opentube.ktx.isNetworkRelated
+import org.schabi.opentube.player.mediasource.FailedMediaSource
+import org.schabi.opentube.player.resolver.PlaybackResolver
 import java.net.UnknownHostException
 
 /**
@@ -56,7 +56,7 @@ class ErrorInfo private constructor(
      */
     val recaptchaUrl: String?,
     /**
-     * If present, this resource can alternatively be opened in browser (useful if NewPipe is
+     * If present, this resource can alternatively be opened in browser (useful if OpenTube is
      * badly broken).
      */
     val openInBrowserUrl: String?,

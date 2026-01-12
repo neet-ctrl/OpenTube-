@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2017-2026 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2017-2026 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.player.playqueue
+package org.schabi.opentube.player.playqueue
 
 import java.io.Serializable
 

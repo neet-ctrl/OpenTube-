@@ -1,9 +1,9 @@
-package org.schabi.newpipe.util.external_communication;
+package org.schabi.opentube.util.external_communication;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import org.schabi.newpipe.util.text.TimestampExtractor;
+import org.schabi.opentube.util.text.TimestampExtractor;
 
 import java.time.Duration;
 import java.util.Arrays;

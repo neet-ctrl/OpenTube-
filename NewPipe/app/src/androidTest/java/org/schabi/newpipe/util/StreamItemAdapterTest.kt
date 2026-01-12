@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util
+package org.schabi.opentube.util
 
 import android.content.Context
 import android.view.View
@@ -19,14 +19,14 @@ import org.junit.Assert.assertTrue
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
-import org.schabi.newpipe.R
-import org.schabi.newpipe.extractor.MediaFormat
-import org.schabi.newpipe.extractor.downloader.Response
-import org.schabi.newpipe.extractor.stream.AudioStream
-import org.schabi.newpipe.extractor.stream.Stream
-import org.schabi.newpipe.extractor.stream.SubtitlesStream
-import org.schabi.newpipe.extractor.stream.VideoStream
-import org.schabi.newpipe.util.StreamItemAdapter.StreamInfoWrapper
+import org.schabi.opentube.R
+import org.schabi.opentube.extractor.MediaFormat
+import org.schabi.opentube.extractor.downloader.Response
+import org.schabi.opentube.extractor.stream.AudioStream
+import org.schabi.opentube.extractor.stream.Stream
+import org.schabi.opentube.extractor.stream.SubtitlesStream
+import org.schabi.opentube.extractor.stream.VideoStream
+import org.schabi.opentube.util.StreamItemAdapter.StreamInfoWrapper
 
 @MediumTest
 @RunWith(AndroidJUnit4::class)

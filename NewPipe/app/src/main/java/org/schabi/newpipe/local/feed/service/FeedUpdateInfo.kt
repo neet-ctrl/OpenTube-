@@ -1,11 +1,11 @@
-package org.schabi.newpipe.local.feed.service
+package org.schabi.opentube.local.feed.service
 
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.extractor.Info
-import org.schabi.newpipe.extractor.channel.ChannelInfo
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.extractor.Info
+import org.schabi.opentube.extractor.channel.ChannelInfo
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.util.image.ImageStrategy
 
 /**
  * Instances of this class might stay around in memory for some time while fetching the feed,

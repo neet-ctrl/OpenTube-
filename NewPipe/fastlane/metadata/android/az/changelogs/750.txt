@@ -17,5 +17,5 @@ Düzəltildi
  • Proqram yeniləməsinin yoxlanılması uğursuz olduqda qəzaya uğramayın (GitHub versiya) #2423
  • Sabit endirmələr 99,9% qalıb #2440
  • Oynatma növbəsi metadatasını güncəlləyin #2453 
-• [SoundCloud] Pleylistləri yükləyərkən yaranan xəta düzəldildi TeamNewPipe/NewPipeExtractor#170
+• [SoundCloud] Pleylistləri yükləyərkən yaranan xəta düzəldildi TeamOpenTube/OpenTubeExtractor#170
  • [YouTube] Sabit müddət Team7Pipe/Newtractor paresed edilə bilməz

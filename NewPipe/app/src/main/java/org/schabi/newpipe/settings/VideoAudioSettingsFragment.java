@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.SharedPreferences;
 import android.content.res.Resources;
@@ -12,9 +12,9 @@ import androidx.preference.ListPreference;
 
 import com.google.android.material.snackbar.Snackbar;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.util.ListHelper;
-import org.schabi.newpipe.util.PermissionHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.util.ListHelper;
+import org.schabi.opentube.util.PermissionHelper;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,6 +1,6 @@
-package org.schabi.newpipe.fragments.list.comments;
+package org.schabi.opentube.fragments.list.comments;
 
-import static org.schabi.newpipe.util.ServiceHelper.getServiceById;
+import static org.schabi.opentube.util.ServiceHelper.getServiceById;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,21 +14,21 @@ import androidx.core.text.HtmlCompat;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.CommentRepliesHeaderBinding;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
-import org.schabi.newpipe.info_list.ItemViewMode;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.image.ImageStrategy;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.text.TextLinkifier;
-import org.schabi.newpipe.util.text.LongPressLinkMovementMethod;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.CommentRepliesHeaderBinding;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.fragments.list.BaseListInfoFragment;
+import org.schabi.opentube.info_list.ItemViewMode;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.image.ImageStrategy;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.text.TextLinkifier;
+import org.schabi.opentube.util.text.LongPressLinkMovementMethod;
 
 import java.util.Queue;
 import java.util.function.Supplier;

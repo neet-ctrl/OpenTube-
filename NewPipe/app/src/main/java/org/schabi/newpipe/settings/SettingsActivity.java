@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -23,21 +23,21 @@ import com.evernote.android.state.State;
 import com.jakewharton.rxbinding4.widget.RxTextView;
 import com.livefront.bridge.Bridge;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.SettingsLayoutBinding;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceParser;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchConfiguration;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchFragment;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchItem;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchResultHighlighter;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceSearchResultListener;
-import org.schabi.newpipe.settings.preferencesearch.PreferenceSearcher;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.KeyboardUtil;
-import org.schabi.newpipe.util.ReleaseVersionUtil;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.views.FocusOverlayView;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.SettingsLayoutBinding;
+import org.schabi.opentube.settings.preferencesearch.PreferenceParser;
+import org.schabi.opentube.settings.preferencesearch.PreferenceSearchConfiguration;
+import org.schabi.opentube.settings.preferencesearch.PreferenceSearchFragment;
+import org.schabi.opentube.settings.preferencesearch.PreferenceSearchItem;
+import org.schabi.opentube.settings.preferencesearch.PreferenceSearchResultHighlighter;
+import org.schabi.opentube.settings.preferencesearch.PreferenceSearchResultListener;
+import org.schabi.opentube.settings.preferencesearch.PreferenceSearcher;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.KeyboardUtil;
+import org.schabi.opentube.util.ReleaseVersionUtil;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.views.FocusOverlayView;
 
 import java.util.concurrent.TimeUnit;
 
@@ -45,20 +45,20 @@ import java.util.concurrent.TimeUnit;
  * Created by Christian Schabesberger on 31.08.15.
  *
  * Copyright (C) Christian Schabesberger 2015 <chris.schabesberger@mailbox.org>
- * SettingsActivity.java is part of NewPipe.
+ * SettingsActivity.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class SettingsActivity extends AppCompatActivity implements

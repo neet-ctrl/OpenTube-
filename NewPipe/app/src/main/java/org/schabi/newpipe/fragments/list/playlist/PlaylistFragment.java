@@ -1,9 +1,9 @@
-package org.schabi.newpipe.fragments.list.playlist;
+package org.schabi.opentube.fragments.list.playlist;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isBlank;
-import static org.schabi.newpipe.ktx.ViewUtils.animate;
-import static org.schabi.newpipe.ktx.ViewUtils.animateHideRecyclerViewAllowingScrolling;
-import static org.schabi.newpipe.util.ServiceHelper.getServiceById;
+import static org.schabi.opentube.extractor.utils.Utils.isBlank;
+import static org.schabi.opentube.ktx.ViewUtils.animate;
+import static org.schabi.opentube.ktx.ViewUtils.animateHideRecyclerViewAllowingScrolling;
+import static org.schabi.opentube.util.ServiceHelper.getServiceById;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -25,36 +25,36 @@ import com.google.android.material.shape.ShapeAppearanceModel;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.databinding.PlaylistControlBinding;
-import org.schabi.newpipe.databinding.PlaylistHeaderBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.ServiceList;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfo;
-import org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper;
-import org.schabi.newpipe.extractor.stream.Description;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
-import org.schabi.newpipe.info_list.dialog.InfoItemDialog;
-import org.schabi.newpipe.info_list.dialog.StreamDialogDefaultEntry;
-import org.schabi.newpipe.local.dialog.PlaylistDialog;
-import org.schabi.newpipe.local.playlist.RemotePlaylistManager;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlaylistPlayQueue;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.Localization;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.PlayButtonHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
-import org.schabi.newpipe.util.image.PicassoHelper;
-import org.schabi.newpipe.util.text.TextEllipsizer;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.databinding.PlaylistControlBinding;
+import org.schabi.opentube.databinding.PlaylistHeaderBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.ServiceList;
+import org.schabi.opentube.extractor.playlist.PlaylistInfo;
+import org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper;
+import org.schabi.opentube.extractor.stream.Description;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.fragments.list.BaseListInfoFragment;
+import org.schabi.opentube.info_list.dialog.InfoItemDialog;
+import org.schabi.opentube.info_list.dialog.StreamDialogDefaultEntry;
+import org.schabi.opentube.local.dialog.PlaylistDialog;
+import org.schabi.opentube.local.playlist.RemotePlaylistManager;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlaylistPlayQueue;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.Localization;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.PlayButtonHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
+import org.schabi.opentube.util.image.PicassoHelper;
+import org.schabi.opentube.util.text.TextEllipsizer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -112,7 +112,7 @@ public class PlaylistFragment extends BaseListInfoFragment<StreamInfoItem, Playl
         super.onCreate(savedInstanceState);
         disposables = new CompositeDisposable();
         isBookmarkButtonReady = new AtomicBoolean(false);
-        remotePlaylistManager = new RemotePlaylistManager(NewPipeDatabase
+        remotePlaylistManager = new RemotePlaylistManager(OpenTubeDatabase
                 .getInstance(requireContext()));
     }
 

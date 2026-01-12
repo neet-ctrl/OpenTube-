@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments;
+package org.schabi.opentube.fragments;
 
 import static android.widget.RelativeLayout.ABOVE;
 import static android.widget.RelativeLayout.ALIGN_PARENT_BOTTOM;
@@ -33,19 +33,19 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
-import org.schabi.newpipe.BaseFragment;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.FragmentMainBinding;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.local.playlist.LocalPlaylistFragment;
-import org.schabi.newpipe.settings.tabs.Tab;
-import org.schabi.newpipe.settings.tabs.TabsManager;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.ServiceHelper;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.views.ScrollableTabLayout;
+import org.schabi.opentube.BaseFragment;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.FragmentMainBinding;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.local.playlist.LocalPlaylistFragment;
+import org.schabi.opentube.settings.tabs.Tab;
+import org.schabi.opentube.settings.tabs.TabsManager;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.ServiceHelper;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.views.ScrollableTabLayout;
 
 import java.util.ArrayList;
 import java.util.List;

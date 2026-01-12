@@ -1,7 +1,7 @@
-package org.schabi.newpipe.player.seekbarpreview;
+package org.schabi.opentube.player.seekbarpreview;
 
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType;
-import static org.schabi.newpipe.player.seekbarpreview.SeekbarPreviewThumbnailHelper.getSeekbarPreviewThumbnailType;
+import static org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHelper.SeekbarPreviewThumbnailType;
+import static org.schabi.opentube.player.seekbarpreview.SeekbarPreviewThumbnailHelper.getSeekbarPreviewThumbnailType;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -13,8 +13,8 @@ import androidx.collection.SparseArrayCompat;
 
 import com.google.common.base.Stopwatch;
 
-import org.schabi.newpipe.extractor.stream.Frameset;
-import org.schabi.newpipe.util.image.PicassoHelper;
+import org.schabi.opentube.extractor.stream.Frameset;
+import org.schabi.opentube.util.image.PicassoHelper;
 
 import java.util.Comparator;
 import java.util.List;
@@ -189,7 +189,7 @@ public class SeekbarPreviewThumbnailHolder {
             // createBitmap allows itself to return the original object that is was created with
             // this leads to recycled bitmaps being returned (if they are identical)
             // Reference: https://stackoverflow.com/a/23683075 + first comment
-            // Fixes: https://github.com/TeamNewPipe/NewPipe/issues/11461
+            // Fixes: https://github.com/TeamOpenTube/OpenTube/issues/11461
             return cutOutBitmap == srcBitMap
                     ? cutOutBitmap.copy(cutOutBitmap.getConfig(), true) : cutOutBitmap;
         };

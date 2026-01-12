@@ -1,20 +1,20 @@
 /*
- * SPDX-FileCopyrightText: 2020-2023 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2020-2023 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.stream
+package org.schabi.opentube.database.stream
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
 import androidx.room.Ignore
-import org.schabi.newpipe.database.LocalItem
-import org.schabi.newpipe.database.history.model.StreamHistoryEntity
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.stream.model.StreamStateEntity.Companion.STREAM_PROGRESS_MILLIS
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.database.LocalItem
+import org.schabi.opentube.database.history.model.StreamHistoryEntity
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.stream.model.StreamStateEntity.Companion.STREAM_PROGRESS_MILLIS
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.util.image.ImageStrategy
 import java.time.OffsetDateTime
 
 data class StreamStatisticsEntry(

@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import static org.schabi.newpipe.extractor.ServiceList.YouTube;
+import static org.schabi.opentube.extractor.ServiceList.YouTube;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -13,13 +13,13 @@ import androidx.annotation.StringRes;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.MediaFormat;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.AudioTrackType;
-import org.schabi.newpipe.extractor.stream.DeliveryMethod;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.MediaFormat;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.AudioTrackType;
+import org.schabi.opentube.extractor.stream.DeliveryMethod;
+import org.schabi.opentube.extractor.stream.Stream;
+import org.schabi.opentube.extractor.stream.VideoStream;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -58,7 +58,7 @@ public final class ListHelper {
     /**
      * List of supported YouTube Itag ids.
      * The original order is kept.
-     * @see {@link org.schabi.newpipe.extractor.services.youtube.ItagItem#ITAG_LIST}
+     * @see {@link org.schabi.opentube.extractor.services.youtube.ItagItem#ITAG_LIST}
      */
     private static final List<Integer> SUPPORTED_ITAG_IDS =
             List.of(

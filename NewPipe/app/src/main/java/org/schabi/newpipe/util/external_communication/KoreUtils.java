@@ -1,7 +1,7 @@
-package org.schabi.newpipe.util.external_communication;
+package org.schabi.opentube.util.external_communication;
 
-import static org.schabi.newpipe.util.external_communication.ShareUtils.installApp;
-import static org.schabi.newpipe.util.external_communication.ShareUtils.tryOpenIntentInApp;
+import static org.schabi.opentube.util.external_communication.ShareUtils.installApp;
+import static org.schabi.opentube.util.external_communication.ShareUtils.tryOpenIntentInApp;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,8 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.ServiceList;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.ServiceList;
 
 /**
  * Util class that provides methods which are related to the Kodi Media Center and its Kore app.

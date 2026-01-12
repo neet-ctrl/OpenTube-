@@ -2,14 +2,14 @@ package us.shandian.giga.get;
 
 import android.util.Log;
 
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.DeliveryMethod;
-import org.schabi.newpipe.extractor.stream.StreamExtractor;
-import org.schabi.newpipe.extractor.stream.SubtitlesStream;
-import org.schabi.newpipe.extractor.stream.VideoStream;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.DeliveryMethod;
+import org.schabi.opentube.extractor.stream.StreamExtractor;
+import org.schabi.opentube.extractor.stream.SubtitlesStream;
+import org.schabi.opentube.extractor.stream.VideoStream;
 
 import java.io.IOException;
 import java.io.InterruptedIOException;
@@ -69,7 +69,7 @@ public class DownloadMissionRecover extends Thread {
     private void tryRecover() throws ExtractionException, IOException, HttpError {
         if (mExtractor == null) {
             try {
-                StreamingService svr = NewPipe.getServiceByUrl(mMission.source);
+                StreamingService svr = OpenTube.getServiceByUrl(mMission.source);
                 mExtractor = svr.getStreamExtractor(mMission.source);
                 mExtractor.fetchPage();
             } catch (ExtractionException e) {

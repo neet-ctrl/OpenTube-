@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2022-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2022-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.settings.preferencesearch
+package org.schabi.opentube.settings.preferencesearch
 
 import androidx.annotation.XmlRes
 

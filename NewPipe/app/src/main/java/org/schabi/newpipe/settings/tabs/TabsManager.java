@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.tabs;
+package org.schabi.opentube.settings.tabs;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -6,7 +6,7 @@ import android.widget.Toast;
 
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 import java.util.List;
 

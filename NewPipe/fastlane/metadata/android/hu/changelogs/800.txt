@@ -17,9 +17,9 @@ Fejlesztések
 
 Javítások
 • Egy bug javítása, amely nem negedte a felugró lejátszó áthelyezését, ha véletlen másik ujjat is érzékelt #2772 
-• Feltöltő nélküli lejátszási listák engedélyezése, a #2724-es hibával kapcsolatos összeomlások javítása, TeamNewPipe/NewPipeExtractor#219
+• Feltöltő nélküli lejátszási listák engedélyezése, a #2724-es hibával kapcsolatos összeomlások javítása, TeamOpenTube/OpenTubeExtractor#219
 • TLS1.1/1.2 bekapcsolása Android 4.4 eszközökön (API 19/KitKat) hogy fixálja a TLS kézfogást a MediaCCC-vel, és egyes PeerTube munkamenetekkel #2792
-• [SoundCloud] client_id extraction TeamNewPipe/NewPipeExtractor javítva #217
+• [SoundCloud] client_id extraction TeamOpenTube/OpenTubeExtractor javítva #217
 • [SoundCloud] Audió sáv mentés javítása
 
 Frissítés

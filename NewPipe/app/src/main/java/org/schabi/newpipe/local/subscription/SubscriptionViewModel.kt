@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription
+package org.schabi.opentube.local.subscription
 
 import android.app.Application
 import android.content.Context
@@ -9,13 +9,13 @@ import com.xwray.groupie.Group
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.processors.BehaviorProcessor
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.info_list.ItemViewMode
-import org.schabi.newpipe.local.feed.FeedDatabaseManager
-import org.schabi.newpipe.local.subscription.item.ChannelItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCardGridItem
-import org.schabi.newpipe.local.subscription.item.FeedGroupCardItem
-import org.schabi.newpipe.util.DEFAULT_THROTTLE_TIMEOUT
-import org.schabi.newpipe.util.ThemeHelper.getItemViewMode
+import org.schabi.opentube.info_list.ItemViewMode
+import org.schabi.opentube.local.feed.FeedDatabaseManager
+import org.schabi.opentube.local.subscription.item.ChannelItem
+import org.schabi.opentube.local.subscription.item.FeedGroupCardGridItem
+import org.schabi.opentube.local.subscription.item.FeedGroupCardItem
+import org.schabi.opentube.util.DEFAULT_THROTTLE_TIMEOUT
+import org.schabi.opentube.util.ThemeHelper.getItemViewMode
 import java.util.concurrent.TimeUnit
 
 class SubscriptionViewModel(application: Application) : AndroidViewModel(application) {

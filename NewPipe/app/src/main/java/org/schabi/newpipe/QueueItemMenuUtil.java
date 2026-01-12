@@ -1,7 +1,7 @@
-package org.schabi.newpipe;
+package org.schabi.opentube;
 
-import static org.schabi.newpipe.util.SparseItemUtil.fetchStreamInfoAndSaveToDatabase;
-import static org.schabi.newpipe.util.external_communication.ShareUtils.shareText;
+import static org.schabi.opentube.util.SparseItemUtil.fetchStreamInfoAndSaveToDatabase;
+import static org.schabi.opentube.util.external_communication.ShareUtils.shareText;
 
 import android.content.Context;
 import android.view.ContextThemeWrapper;
@@ -10,13 +10,13 @@ import android.widget.PopupMenu;
 
 import androidx.fragment.app.FragmentManager;
 
-import org.schabi.newpipe.database.stream.model.StreamEntity;
-import org.schabi.newpipe.download.DownloadDialog;
-import org.schabi.newpipe.local.dialog.PlaylistDialog;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.SparseItemUtil;
+import org.schabi.opentube.database.stream.model.StreamEntity;
+import org.schabi.opentube.download.DownloadDialog;
+import org.schabi.opentube.local.dialog.PlaylistDialog;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.SparseItemUtil;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 /*
  * Copyright 2017 Mauricio Colli <mauriciocolli@outlook.com>
- * ExtractorHelper.java is part of NewPipe
+ * ExtractorHelper.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,10 +17,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import static org.schabi.newpipe.extractor.utils.Utils.isNullOrEmpty;
-import static org.schabi.newpipe.util.text.TextLinkifier.SET_LINK_MOVEMENT_METHOD;
+import static org.schabi.opentube.extractor.utils.Utils.isNullOrEmpty;
+import static org.schabi.opentube.util.text.TextLinkifier.SET_LINK_MOVEMENT_METHOD;
 
 import android.content.Context;
 import android.util.Log;
@@ -32,26 +32,26 @@ import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.extractor.Info;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor.InfoItemsPage;
-import org.schabi.newpipe.extractor.MetaInfo;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.Page;
-import org.schabi.newpipe.extractor.channel.ChannelInfo;
-import org.schabi.newpipe.extractor.channel.tabs.ChannelTabInfo;
-import org.schabi.newpipe.extractor.comments.CommentsInfo;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.extractor.kiosk.KioskInfo;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfo;
-import org.schabi.newpipe.extractor.search.SearchInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.extractor.suggestion.SuggestionExtractor;
-import org.schabi.newpipe.util.text.TextLinkifier;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.R;
+import org.schabi.opentube.extractor.Info;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor.InfoItemsPage;
+import org.schabi.opentube.extractor.MetaInfo;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.Page;
+import org.schabi.opentube.extractor.channel.ChannelInfo;
+import org.schabi.opentube.extractor.channel.tabs.ChannelTabInfo;
+import org.schabi.opentube.extractor.comments.CommentsInfo;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.extractor.kiosk.KioskInfo;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandler;
+import org.schabi.opentube.extractor.playlist.PlaylistInfo;
+import org.schabi.opentube.extractor.search.SearchInfo;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.suggestion.SuggestionExtractor;
+import org.schabi.opentube.util.text.TextLinkifier;
 
 import java.util.Collections;
 import java.util.List;
@@ -79,8 +79,8 @@ public final class ExtractorHelper {
                                                final String sortFilter) {
         checkServiceId(serviceId);
         return Single.fromCallable(() ->
-                SearchInfo.getInfo(NewPipe.getService(serviceId),
-                        NewPipe.getService(serviceId)
+                SearchInfo.getInfo(OpenTube.getService(serviceId),
+                        OpenTube.getService(serviceId)
                                 .getSearchQHFactory()
                                 .fromQuery(searchString, contentFilter, sortFilter)));
     }
@@ -93,8 +93,8 @@ public final class ExtractorHelper {
             final Page page) {
         checkServiceId(serviceId);
         return Single.fromCallable(() ->
-                SearchInfo.getMoreItems(NewPipe.getService(serviceId),
-                        NewPipe.getService(serviceId)
+                SearchInfo.getMoreItems(OpenTube.getService(serviceId),
+                        OpenTube.getService(serviceId)
                                 .getSearchQHFactory()
                                 .fromQuery(searchString, contentFilter, sortFilter), page));
 
@@ -103,7 +103,7 @@ public final class ExtractorHelper {
     public static Single<List<String>> suggestionsFor(final int serviceId, final String query) {
         checkServiceId(serviceId);
         return Single.fromCallable(() -> {
-            final SuggestionExtractor extractor = NewPipe.getService(serviceId)
+            final SuggestionExtractor extractor = OpenTube.getService(serviceId)
                     .getSuggestionExtractor();
             return extractor != null
                     ? extractor.suggestionList(query)
@@ -115,7 +115,7 @@ public final class ExtractorHelper {
                                                    final boolean forceLoad) {
         checkServiceId(serviceId);
         return checkCache(forceLoad, serviceId, url, InfoCache.Type.STREAM,
-                Single.fromCallable(() -> StreamInfo.getInfo(NewPipe.getService(serviceId), url)));
+                Single.fromCallable(() -> StreamInfo.getInfo(OpenTube.getService(serviceId), url)));
     }
 
     public static Single<ChannelInfo> getChannelInfo(final int serviceId, final String url,
@@ -123,7 +123,7 @@ public final class ExtractorHelper {
         checkServiceId(serviceId);
         return checkCache(forceLoad, serviceId, url, InfoCache.Type.CHANNEL,
                 Single.fromCallable(() ->
-                        ChannelInfo.getInfo(NewPipe.getService(serviceId), url)));
+                        ChannelInfo.getInfo(OpenTube.getService(serviceId), url)));
     }
 
     public static Single<ChannelTabInfo> getChannelTab(final int serviceId,
@@ -133,7 +133,7 @@ public final class ExtractorHelper {
         return checkCache(forceLoad, serviceId,
                 listLinkHandler.getUrl(), InfoCache.Type.CHANNEL_TAB,
                 Single.fromCallable(() ->
-                        ChannelTabInfo.getInfo(NewPipe.getService(serviceId), listLinkHandler)));
+                        ChannelTabInfo.getInfo(OpenTube.getService(serviceId), listLinkHandler)));
     }
 
     public static Single<InfoItemsPage<InfoItem>> getMoreChannelTabItems(
@@ -142,7 +142,7 @@ public final class ExtractorHelper {
             final Page nextPage) {
         checkServiceId(serviceId);
         return Single.fromCallable(() ->
-                ChannelTabInfo.getMoreItems(NewPipe.getService(serviceId),
+                ChannelTabInfo.getMoreItems(OpenTube.getService(serviceId),
                         listLinkHandler, nextPage));
     }
 
@@ -152,7 +152,7 @@ public final class ExtractorHelper {
         checkServiceId(serviceId);
         return checkCache(forceLoad, serviceId, url, InfoCache.Type.COMMENTS,
                 Single.fromCallable(() ->
-                        CommentsInfo.getInfo(NewPipe.getService(serviceId), url)));
+                        CommentsInfo.getInfo(OpenTube.getService(serviceId), url)));
     }
 
     public static Single<InfoItemsPage<CommentsInfoItem>> getMoreCommentItems(
@@ -161,7 +161,7 @@ public final class ExtractorHelper {
             final Page nextPage) {
         checkServiceId(serviceId);
         return Single.fromCallable(() ->
-                CommentsInfo.getMoreItems(NewPipe.getService(serviceId), info, nextPage));
+                CommentsInfo.getMoreItems(OpenTube.getService(serviceId), info, nextPage));
     }
 
     public static Single<InfoItemsPage<CommentsInfoItem>> getMoreCommentItems(
@@ -170,7 +170,7 @@ public final class ExtractorHelper {
             final Page nextPage) {
         checkServiceId(serviceId);
         return Single.fromCallable(() ->
-                CommentsInfo.getMoreItems(NewPipe.getService(serviceId), url, nextPage));
+                CommentsInfo.getMoreItems(OpenTube.getService(serviceId), url, nextPage));
     }
 
     public static Single<PlaylistInfo> getPlaylistInfo(final int serviceId,
@@ -179,7 +179,7 @@ public final class ExtractorHelper {
         checkServiceId(serviceId);
         return checkCache(forceLoad, serviceId, url, InfoCache.Type.PLAYLIST,
                 Single.fromCallable(() ->
-                        PlaylistInfo.getInfo(NewPipe.getService(serviceId), url)));
+                        PlaylistInfo.getInfo(OpenTube.getService(serviceId), url)));
     }
 
     public static Single<InfoItemsPage<StreamInfoItem>> getMorePlaylistItems(final int serviceId,
@@ -187,21 +187,21 @@ public final class ExtractorHelper {
                                                                              final Page nextPage) {
         checkServiceId(serviceId);
         return Single.fromCallable(() ->
-                PlaylistInfo.getMoreItems(NewPipe.getService(serviceId), url, nextPage));
+                PlaylistInfo.getMoreItems(OpenTube.getService(serviceId), url, nextPage));
     }
 
     public static Single<KioskInfo> getKioskInfo(final int serviceId,
                                                  final String url,
                                                  final boolean forceLoad) {
         return checkCache(forceLoad, serviceId, url, InfoCache.Type.KIOSK,
-                Single.fromCallable(() -> KioskInfo.getInfo(NewPipe.getService(serviceId), url)));
+                Single.fromCallable(() -> KioskInfo.getInfo(OpenTube.getService(serviceId), url)));
     }
 
     public static Single<InfoItemsPage<StreamInfoItem>> getMoreKioskItems(final int serviceId,
                                                                           final String url,
                                                                           final Page nextPage) {
         return Single.fromCallable(() ->
-                KioskInfo.getMoreItems(NewPipe.getService(serviceId), url, nextPage));
+                KioskInfo.getMoreItems(OpenTube.getService(serviceId), url, nextPage));
     }
 
     /*//////////////////////////////////////////////////////////////////////////

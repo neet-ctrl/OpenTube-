@@ -31,6 +31,6 @@ Corrections
 
 • Mise à jour des métadonnées de la file d'attente de lecture #2453
 
-• [SoundCloud] Correction du plantage lors du chargement des playlists TeamNewPipe/NewPipeExtractor#170
+• [SoundCloud] Correction du plantage lors du chargement des playlists TeamOpenTube/OpenTubeExtractor#170
 
-• [YouTube] Correction de l'impossibilité d'afficher la durée  paresd TeamNewPipe/NewPipeExtractor#177
+• [YouTube] Correction de l'impossibilité d'afficher la durée  paresd TeamOpenTube/OpenTubeExtractor#177

@@ -1,10 +1,10 @@
-package org.schabi.newpipe.local.bookmark;
+package org.schabi.opentube.local.bookmark;
 
-import org.schabi.newpipe.database.playlist.PlaylistLocalItem;
-import org.schabi.newpipe.database.playlist.PlaylistMetadataEntry;
-import org.schabi.newpipe.database.playlist.model.PlaylistRemoteEntity;
-import org.schabi.newpipe.local.playlist.LocalPlaylistManager;
-import org.schabi.newpipe.local.playlist.RemotePlaylistManager;
+import org.schabi.opentube.database.playlist.PlaylistLocalItem;
+import org.schabi.opentube.database.playlist.PlaylistMetadataEntry;
+import org.schabi.opentube.database.playlist.model.PlaylistRemoteEntity;
+import org.schabi.opentube.local.playlist.LocalPlaylistManager;
+import org.schabi.opentube.local.playlist.RemotePlaylistManager;
 
 import java.util.ArrayList;
 import java.util.Collections;

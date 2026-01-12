@@ -1,6 +1,6 @@
 /*
  * Copyright 2018 Mauricio Colli <mauriciocolli@outlook.com>
- * SubscriptionsExportService.java is part of NewPipe
+ * SubscriptionsExportService.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,9 +17,9 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.local.subscription.services;
+package org.schabi.opentube.local.subscription.services;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
+import static org.schabi.opentube.MainActivity.DEBUG;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -30,12 +30,12 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.subscription.SubscriptionEntity;
-import org.schabi.newpipe.extractor.subscription.SubscriptionItem;
-import org.schabi.newpipe.streams.io.SharpOutputStream;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.subscription.SubscriptionEntity;
+import org.schabi.opentube.extractor.subscription.SubscriptionItem;
+import org.schabi.opentube.streams.io.SharpOutputStream;
+import org.schabi.opentube.streams.io.StoredFileHelper;
 
 import java.io.IOException;
 import java.io.OutputStream;

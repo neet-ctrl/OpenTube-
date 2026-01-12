@@ -1,21 +1,21 @@
 /*
- * SPDX-FileCopyrightText: 2018-2022 NewPipe contributors <https://newpipe.net>
- * SPDX-FileCopyrightText: 2025 NewPipe e.V. <https://newpipe-ev.de>
+ * SPDX-FileCopyrightText: 2018-2022 OpenTube contributors <https://opentube.net>
+ * SPDX-FileCopyrightText: 2025 OpenTube e.V. <https://opentube-ev.de>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.database.history.model
+package org.schabi.opentube.database.history.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.ForeignKey.Companion.CASCADE
 import androidx.room.Index
-import org.schabi.newpipe.database.history.model.StreamHistoryEntity.Companion.JOIN_STREAM_ID
-import org.schabi.newpipe.database.history.model.StreamHistoryEntity.Companion.STREAM_ACCESS_DATE
-import org.schabi.newpipe.database.history.model.StreamHistoryEntity.Companion.STREAM_HISTORY_TABLE
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.stream.model.StreamEntity.Companion.STREAM_ID
+import org.schabi.opentube.database.history.model.StreamHistoryEntity.Companion.JOIN_STREAM_ID
+import org.schabi.opentube.database.history.model.StreamHistoryEntity.Companion.STREAM_ACCESS_DATE
+import org.schabi.opentube.database.history.model.StreamHistoryEntity.Companion.STREAM_HISTORY_TABLE
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.stream.model.StreamEntity.Companion.STREAM_ID
 import java.time.OffsetDateTime
 
 /**

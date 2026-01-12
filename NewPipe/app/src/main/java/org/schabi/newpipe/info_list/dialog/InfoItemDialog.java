@@ -1,6 +1,6 @@
-package org.schabi.newpipe.info_list.dialog;
+package org.schabi.opentube.info_list.dialog;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
+import static org.schabi.opentube.MainActivity.DEBUG;
 
 import android.app.Activity;
 import android.content.Context;
@@ -15,17 +15,17 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.preference.PreferenceManager;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.player.helper.PlayerHolder;
-import org.schabi.newpipe.util.StreamTypeUtil;
-import org.schabi.newpipe.util.external_communication.KoreUtils;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.player.helper.PlayerHolder;
+import org.schabi.opentube.util.StreamTypeUtil;
+import org.schabi.opentube.util.external_communication.KoreUtils;
 
 import java.util.ArrayList;
 import java.util.List;

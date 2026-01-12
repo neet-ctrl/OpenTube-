@@ -1,4 +1,4 @@
-package org.schabi.newpipe.info_list.dialog;
+package org.schabi.opentube.info_list.dialog;
 
 import android.content.Context;
 
@@ -6,7 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
 
 public class StreamDialogEntry {
 

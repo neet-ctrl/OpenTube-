@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;

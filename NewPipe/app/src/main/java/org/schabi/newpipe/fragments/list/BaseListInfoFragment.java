@@ -1,6 +1,6 @@
-package org.schabi.newpipe.fragments.list;
+package org.schabi.opentube.fragments.list;
 
-import static org.schabi.newpipe.extractor.ServiceList.SoundCloud;
+import static org.schabi.opentube.extractor.ServiceList.SoundCloud;
 
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,16 +12,16 @@ import androidx.annotation.Nullable;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.error.ErrorInfo;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.ListInfo;
-import org.schabi.newpipe.extractor.Page;
-import org.schabi.newpipe.extractor.exceptions.ContentNotSupportedException;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.views.NewPipeRecyclerView;
+import org.schabi.opentube.R;
+import org.schabi.opentube.error.ErrorInfo;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.ListInfo;
+import org.schabi.opentube.extractor.Page;
+import org.schabi.opentube.extractor.exceptions.ContentNotSupportedException;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.views.OpenTubeRecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -125,7 +125,7 @@ public abstract class BaseListInfoFragment<I extends InfoItem, L extends ListInf
 
     /**
      * Implement the logic to load the info from the network.<br/>
-     * You can use the default implementations from {@link org.schabi.newpipe.util.ExtractorHelper}.
+     * You can use the default implementations from {@link org.schabi.opentube.util.ExtractorHelper}.
      *
      * @param forceLoad allow or disallow the result to come from the cache
      * @return Rx {@link Single} containing the {@link ListInfo}
@@ -159,7 +159,7 @@ public abstract class BaseListInfoFragment<I extends InfoItem, L extends ListInf
     /**
      * Implement the logic to load more items.
      * <p>You can use the default implementations
-     * from {@link org.schabi.newpipe.util.ExtractorHelper}.</p>
+     * from {@link org.schabi.opentube.util.ExtractorHelper}.</p>
      *
      * @return Rx {@link Single} containing the {@link ListExtractor.InfoItemsPage}
      */
@@ -188,14 +188,14 @@ public abstract class BaseListInfoFragment<I extends InfoItem, L extends ListInf
     }
 
     private void forbidDownwardFocusScroll() {
-        if (itemsList instanceof NewPipeRecyclerView) {
-            ((NewPipeRecyclerView) itemsList).setFocusScrollAllowed(false);
+        if (itemsList instanceof OpenTubeRecyclerView) {
+            ((OpenTubeRecyclerView) itemsList).setFocusScrollAllowed(false);
         }
     }
 
     private void allowDownwardFocusScroll() {
-        if (itemsList instanceof NewPipeRecyclerView) {
-            ((NewPipeRecyclerView) itemsList).setFocusScrollAllowed(true);
+        if (itemsList instanceof OpenTubeRecyclerView) {
+            ((OpenTubeRecyclerView) itemsList).setFocusScrollAllowed(true);
         }
     }
 

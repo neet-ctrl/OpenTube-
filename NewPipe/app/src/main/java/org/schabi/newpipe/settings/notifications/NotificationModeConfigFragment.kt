@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings.notifications
+package org.schabi.opentube.settings.notifications
 
 import android.content.Context
 import android.os.Bundle
@@ -13,10 +13,10 @@ import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.disposables.CompositeDisposable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.R
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.databinding.FragmentChannelsNotificationsBinding
-import org.schabi.newpipe.local.subscription.SubscriptionManager
+import org.schabi.opentube.R
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.databinding.FragmentChannelsNotificationsBinding
+import org.schabi.opentube.local.subscription.SubscriptionManager
 
 /**
  * [NotificationModeConfigFragment] is a settings fragment

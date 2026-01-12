@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util
+package org.schabi.opentube.util
 
 import android.widget.SeekBar
 

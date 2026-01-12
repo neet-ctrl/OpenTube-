@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -15,12 +15,12 @@ import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.AppDatabase;
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.AppDatabase;
+import org.schabi.opentube.database.feed.model.FeedGroupEntity;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.util.List;
 import java.util.Vector;
@@ -32,22 +32,22 @@ import io.reactivex.rxjava3.schedulers.Schedulers;
 
 /**
  * Created by Christian Schabesberger on 26.09.17.
- * SelectChannelFragment.java is part of NewPipe.
+ * SelectChannelFragment.java is part of OpenTube.
  * <p>
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  * </p>
  * <p>
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  * </p>
  * <p>
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  * </p>
  */
 
@@ -96,7 +96,7 @@ public class SelectFeedGroupFragment extends DialogFragment {
         emptyView.setVisibility(View.GONE);
 
 
-        final AppDatabase database = NewPipeDatabase.getInstance(requireContext());
+        final AppDatabase database = OpenTubeDatabase.getInstance(requireContext());
         database.feedGroupDAO().getAll().toObservable()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())

@@ -1,12 +1,12 @@
-package org.schabi.newpipe.player.mediaitem;
+package org.schabi.opentube.player.mediaitem;
 
 import com.google.android.exoplayer2.MediaItem;
 
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamType;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.util.image.ImageStrategy;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamType;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.util.image.ImageStrategy;
 
 import java.util.Collections;
 import java.util.List;

@@ -1,7 +1,7 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import static android.text.TextUtils.isEmpty;
-import static org.schabi.newpipe.util.ListHelper.getUrlAndNonTorrentStreams;
+import static org.schabi.opentube.util.ListHelper.getUrlAndNonTorrentStreams;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -24,49 +24,49 @@ import androidx.fragment.app.FragmentTransaction;
 
 import com.jakewharton.processphoenix.ProcessPhoenix;
 
-import org.schabi.newpipe.MainActivity;
-import org.schabi.newpipe.NewPipeDatabase;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.RouterActivity;
-import org.schabi.newpipe.about.AboutActivity;
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity;
-import org.schabi.newpipe.download.DownloadActivity;
-import org.schabi.newpipe.error.ErrorUtil;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.extractor.exceptions.ExtractionException;
-import org.schabi.newpipe.extractor.stream.AudioStream;
-import org.schabi.newpipe.extractor.stream.DeliveryMethod;
-import org.schabi.newpipe.extractor.stream.Stream;
-import org.schabi.newpipe.extractor.stream.StreamInfo;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.extractor.stream.VideoStream;
-import org.schabi.newpipe.fragments.MainFragment;
-import org.schabi.newpipe.fragments.detail.VideoDetailFragment;
-import org.schabi.newpipe.fragments.list.channel.ChannelFragment;
-import org.schabi.newpipe.fragments.list.comments.CommentRepliesFragment;
-import org.schabi.newpipe.fragments.list.kiosk.KioskFragment;
-import org.schabi.newpipe.fragments.list.playlist.PlaylistFragment;
-import org.schabi.newpipe.fragments.list.search.SearchFragment;
-import org.schabi.newpipe.local.bookmark.BookmarkFragment;
-import org.schabi.newpipe.local.feed.FeedFragment;
-import org.schabi.newpipe.local.history.StatisticsPlaylistFragment;
-import org.schabi.newpipe.local.playlist.LocalPlaylistFragment;
-import org.schabi.newpipe.local.subscription.SubscriptionFragment;
-import org.schabi.newpipe.local.subscription.SubscriptionsImportFragment;
-import org.schabi.newpipe.player.PlayQueueActivity;
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.PlayerIntentType;
-import org.schabi.newpipe.player.PlayerService;
-import org.schabi.newpipe.player.PlayerType;
-import org.schabi.newpipe.player.TimestampChangeData;
-import org.schabi.newpipe.player.helper.PlayerHelper;
-import org.schabi.newpipe.player.helper.PlayerHolder;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.settings.SettingsActivity;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.MainActivity;
+import org.schabi.opentube.OpenTubeDatabase;
+import org.schabi.opentube.R;
+import org.schabi.opentube.RouterActivity;
+import org.schabi.opentube.about.AboutActivity;
+import org.schabi.opentube.database.feed.model.FeedGroupEntity;
+import org.schabi.opentube.download.DownloadActivity;
+import org.schabi.opentube.error.ErrorUtil;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.extractor.exceptions.ExtractionException;
+import org.schabi.opentube.extractor.stream.AudioStream;
+import org.schabi.opentube.extractor.stream.DeliveryMethod;
+import org.schabi.opentube.extractor.stream.Stream;
+import org.schabi.opentube.extractor.stream.StreamInfo;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.extractor.stream.VideoStream;
+import org.schabi.opentube.fragments.MainFragment;
+import org.schabi.opentube.fragments.detail.VideoDetailFragment;
+import org.schabi.opentube.fragments.list.channel.ChannelFragment;
+import org.schabi.opentube.fragments.list.comments.CommentRepliesFragment;
+import org.schabi.opentube.fragments.list.kiosk.KioskFragment;
+import org.schabi.opentube.fragments.list.playlist.PlaylistFragment;
+import org.schabi.opentube.fragments.list.search.SearchFragment;
+import org.schabi.opentube.local.bookmark.BookmarkFragment;
+import org.schabi.opentube.local.feed.FeedFragment;
+import org.schabi.opentube.local.history.StatisticsPlaylistFragment;
+import org.schabi.opentube.local.playlist.LocalPlaylistFragment;
+import org.schabi.opentube.local.subscription.SubscriptionFragment;
+import org.schabi.opentube.local.subscription.SubscriptionsImportFragment;
+import org.schabi.opentube.player.PlayQueueActivity;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.PlayerIntentType;
+import org.schabi.opentube.player.PlayerService;
+import org.schabi.opentube.player.PlayerType;
+import org.schabi.opentube.player.TimestampChangeData;
+import org.schabi.opentube.player.helper.PlayerHelper;
+import org.schabi.opentube.player.helper.PlayerHolder;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.settings.SettingsActivity;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 import java.util.List;
 import java.util.Optional;
@@ -687,7 +687,7 @@ public final class NavigationHelper {
 
     public static Intent getIntentByLink(final Context context, final String url)
             throws ExtractionException {
-        return getIntentByLink(context, NewPipe.getServiceByUrl(url), url);
+        return getIntentByLink(context, OpenTube.getServiceByUrl(url), url);
     }
 
     public static Intent getIntentByLink(final Context context,
@@ -725,7 +725,7 @@ public final class NavigationHelper {
      * @param activity the activity to finish
      */
     public static void restartApp(final Activity activity) {
-        NewPipeDatabase.close();
+        OpenTubeDatabase.close();
 
         ProcessPhoenix.triggerRebirth(activity.getApplicationContext());
     }

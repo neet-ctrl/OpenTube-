@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
 import android.content.Context;
 import android.net.Uri;
@@ -20,7 +20,7 @@ import androidx.recyclerview.widget.SortedList;
 import com.nononsenseapps.filepicker.AbstractFilePickerFragment;
 import com.nononsenseapps.filepicker.FilePickerFragment;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 import java.io.File;
 

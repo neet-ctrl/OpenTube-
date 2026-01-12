@@ -1,4 +1,4 @@
-package org.schabi.newpipe.settings
+package org.schabi.opentube.settings
 
 import android.content.SharedPreferences
 import com.grack.nanojson.JsonParser
@@ -19,9 +19,9 @@ import org.mockito.Mockito.verify
 import org.mockito.Mockito.`when`
 import org.mockito.Mockito.withSettings
 import org.mockito.junit.MockitoJUnitRunner
-import org.schabi.newpipe.settings.export.BackupFileLocator
-import org.schabi.newpipe.settings.export.ImportExportManager
-import org.schabi.newpipe.streams.io.StoredFileHelper
+import org.schabi.opentube.settings.export.BackupFileLocator
+import org.schabi.opentube.settings.export.ImportExportManager
+import org.schabi.opentube.streams.io.StoredFileHelper
 import us.shandian.giga.io.FileStream
 import java.io.File
 import java.io.ObjectInputStream
@@ -46,7 +46,7 @@ class ImportExportManagerTest {
 
     @Test
     fun `The settings must be exported successfully in the correct format`() {
-        val db = File(classloader.getResource("settings/newpipe.db")!!.file)
+        val db = File(classloader.getResource("settings/opentube.db")!!.file)
         `when`(fileLocator.db).thenReturn(db)
 
         val expectedPreferences = mapOf("such pref" to "much wow")
@@ -54,7 +54,7 @@ class ImportExportManagerTest {
             Mockito.mock(SharedPreferences::class.java, withSettings().stubOnly())
         `when`(sharedPreferences.all).thenReturn(expectedPreferences)
 
-        val output = File.createTempFile("newpipe_", "")
+        val output = File.createTempFile("opentube_", "")
         `when`(storedFileHelper.openAndTruncateStream()).thenReturn(FileStream(output))
         ImportExportManager(fileLocator).exportDatabase(sharedPreferences, storedFileHelper)
 
@@ -62,13 +62,13 @@ class ImportExportManagerTest {
         val entries = zipFile.entries().toList()
         assertEquals(3, entries.size)
 
-        zipFile.getInputStream(entries.first { it.name == "newpipe.db" }).use { actual ->
+        zipFile.getInputStream(entries.first { it.name == "opentube.db" }).use { actual ->
             db.inputStream().use { expected ->
                 assertEquals(expected.reader().readText(), actual.reader().readText())
             }
         }
 
-        zipFile.getInputStream(entries.first { it.name == "newpipe.settings" }).use { actual ->
+        zipFile.getInputStream(entries.first { it.name == "opentube.settings" }).use { actual ->
             val actualPreferences = ObjectInputStream(actual).readObject()
             assertEquals(expectedPreferences, actualPreferences)
         }
@@ -81,7 +81,7 @@ class ImportExportManagerTest {
 
     @Test
     fun `Ensuring db directory existence must work`() {
-        val dir = Files.createTempDirectory("newpipe_").toFile()
+        val dir = Files.createTempDirectory("opentube_").toFile()
         Assume.assumeTrue(dir.delete())
         `when`(fileLocator.dbDir).thenReturn(dir)
 
@@ -91,7 +91,7 @@ class ImportExportManagerTest {
 
     @Test
     fun `Ensuring db directory existence must work when the directory already exists`() {
-        val dir = Files.createTempDirectory("newpipe_").toFile()
+        val dir = Files.createTempDirectory("opentube_").toFile()
         `when`(fileLocator.dbDir).thenReturn(dir)
 
         ImportExportManager(fileLocator).ensureDbDirectoryExists()
@@ -100,10 +100,10 @@ class ImportExportManagerTest {
 
     @Test
     fun `The database must be extracted from the zip file`() {
-        val db = File.createTempFile("newpipe_", "")
-        val dbJournal = File.createTempFile("newpipe_", "")
-        val dbWal = File.createTempFile("newpipe_", "")
-        val dbShm = File.createTempFile("newpipe_", "")
+        val db = File.createTempFile("opentube_", "")
+        val dbJournal = File.createTempFile("opentube_", "")
+        val dbWal = File.createTempFile("opentube_", "")
+        val dbShm = File.createTempFile("opentube_", "")
         `when`(fileLocator.db).thenReturn(db)
         `when`(fileLocator.dbJournal).thenReturn(dbJournal)
         `when`(fileLocator.dbShm).thenReturn(dbShm)
@@ -122,10 +122,10 @@ class ImportExportManagerTest {
 
     @Test
     fun `Extracting the database from an empty zip must not work`() {
-        val db = File.createTempFile("newpipe_", "")
-        val dbJournal = File.createTempFile("newpipe_", "")
-        val dbWal = File.createTempFile("newpipe_", "")
-        val dbShm = File.createTempFile("newpipe_", "")
+        val db = File.createTempFile("opentube_", "")
+        val dbJournal = File.createTempFile("opentube_", "")
+        val dbWal = File.createTempFile("opentube_", "")
+        val dbShm = File.createTempFile("opentube_", "")
         `when`(fileLocator.db).thenReturn(db)
 
         val emptyZip = File(classloader.getResource("settings/nodb_noser_nojson.zip")?.file!!)

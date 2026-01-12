@@ -5,21 +5,21 @@
  * Apache License, Version 2.0.
  */
 
-package org.schabi.newpipe.player.datasource;
+package org.schabi.opentube.player.datasource;
 
 import static com.google.android.exoplayer2.upstream.DefaultHttpDataSource.DEFAULT_CONNECT_TIMEOUT_MILLIS;
 import static com.google.android.exoplayer2.upstream.DefaultHttpDataSource.DEFAULT_READ_TIMEOUT_MILLIS;
 import static com.google.android.exoplayer2.upstream.HttpUtil.buildRangeRequestHeader;
 import static com.google.android.exoplayer2.util.Assertions.checkNotNull;
 import static com.google.android.exoplayer2.util.Util.castNonNull;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.getAndroidUserAgent;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.getIosUserAgent;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.getTvHtml5UserAgent;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.isAndroidStreamingUrl;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.isIosStreamingUrl;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.isTvHtml5StreamingUrl;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.isWebStreamingUrl;
-import static org.schabi.newpipe.extractor.services.youtube.YoutubeParsingHelper.isWebEmbeddedPlayerStreamingUrl;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.getAndroidUserAgent;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.getIosUserAgent;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.getTvHtml5UserAgent;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.isAndroidStreamingUrl;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.isIosStreamingUrl;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.isTvHtml5StreamingUrl;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.isWebStreamingUrl;
+import static org.schabi.opentube.extractor.services.youtube.YoutubeParsingHelper.isWebEmbeddedPlayerStreamingUrl;
 import static java.lang.Math.min;
 
 import android.net.Uri;
@@ -46,7 +46,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Sets;
 import com.google.common.net.HttpHeaders;
 
-import org.schabi.newpipe.DownloaderImpl;
+import org.schabi.opentube.DownloaderImpl;
 
 import java.io.IOException;
 import java.io.InputStream;

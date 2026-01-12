@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments.detail;
+package org.schabi.opentube.fragments.detail;
 
 import android.view.ViewGroup;
 

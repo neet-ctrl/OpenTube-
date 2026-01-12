@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments.list.channel;
+package org.schabi.opentube.fragments.list.channel;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -11,24 +11,24 @@ import androidx.annotation.Nullable;
 
 import com.evernote.android.state.State;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.PlaylistControlBinding;
-import org.schabi.newpipe.error.UserAction;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.ListExtractor;
-import org.schabi.newpipe.extractor.channel.tabs.ChannelTabInfo;
-import org.schabi.newpipe.extractor.exceptions.ParsingException;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandlerFactory;
-import org.schabi.newpipe.extractor.linkhandler.ReadyChannelTabListLinkHandler;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.fragments.list.BaseListInfoFragment;
-import org.schabi.newpipe.fragments.list.playlist.PlaylistControlViewHolder;
-import org.schabi.newpipe.player.playqueue.ChannelTabPlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.util.ChannelTabHelper;
-import org.schabi.newpipe.util.ExtractorHelper;
-import org.schabi.newpipe.util.PlayButtonHelper;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.PlaylistControlBinding;
+import org.schabi.opentube.error.UserAction;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.ListExtractor;
+import org.schabi.opentube.extractor.channel.tabs.ChannelTabInfo;
+import org.schabi.opentube.extractor.exceptions.ParsingException;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandler;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandlerFactory;
+import org.schabi.opentube.extractor.linkhandler.ReadyChannelTabListLinkHandler;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.fragments.list.BaseListInfoFragment;
+import org.schabi.opentube.fragments.list.playlist.PlaylistControlViewHolder;
+import org.schabi.opentube.player.playqueue.ChannelTabPlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.util.ChannelTabHelper;
+import org.schabi.opentube.util.ExtractorHelper;
+import org.schabi.opentube.util.PlayButtonHelper;
 
 import java.util.List;
 import java.util.function.Supplier;

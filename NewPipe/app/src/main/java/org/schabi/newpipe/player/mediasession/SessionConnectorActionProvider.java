@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.mediasession;
+package org.schabi.opentube.player.mediasession;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,7 @@ import androidx.annotation.Nullable;
 import com.google.android.exoplayer2.Player;
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector;
 
-import org.schabi.newpipe.player.notification.NotificationActionData;
+import org.schabi.opentube.player.notification.NotificationActionData;
 
 import java.lang.ref.WeakReference;
 

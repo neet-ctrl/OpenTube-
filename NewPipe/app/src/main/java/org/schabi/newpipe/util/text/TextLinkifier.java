@@ -1,4 +1,4 @@
-package org.schabi.newpipe.util.text;
+package org.schabi.opentube.util.text;
 
 import android.content.Context;
 import android.text.SpannableStringBuilder;
@@ -12,10 +12,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.text.HtmlCompat;
 
-import org.schabi.newpipe.extractor.StreamingService;
-import org.schabi.newpipe.extractor.stream.Description;
-import org.schabi.newpipe.util.NavigationHelper;
-import org.schabi.newpipe.util.external_communication.ShareUtils;
+import org.schabi.opentube.extractor.StreamingService;
+import org.schabi.opentube.extractor.stream.Description;
+import org.schabi.opentube.util.NavigationHelper;
+import org.schabi.opentube.util.external_communication.ShareUtils;
 
 import java.util.function.Consumer;
 import java.util.regex.Matcher;

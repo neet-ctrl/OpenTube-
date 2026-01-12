@@ -1,11 +1,11 @@
-package org.schabi.newpipe.info_list.holder;
+package org.schabi.opentube.info_list.holder;
 
 import android.view.ViewGroup;
 
 import androidx.annotation.Nullable;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.info_list.InfoItemBuilder;
+import org.schabi.opentube.R;
+import org.schabi.opentube.info_list.InfoItemBuilder;
 
 public class ChannelCardInfoItemHolder extends ChannelMiniInfoItemHolder {
     public ChannelCardInfoItemHolder(final InfoItemBuilder infoItemBuilder,

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.info_list;
+package org.schabi.opentube.info_list;
 
 import android.content.Context;
 import android.util.Log;
@@ -11,29 +11,29 @@ import androidx.annotation.Nullable;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.schabi.newpipe.databinding.PignateFooterBinding;
-import org.schabi.newpipe.extractor.InfoItem;
-import org.schabi.newpipe.extractor.channel.ChannelInfoItem;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.extractor.playlist.PlaylistInfoItem;
-import org.schabi.newpipe.extractor.stream.StreamInfoItem;
-import org.schabi.newpipe.info_list.holder.ChannelCardInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.ChannelGridInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.ChannelInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.ChannelMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.CommentInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.InfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistCardInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistGridInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.PlaylistMiniInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamCardInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamGridInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamInfoItemHolder;
-import org.schabi.newpipe.info_list.holder.StreamMiniInfoItemHolder;
-import org.schabi.newpipe.local.history.HistoryRecordManager;
-import org.schabi.newpipe.util.FallbackViewHolder;
-import org.schabi.newpipe.util.OnClickGesture;
+import org.schabi.opentube.databinding.PignateFooterBinding;
+import org.schabi.opentube.extractor.InfoItem;
+import org.schabi.opentube.extractor.channel.ChannelInfoItem;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.extractor.playlist.PlaylistInfoItem;
+import org.schabi.opentube.extractor.stream.StreamInfoItem;
+import org.schabi.opentube.info_list.holder.ChannelCardInfoItemHolder;
+import org.schabi.opentube.info_list.holder.ChannelGridInfoItemHolder;
+import org.schabi.opentube.info_list.holder.ChannelInfoItemHolder;
+import org.schabi.opentube.info_list.holder.ChannelMiniInfoItemHolder;
+import org.schabi.opentube.info_list.holder.CommentInfoItemHolder;
+import org.schabi.opentube.info_list.holder.InfoItemHolder;
+import org.schabi.opentube.info_list.holder.PlaylistCardInfoItemHolder;
+import org.schabi.opentube.info_list.holder.PlaylistGridInfoItemHolder;
+import org.schabi.opentube.info_list.holder.PlaylistInfoItemHolder;
+import org.schabi.opentube.info_list.holder.PlaylistMiniInfoItemHolder;
+import org.schabi.opentube.info_list.holder.StreamCardInfoItemHolder;
+import org.schabi.opentube.info_list.holder.StreamGridInfoItemHolder;
+import org.schabi.opentube.info_list.holder.StreamInfoItemHolder;
+import org.schabi.opentube.info_list.holder.StreamMiniInfoItemHolder;
+import org.schabi.opentube.local.history.HistoryRecordManager;
+import org.schabi.opentube.util.FallbackViewHolder;
+import org.schabi.opentube.util.OnClickGesture;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,20 +43,20 @@ import java.util.function.Supplier;
  * Created by Christian Schabesberger on 01.08.16.
  *
  * Copyright (C) Christian Schabesberger 2016 <chris.schabesberger@mailbox.org>
- * InfoListAdapter.java is part of NewPipe.
+ * InfoListAdapter.java is part of OpenTube.
  *
- * NewPipe is free software: you can redistribute it and/or modify
+ * OpenTube is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * NewPipe is distributed in the hope that it will be useful,
+ * OpenTube is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with NewPipe.  If not, see <http://www.gnu.org/licenses/>.
+ * along with OpenTube.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 public class InfoListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

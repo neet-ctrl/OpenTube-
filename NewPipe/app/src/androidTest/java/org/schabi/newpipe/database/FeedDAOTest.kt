@@ -1,4 +1,4 @@
-package org.schabi.newpipe.database
+package org.schabi.opentube.database
 
 import android.content.Context
 import androidx.room.Room
@@ -9,17 +9,17 @@ import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNotNull
 import org.junit.Before
 import org.junit.Test
-import org.schabi.newpipe.database.feed.dao.FeedDAO
-import org.schabi.newpipe.database.feed.model.FeedEntity
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.stream.StreamWithState
-import org.schabi.newpipe.database.stream.dao.StreamDAO
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.subscription.SubscriptionDAO
-import org.schabi.newpipe.database.subscription.SubscriptionEntity
-import org.schabi.newpipe.extractor.ServiceList
-import org.schabi.newpipe.extractor.channel.ChannelInfo
-import org.schabi.newpipe.extractor.stream.StreamType
+import org.schabi.opentube.database.feed.dao.FeedDAO
+import org.schabi.opentube.database.feed.model.FeedEntity
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.stream.StreamWithState
+import org.schabi.opentube.database.stream.dao.StreamDAO
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.subscription.SubscriptionDAO
+import org.schabi.opentube.database.subscription.SubscriptionEntity
+import org.schabi.opentube.extractor.ServiceList
+import org.schabi.opentube.extractor.channel.ChannelInfo
+import org.schabi.opentube.extractor.stream.StreamType
 import java.io.IOException
 import java.time.OffsetDateTime
 import kotlin.streams.toList

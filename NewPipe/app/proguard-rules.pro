@@ -3,8 +3,8 @@
 ## Helps debug release versions
 -dontobfuscate
 
-## Rules for NewPipeExtractor
--keep class org.schabi.newpipe.extractor.timeago.patterns.** { *; }
+## Rules for OpenTubeExtractor
+-keep class org.schabi.opentube.extractor.timeago.patterns.** { *; }
 ## Rules for Rhino and Rhino Engine
 -keep class org.mozilla.javascript.* { *; }
 -keep class org.mozilla.javascript.** { *; }
@@ -29,7 +29,7 @@
 -dontwarn okhttp3.**
 -dontwarn okio.**
 
-## See https://github.com/TeamNewPipe/NewPipe/pull/1441
+## See https://github.com/TeamOpenTube/OpenTube/pull/1441
 -keepclassmembers class * implements java.io.Serializable {
     static final long serialVersionUID;
     !static !transient <fields>;
@@ -38,4 +38,4 @@
 }
 
 ## For some reason NotificationModeConfigFragment wasn't kept (only referenced in a preference xml)
--keep class org.schabi.newpipe.settings.notifications.** { *; }
+-keep class org.schabi.opentube.settings.notifications.** { *; }

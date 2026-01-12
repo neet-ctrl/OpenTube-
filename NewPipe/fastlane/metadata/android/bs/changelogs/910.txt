@@ -1,1 +1,1 @@
-Ispravljena migracija baze podataka koja je u nekim rijetkim slučajevima sprečavala pokretanje NewPipe-a.
+Ispravljena migracija baze podataka koja je u nekim rijetkim slučajevima sprečavala pokretanje OpenTube-a.

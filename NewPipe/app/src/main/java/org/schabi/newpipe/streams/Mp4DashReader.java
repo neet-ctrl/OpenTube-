@@ -1,6 +1,6 @@
-package org.schabi.newpipe.streams;
+package org.schabi.opentube.streams;
 
-import org.schabi.newpipe.streams.io.SharpStream;
+import org.schabi.opentube.streams.io.SharpStream;
 
 import java.io.EOFException;
 import java.io.IOException;

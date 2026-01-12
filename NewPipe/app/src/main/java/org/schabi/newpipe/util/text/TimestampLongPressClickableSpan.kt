@@ -1,17 +1,17 @@
 /*
- * SPDX-FileCopyrightText: 2023-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2023-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.util.text
+package org.schabi.opentube.util.text
 
 import android.content.Context
 import android.view.View
 import io.reactivex.rxjava3.disposables.CompositeDisposable
-import org.schabi.newpipe.extractor.ServiceList
-import org.schabi.newpipe.extractor.StreamingService
-import org.schabi.newpipe.util.external_communication.ShareUtils
-import org.schabi.newpipe.util.text.TimestampExtractor.TimestampMatchDTO
+import org.schabi.opentube.extractor.ServiceList
+import org.schabi.opentube.extractor.StreamingService
+import org.schabi.opentube.util.external_communication.ShareUtils
+import org.schabi.opentube.util.text.TimestampExtractor.TimestampMatchDTO
 
 class TimestampLongPressClickableSpan(
     private val context: Context,

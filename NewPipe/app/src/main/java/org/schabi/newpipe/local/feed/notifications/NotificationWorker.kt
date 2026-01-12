@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed.notifications
+package org.schabi.opentube.local.feed.notifications
 
 import android.content.Context
 import android.content.pm.ServiceInfo
@@ -16,13 +16,13 @@ import androidx.work.WorkerParameters
 import androidx.work.rxjava3.RxWorker
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.core.Single
-import org.schabi.newpipe.App
-import org.schabi.newpipe.R
-import org.schabi.newpipe.error.ErrorInfo
-import org.schabi.newpipe.error.ErrorUtil
-import org.schabi.newpipe.error.UserAction
-import org.schabi.newpipe.local.feed.service.FeedLoadManager
-import org.schabi.newpipe.local.feed.service.FeedLoadService
+import org.schabi.opentube.App
+import org.schabi.opentube.R
+import org.schabi.opentube.error.ErrorInfo
+import org.schabi.opentube.error.ErrorUtil
+import org.schabi.opentube.error.UserAction
+import org.schabi.opentube.local.feed.service.FeedLoadManager
+import org.schabi.opentube.local.feed.service.FeedLoadService
 import java.util.concurrent.TimeUnit
 
 /*
@@ -80,7 +80,7 @@ class NotificationWorker(
             applicationContext.getString(R.string.notification_channel_id)
         ).setOngoing(true)
             .setProgress(-1, -1, true)
-            .setSmallIcon(R.drawable.ic_newpipe_triangle_white)
+            .setSmallIcon(R.drawable.ic_opentube_triangle_white)
             .setVisibility(NotificationCompat.VISIBILITY_PUBLIC)
             .setPriority(NotificationCompat.PRIORITY_LOW)
             .setContentTitle(applicationContext.getString(R.string.feed_notification_loading))

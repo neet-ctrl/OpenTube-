@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.mediasession;
+package org.schabi.opentube.player.mediasession;
 
 import static android.support.v4.media.session.PlaybackStateCompat.ACTION_SKIP_TO_NEXT;
 import static android.support.v4.media.session.PlaybackStateCompat.ACTION_SKIP_TO_PREVIOUS;
@@ -17,10 +17,10 @@ import androidx.annotation.Nullable;
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector;
 import com.google.android.exoplayer2.util.Util;
 
-import org.schabi.newpipe.player.Player;
-import org.schabi.newpipe.player.playqueue.PlayQueue;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
-import org.schabi.newpipe.util.image.ImageStrategy;
+import org.schabi.opentube.player.Player;
+import org.schabi.opentube.player.playqueue.PlayQueue;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.util.image.ImageStrategy;
 
 import java.util.ArrayList;
 import java.util.Collections;

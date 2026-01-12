@@ -1,13 +1,13 @@
 /*
- * SPDX-FileCopyrightText: 2023-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2023-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.util.image
+package org.schabi.opentube.util.image
 
 import android.content.Context
-import org.schabi.newpipe.R
-import org.schabi.newpipe.extractor.Image.ResolutionLevel
+import org.schabi.opentube.R
+import org.schabi.opentube.extractor.Image.ResolutionLevel
 
 enum class PreferredImageQuality {
     NONE,

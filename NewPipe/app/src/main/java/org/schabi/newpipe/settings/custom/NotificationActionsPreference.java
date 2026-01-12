@@ -1,6 +1,6 @@
-package org.schabi.newpipe.settings.custom;
+package org.schabi.opentube.settings.custom;
 
-import static org.schabi.newpipe.player.notification.NotificationConstants.ACTION_RECREATE_NOTIFICATION;
+import static org.schabi.opentube.player.notification.NotificationConstants.ACTION_RECREATE_NOTIFICATION;
 
 import android.content.Context;
 import android.content.Intent;
@@ -16,9 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceViewHolder;
 
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.player.notification.NotificationConstants;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.player.notification.NotificationConstants;
 
 import java.util.ArrayList;
 import java.util.List;

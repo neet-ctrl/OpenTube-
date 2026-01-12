@@ -1,6 +1,6 @@
 /*
  * Copyright 2017 Mauricio Colli <mauriciocolli@outlook.com>
- * Part of NewPipe
+ * Part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,7 +17,7 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.player;
+package org.schabi.opentube.player;
 
 import android.content.Context;
 import android.content.Intent;
@@ -35,13 +35,13 @@ import androidx.media.MediaBrowserServiceCompat;
 
 import com.google.android.exoplayer2.ext.mediasession.MediaSessionConnector;
 
-import org.schabi.newpipe.ktx.BundleKt;
-import org.schabi.newpipe.player.mediabrowser.MediaBrowserImpl;
-import org.schabi.newpipe.player.mediabrowser.MediaBrowserPlaybackPreparer;
-import org.schabi.newpipe.player.mediasession.MediaSessionPlayerUi;
-import org.schabi.newpipe.player.notification.NotificationPlayerUi;
-import org.schabi.newpipe.player.notification.NotificationUtil;
-import org.schabi.newpipe.util.ThemeHelper;
+import org.schabi.opentube.ktx.BundleKt;
+import org.schabi.opentube.player.mediabrowser.MediaBrowserImpl;
+import org.schabi.opentube.player.mediabrowser.MediaBrowserPlaybackPreparer;
+import org.schabi.opentube.player.mediasession.MediaSessionPlayerUi;
+import org.schabi.opentube.player.notification.NotificationPlayerUi;
+import org.schabi.opentube.player.notification.NotificationUtil;
+import org.schabi.opentube.util.ThemeHelper;
 
 import java.lang.ref.WeakReference;
 import java.util.List;
@@ -129,7 +129,7 @@ public final class PlayerService extends MediaBrowserServiceCompat {
                     + "], flags = [" + flags + "], startId = [" + startId + "]");
         }
 
-        // All internal NewPipe intents used to interact with the player, that are sent to the
+        // All internal OpenTube intents used to interact with the player, that are sent to the
         // PlayerService using startForegroundService(), will have SHOULD_START_FOREGROUND_EXTRA,
         // to ensure startForeground() is called (otherwise Android will force-crash the app).
         if (intent.getBooleanExtra(SHOULD_START_FOREGROUND_EXTRA, false)) {

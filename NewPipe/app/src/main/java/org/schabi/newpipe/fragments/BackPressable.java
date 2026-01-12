@@ -1,4 +1,4 @@
-package org.schabi.newpipe.fragments;
+package org.schabi.opentube.fragments;
 
 /**
  * Indicates that the current fragment can handle back presses.

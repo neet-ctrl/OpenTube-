@@ -1,9 +1,9 @@
 /*
- * SPDX-FileCopyrightText: 2017-2025 NewPipe contributors <https://newpipe.net>
+ * SPDX-FileCopyrightText: 2017-2025 OpenTube contributors <https://opentube.net>
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-package org.schabi.newpipe.fragments.list.search
+package org.schabi.opentube.fragments.list.search
 
 class SuggestionItem(@JvmField val fromHistory: Boolean, @JvmField val query: String) {
     override fun equals(other: Any?): Boolean {

@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription.item
+package org.schabi.opentube.local.subscription.item
 
 import android.os.Parcelable
 import android.view.View
@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.viewbinding.BindableItem
 import com.xwray.groupie.viewbinding.GroupieViewHolder
-import org.schabi.newpipe.R
-import org.schabi.newpipe.databinding.FeedItemCarouselBinding
-import org.schabi.newpipe.util.DeviceUtils
-import org.schabi.newpipe.util.ThemeHelper.getGridSpanCount
+import org.schabi.opentube.R
+import org.schabi.opentube.databinding.FeedItemCarouselBinding
+import org.schabi.opentube.util.DeviceUtils
+import org.schabi.opentube.util.ThemeHelper.getGridSpanCount
 
 class FeedGroupCarouselItem(
     private val carouselAdapter: GroupAdapter<GroupieViewHolder<FeedItemCarouselBinding>>,

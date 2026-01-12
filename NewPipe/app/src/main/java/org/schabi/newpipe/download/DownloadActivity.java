@@ -1,4 +1,4 @@
-package org.schabi.newpipe.download;
+package org.schabi.opentube.download;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +11,11 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.databinding.ActivityDownloaderBinding;
-import org.schabi.newpipe.util.DeviceUtils;
-import org.schabi.newpipe.util.ThemeHelper;
-import org.schabi.newpipe.views.FocusOverlayView;
+import org.schabi.opentube.R;
+import org.schabi.opentube.databinding.ActivityDownloaderBinding;
+import org.schabi.opentube.util.DeviceUtils;
+import org.schabi.opentube.util.ThemeHelper;
+import org.schabi.opentube.views.FocusOverlayView;
 
 import us.shandian.giga.service.DownloadManagerService;
 import us.shandian.giga.ui.fragment.MissionsFragment;

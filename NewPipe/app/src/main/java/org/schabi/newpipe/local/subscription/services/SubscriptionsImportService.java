@@ -1,6 +1,6 @@
 /*
  * Copyright 2018 Mauricio Colli <mauriciocolli@outlook.com>
- * SubscriptionsImportService.java is part of NewPipe
+ * SubscriptionsImportService.java is part of OpenTube
  *
  * License: GPL-3.0+
  * This program is free software: you can redistribute it and/or modify
@@ -17,10 +17,10 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-package org.schabi.newpipe.local.subscription.services;
+package org.schabi.opentube.local.subscription.services;
 
-import static org.schabi.newpipe.MainActivity.DEBUG;
-import static org.schabi.newpipe.streams.io.StoredFileHelper.DEFAULT_MIME;
+import static org.schabi.opentube.MainActivity.DEBUG;
+import static org.schabi.opentube.streams.io.StoredFileHelper.DEFAULT_MIME;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -35,18 +35,18 @@ import androidx.localbroadcastmanager.content.LocalBroadcastManager;
 
 import org.reactivestreams.Subscriber;
 import org.reactivestreams.Subscription;
-import org.schabi.newpipe.App;
-import org.schabi.newpipe.R;
-import org.schabi.newpipe.database.subscription.SubscriptionEntity;
-import org.schabi.newpipe.extractor.NewPipe;
-import org.schabi.newpipe.extractor.channel.ChannelInfo;
-import org.schabi.newpipe.extractor.channel.tabs.ChannelTabInfo;
-import org.schabi.newpipe.extractor.subscription.SubscriptionItem;
-import org.schabi.newpipe.ktx.ExceptionUtils;
-import org.schabi.newpipe.streams.io.SharpInputStream;
-import org.schabi.newpipe.streams.io.StoredFileHelper;
-import org.schabi.newpipe.util.Constants;
-import org.schabi.newpipe.util.ExtractorHelper;
+import org.schabi.opentube.App;
+import org.schabi.opentube.R;
+import org.schabi.opentube.database.subscription.SubscriptionEntity;
+import org.schabi.opentube.extractor.OpenTube;
+import org.schabi.opentube.extractor.channel.ChannelInfo;
+import org.schabi.opentube.extractor.channel.tabs.ChannelTabInfo;
+import org.schabi.opentube.extractor.subscription.SubscriptionItem;
+import org.schabi.opentube.ktx.ExceptionUtils;
+import org.schabi.opentube.streams.io.SharpInputStream;
+import org.schabi.opentube.streams.io.StoredFileHelper;
+import org.schabi.opentube.util.Constants;
+import org.schabi.opentube.util.ExtractorHelper;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -303,7 +303,7 @@ public class SubscriptionsImportService extends BaseImportExportService {
     }
 
     private Flowable<List<SubscriptionItem>> importFromChannelUrl() {
-        return Flowable.fromCallable(() -> NewPipe.getService(currentServiceId)
+        return Flowable.fromCallable(() -> OpenTube.getService(currentServiceId)
                 .getSubscriptionExtractor()
                 .fromChannelUrl(channelUrl));
     }
@@ -312,7 +312,7 @@ public class SubscriptionsImportService extends BaseImportExportService {
         Objects.requireNonNull(inputStream);
         Objects.requireNonNull(inputStreamType);
 
-        return Flowable.fromCallable(() -> NewPipe.getService(currentServiceId)
+        return Flowable.fromCallable(() -> OpenTube.getService(currentServiceId)
                 .getSubscriptionExtractor()
                 .fromInputStream(inputStream, inputStreamType));
     }

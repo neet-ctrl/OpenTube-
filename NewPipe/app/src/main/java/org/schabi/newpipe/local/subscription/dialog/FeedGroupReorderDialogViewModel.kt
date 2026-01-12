@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.subscription.dialog
+package org.schabi.opentube.local.subscription.dialog
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
@@ -7,8 +7,8 @@ import androidx.lifecycle.MutableLiveData
 import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.disposables.Disposable
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.local.feed.FeedDatabaseManager
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.local.feed.FeedDatabaseManager
 
 class FeedGroupReorderDialogViewModel(application: Application) : AndroidViewModel(application) {
     private var feedDatabaseManager: FeedDatabaseManager = FeedDatabaseManager(application)

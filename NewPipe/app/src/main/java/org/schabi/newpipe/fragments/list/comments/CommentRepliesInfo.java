@@ -1,8 +1,8 @@
-package org.schabi.newpipe.fragments.list.comments;
+package org.schabi.opentube.fragments.list.comments;
 
-import org.schabi.newpipe.extractor.ListInfo;
-import org.schabi.newpipe.extractor.comments.CommentsInfoItem;
-import org.schabi.newpipe.extractor.linkhandler.ListLinkHandler;
+import org.schabi.opentube.extractor.ListInfo;
+import org.schabi.opentube.extractor.comments.CommentsInfoItem;
+import org.schabi.opentube.extractor.linkhandler.ListLinkHandler;
 
 import java.util.Collections;
 

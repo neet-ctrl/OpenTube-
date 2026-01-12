@@ -1,10 +1,10 @@
-package org.schabi.newpipe.database.history.model
+package org.schabi.opentube.database.history.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Embedded
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.util.image.ImageStrategy
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.util.image.ImageStrategy
 import java.time.OffsetDateTime
 
 data class StreamHistoryEntry(

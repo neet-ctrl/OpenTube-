@@ -1,4 +1,4 @@
-package org.schabi.newpipe.local.feed
+package org.schabi.opentube.local.feed
 
 import android.content.Context
 import android.util.Log
@@ -7,23 +7,23 @@ import io.reactivex.rxjava3.core.Completable
 import io.reactivex.rxjava3.core.Flowable
 import io.reactivex.rxjava3.core.Maybe
 import io.reactivex.rxjava3.schedulers.Schedulers
-import org.schabi.newpipe.MainActivity.DEBUG
-import org.schabi.newpipe.NewPipeDatabase
-import org.schabi.newpipe.database.feed.model.FeedEntity
-import org.schabi.newpipe.database.feed.model.FeedGroupEntity
-import org.schabi.newpipe.database.feed.model.FeedLastUpdatedEntity
-import org.schabi.newpipe.database.stream.StreamWithState
-import org.schabi.newpipe.database.stream.model.StreamEntity
-import org.schabi.newpipe.database.subscription.NotificationMode
-import org.schabi.newpipe.extractor.stream.StreamInfoItem
-import org.schabi.newpipe.extractor.stream.StreamType
-import org.schabi.newpipe.local.subscription.FeedGroupIcon
+import org.schabi.opentube.MainActivity.DEBUG
+import org.schabi.opentube.OpenTubeDatabase
+import org.schabi.opentube.database.feed.model.FeedEntity
+import org.schabi.opentube.database.feed.model.FeedGroupEntity
+import org.schabi.opentube.database.feed.model.FeedLastUpdatedEntity
+import org.schabi.opentube.database.stream.StreamWithState
+import org.schabi.opentube.database.stream.model.StreamEntity
+import org.schabi.opentube.database.subscription.NotificationMode
+import org.schabi.opentube.extractor.stream.StreamInfoItem
+import org.schabi.opentube.extractor.stream.StreamType
+import org.schabi.opentube.local.subscription.FeedGroupIcon
 import java.time.LocalDate
 import java.time.OffsetDateTime
 import java.time.ZoneOffset
 
 class FeedDatabaseManager(context: Context) {
-    private val database = NewPipeDatabase.getInstance(context)
+    private val database = OpenTubeDatabase.getInstance(context)
     private val feedTable = database.feedDAO()
     private val feedGroupTable = database.feedGroupDAO()
     private val streamTable = database.streamDAO()

@@ -1,6 +1,6 @@
-package org.schabi.newpipe.util;
+package org.schabi.opentube.util;
 
-import org.schabi.newpipe.extractor.stream.StreamType;
+import org.schabi.opentube.extractor.stream.StreamType;
 
 /**
  * Utility class for {@link StreamType}.

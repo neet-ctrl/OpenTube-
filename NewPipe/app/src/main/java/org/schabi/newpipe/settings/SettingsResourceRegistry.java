@@ -1,10 +1,10 @@
-package org.schabi.newpipe.settings;
+package org.schabi.opentube.settings;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.XmlRes;
 import androidx.fragment.app.Fragment;
 
-import org.schabi.newpipe.R;
+import org.schabi.opentube.R;
 
 import java.util.HashSet;
 import java.util.Objects;

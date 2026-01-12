@@ -1,4 +1,4 @@
-package org.schabi.newpipe.player.mediasource;
+package org.schabi.opentube.player.mediasource;
 
 import android.util.Log;
 
@@ -12,8 +12,8 @@ import com.google.android.exoplayer2.source.SinglePeriodTimeline;
 import com.google.android.exoplayer2.upstream.Allocator;
 import com.google.android.exoplayer2.upstream.TransferListener;
 
-import org.schabi.newpipe.player.mediaitem.ExceptionTag;
-import org.schabi.newpipe.player.playqueue.PlayQueueItem;
+import org.schabi.opentube.player.mediaitem.ExceptionTag;
+import org.schabi.opentube.player.playqueue.PlayQueueItem;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,7 +25,7 @@ import androidx.annotation.Nullable;
 public class FailedMediaSource extends BaseMediaSource implements ManagedMediaSource {
     /**
      * Play 2 seconds of silenced audio when a stream fails to resolve due to a known issue,
-     * such as {@link org.schabi.newpipe.extractor.exceptions.ExtractionException}.
+     * such as {@link org.schabi.opentube.extractor.exceptions.ExtractionException}.
      *
      * This silence duration allows user to react and have time to jump to a previous stream,
      * while still provide a smooth playback experience. A duration lower than 1 second is
@@ -92,7 +92,7 @@ public class FailedMediaSource extends BaseMediaSource implements ManagedMediaSo
     /**
      * Prepares the source with {@link Timeline} info on the silence playback when the error
      * is classed as {@link FailedMediaSourceException}, for example, when the error is
-     * {@link org.schabi.newpipe.extractor.exceptions.ExtractionException ExtractionException}.
+     * {@link org.schabi.opentube.extractor.exceptions.ExtractionException ExtractionException}.
      * These types of error are swallowed by {@link FailedMediaSource}, and the underlying
      * exception is carried to the {@link MediaItem} metadata during playback.
      * <br><br>
@@ -117,7 +117,7 @@ public class FailedMediaSource extends BaseMediaSource implements ManagedMediaSo
     /**
      * If the error is not known, e.g. network issue, then the exception is not swallowed here in
      * {@link FailedMediaSource}. The exception is then propagated to the player, which
-     * {@link org.schabi.newpipe.player.Player Player} can react to inside
+     * {@link org.schabi.opentube.player.Player Player} can react to inside
      * {@link com.google.android.exoplayer2.Player.Listener#onPlayerError(PlaybackException)}.
      *
      * @throws IOException An error which will always result in
