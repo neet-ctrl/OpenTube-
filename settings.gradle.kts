@@ -25,9 +25,9 @@ include (":app")
 // We assume, that OpenTube and OpenTube Extractor have the same parent directory.
 // If this is not the case, please change the path in includeBuild().
 
-//includeBuild("../OpenTubeExtractor") {
+//includeBuild("../NewPipeExtractor") {
 //    dependencySubstitution {
-//        substitute(module("com.github.TeamOpenTube:OpenTubeExtractor"))
+//        substitute(module("com.github.TeamNewPipe:NewPipeExtractor"))
 //            .using(project(":extractor"))
 //    }
 //}

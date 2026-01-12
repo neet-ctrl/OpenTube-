@@ -1,0 +1,59 @@
+Skip to content
+Navigation Menu
+neet-ctrl
+OpenTube-
+
+Code
+Issues
+Pull requests
+CI
+Saved progress at the end of the loop #1
+Annotations
+1 error
+build-and-test-jvm
+failed 1 minute ago in 1m 46s
+3s
+1s
+0s
+0s
+1s
+1m 37s
+	at org.gradle.internal.serialize.codecs.core.FileCollectionCodec.encodeViaCollectingVisitor(FileCollectionCodec.kt:80)
+	at org.gradle.internal.serialize.codecs.core.FileCollectionCodec.encodeContents(FileCollectionCodec.kt:73)
+	at org.gradle.internal.serialize.codecs.core.FileCollectionCodec.encode(FileCollectionCodec.kt:62)
+	at org.gradle.internal.serialize.codecs.core.FileCollectionCodec.encode(FileCollectionCodec.kt:54)
+	at org.gradle.internal.serialize.graph.codecs.BindingsBackedCodec.encode(BindingsBackedCodec.kt:66)
+	at org.gradle.internal.serialize.graph.DefaultWriteContext.write(Contexts.kt:111)
+	at org.gradle.internal.serialize.graph.BeanPropertyExtensionsKt.writePropertyValue(BeanPropertyExtensions.kt:34)
+	... 219 more
+Cause 1: org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find com.github.TeamOpenTube:nanojson:e9d656ddb49a412a5a0a5d5ef20ca7ef09549996.
+Searched in the following locations:
+  - https://jitpack.io/com/github/TeamOpenTube/nanojson/e9d656ddb49a412a5a0a5d5ef20ca7ef09549996/nanojson-e9d656ddb49a412a5a0a5d5ef20ca7ef09549996.pom
+Required by:
+    project ':app'
+Cause 2: org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find com.github.TeamOpenTube:OpenTubeExtractor:v0.25.0.
+Searched in the following locations:
+  - https://jitpack.io/com/github/TeamOpenTube/OpenTubeExtractor/v0.25.0/OpenTubeExtractor-v0.25.0.pom
+Required by:
+    project ':app'
+Cause 3: org.gradle.internal.resolve.ModuleVersionNotFoundException: Could not find com.github.TeamOpenTube:NoNonsense-FilePicker:5.0.0.
+Searched in the following locations:
+  - https://jitpack.io/com/github/TeamOpenTube/NoNonsense-FilePicker/5.0.0/NoNonsense-FilePicker-5.0.0.pom
+Required by:
+    project ':app'
+
+
+BUILD FAILED in 1m 35s
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 10.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/9.2.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+3 actionable tasks: 3 executed
+Configuration cache entry discarded due to serialization error.
+Error: Process completed with exit code 1.
+0s
+0s
+0s
+0s
