@@ -34,5 +34,5 @@ jobs:
       - name: "Upload APK"
         uses: actions/upload-artifact@v6
         with:
-          name: app
+          name: OpenTube-release
           path: app/build/outputs/apk/release/*.apk
