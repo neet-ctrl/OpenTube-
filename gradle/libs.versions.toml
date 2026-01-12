@@ -53,13 +53,13 @@ swiperefreshlayout = "1.2.0"
 # Or you can use a commit you pushed to GitHub by just replacing TeamNewPipe with your GitHub
 # name and the commit hash with the commit hash of the (pushed) commit you want to test
 # This works thanks to JitPack: https://jitpack.io/
-teamopentube-filepicker = "5.0.0"
-teamopentube-nanojson = "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
+teamnewpipe-filepicker = "5.0.0"
+teamnewpipe-nanojson = "e9d656ddb49a412a5a0a5d5ef20ca7ef09549996"
 # WORKAROUND: if you get errors with the NewPipeExtractor dependency, replace `v0.XX.Y` with
 # the corresponding commit hash, since JitPack sometimes deletes artifacts.
 # If there’s already a git hash, just add more of it to the end (or remove a letter)
 # to cause jitpack to regenerate the artifact.
-teamopentube-opentube-extractor = "v0.25.0"
+teamnewpipe-newpipe-extractor = "v0.25.0"
 viewpager2 = "1.1.0"
 webkit = "1.14.0"
 work = "2.10.5"  # Newer versions require minSdk >= 23
@@ -113,9 +113,9 @@ lisawray-groupie-core = { module = "com.github.lisawray.groupie:groupie", versio
 lisawray-groupie-viewbinding = { module = "com.github.lisawray.groupie:groupie-viewbinding", version.ref = "groupie" }
 livefront-bridge = { module = "com.github.livefront:bridge", version.ref = "bridge" }
 mockito-core = { module = "org.mockito:mockito-core", version.ref = "mockitoCore" }
-opentube-extractor = { module = "com.github.TeamNewPipe:NewPipeExtractor", version.ref = "teamopentube-opentube-extractor" }
-opentube-filepicker = { module = "com.github.TeamNewPipe:NoNonsense-FilePicker", version.ref = "teamopentube-filepicker" }
-opentube-nanojson = { module = "com.github.TeamNewPipe:nanojson", version.ref = "teamopentube-nanojson" }
+newpipe-extractor = { module = "com.github.TeamNewPipe:NewPipeExtractor", version.ref = "teamnewpipe-newpipe-extractor" }
+newpipe-filepicker = { module = "com.github.TeamNewPipe:NoNonsense-FilePicker", version.ref = "teamnewpipe-filepicker" }
+newpipe-nanojson = { module = "com.github.TeamNewPipe:nanojson", version.ref = "teamnewpipe-nanojson" }
 noties-markwon-core = { module = "io.noties.markwon:core", version.ref = "markwon" }
 noties-markwon-linkify = { module = "io.noties.markwon:linkify", version.ref = "markwon" }
 ocpsoft-prettytime = { module = "org.ocpsoft.prettytime:prettytime", version.ref = "prettytime" }

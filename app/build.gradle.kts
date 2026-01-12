@@ -195,7 +195,7 @@ afterEvaluate {
 
 sonar {
     properties {
-        property("sonar.projectKey", "TeamOpenTube_OpenTube")
+        property("sonar.projectKey", "TeamNewPipe_OpenTube")
         property("sonar.organization", "teamopentube")
         property("sonar.host.url", "https://sonarcloud.io")
     }
@@ -206,9 +206,9 @@ dependencies {
     coreLibraryDesugaring(libs.android.desugar)
 
     /** OpenTube libraries **/
-    implementation(libs.opentube.nanojson)
-    implementation(libs.opentube.extractor)
-    implementation(libs.opentube.filepicker)
+    implementation(libs.newpipe.nanojson)
+    implementation(libs.newpipe.extractor)
+    implementation(libs.newpipe.filepicker)
 
     /** Checkstyle **/
     checkstyle(libs.puppycrawl.checkstyle)
